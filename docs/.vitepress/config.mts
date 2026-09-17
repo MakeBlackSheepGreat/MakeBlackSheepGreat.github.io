@@ -103,7 +103,7 @@ export default defineConfig({
     root: {
       label: '中文',
       lang: 'zh-CN',
-      title: 'LiteBlackSheep · 杨智杰',
+      title: 'LiteBlackSheep',
       description: '杨智杰的个人主页：医学影像深度学习、多智能体系统与工程实践',
       themeConfig: {
         logo: '/avatar.svg',
@@ -198,7 +198,7 @@ export default defineConfig({
     en: {
       label: 'English',
       lang: 'en-US',
-      title: 'LiteBlackSheep · ZhiJie Yang',
+      title: 'LiteBlackSheep',
       description: 'ZhiJie Yang — medical imaging deep learning, multi-agent systems and engineering practice',
       themeConfig: {
         logo: '/avatar.svg',

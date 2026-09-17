@@ -199,10 +199,13 @@
   border: 1px solid var(--vp-c-divider);
 }
 
-/* 窄屏不显示照片占位图：避免它排在姓名标题之前 */
+/* 窄屏保留照片，但缩小并靠右浮动，避免变成整块压在姓名标题之前 */
 @media (max-width: 640px) {
   .profile-photo {
-    display: none;
+    float: right;
+    width: 118px;
+    margin: 0.2rem 0 0.8rem 1rem;
+    border-radius: 8px;
   }
 }
 
