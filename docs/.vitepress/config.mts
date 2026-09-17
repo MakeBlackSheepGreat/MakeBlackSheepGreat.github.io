@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import container from 'markdown-it-container'
+import { execSync } from 'node:child_process'
 
 function labeledContainer(md, name, className) {
   md.use(container, name, {
@@ -62,6 +63,18 @@ export default defineConfig({
     ]
   ],
   transformPageData(pageData) {
+    // 首页显示整站最后更新时间（取仓库最新提交），避免首页文件本身很少改动而显得过期
+    if (pageData.relativePath === 'index.md' || pageData.relativePath === 'en/index.md') {
+      try {
+        const secs = Number(
+          execSync('git log -1 --format=%ct', { encoding: 'utf-8', stdio: ['ignore', 'pipe', 'ignore'] }).trim()
+        )
+        if (secs) pageData.lastUpdated = secs * 1000
+      } catch {
+        pageData.lastUpdated = Date.now()
+      }
+    }
+
     const clean = pageData.relativePath.replace(/index\.md$/, '').replace(/\.md$/, '')
     const path = '/' + clean
     const isEn = path === '/en/' || path.startsWith('/en/')

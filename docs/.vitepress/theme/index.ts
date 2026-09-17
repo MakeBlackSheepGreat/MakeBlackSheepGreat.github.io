@@ -2,6 +2,7 @@ import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import LangSwitch from './LangSwitch.vue'
 import SocialRow from './SocialRow.vue'
+import VisitCounter from './VisitCounter.vue'
 import './custom.css'
 
 export default {
@@ -13,5 +14,6 @@ export default {
   },
   enhanceApp({ app }) {
     app.component('SocialRow', SocialRow)
+    app.component('VisitCounter', VisitCounter)
   }
 }

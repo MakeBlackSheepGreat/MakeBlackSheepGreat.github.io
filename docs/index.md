@@ -42,3 +42,5 @@
 | [笔记](/notes/) | 工程实践记录 |
 | [CV](/cv) | 完整简历，可下载 PDF |
 | [致谢](/acknowledgements) | 致谢 |
+
+<VisitCounter />

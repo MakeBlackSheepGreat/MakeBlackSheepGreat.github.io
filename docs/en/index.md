@@ -42,3 +42,5 @@ Current work includes pulmonary nodule classification and malignancy risk gradin
 | [notes](/en/notes/) | Engineering practice records |
 | [cv](/en/cv) | Full CV with a downloadable PDF |
 | [thanks](/en/acknowledgements) | Acknowledgements |
+
+<VisitCounter />
