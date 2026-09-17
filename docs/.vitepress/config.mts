@@ -46,7 +46,7 @@ export default defineConfig({
       description: '杨智杰的个人主页：医学影像深度学习、多智能体系统与工程实践',
       themeConfig: {
         logo: '/avatar.svg',
-        siteTitle: '杨智杰',
+        siteTitle: 'LiteBlackSheep',
         nav: [
           { text: '关于', link: '/' },
           { text: '经历', link: '/experiences' },
@@ -108,7 +108,7 @@ export default defineConfig({
       description: 'ZhiJie Yang — medical imaging deep learning, multi-agent systems and engineering practice',
       themeConfig: {
         logo: '/avatar.svg',
-        siteTitle: 'ZhiJie Yang',
+        siteTitle: 'LiteBlackSheep',
         nav: [
           { text: 'about', link: '/en/' },
           { text: 'experiences', link: '/en/experiences' },
