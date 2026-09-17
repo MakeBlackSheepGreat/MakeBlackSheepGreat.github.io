@@ -24,8 +24,8 @@ export default defineConfig({
   lastUpdated: true,
   sitemap: { hostname: SITE },
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
-    ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg?v=2' }],
+    ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png?v=2' }],
     ['meta', { name: 'theme-color', content: '#4f46e5' }],
     ['meta', { name: 'author', content: '杨智杰 (LiteBlackSheep)' }],
     ['meta', { name: 'robots', content: 'index, follow' }],
