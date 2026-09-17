@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://liteblacksheep.asia/sitemap.xml
+Sitemap: https://home.liteblacksheep.asia/sitemap.xml

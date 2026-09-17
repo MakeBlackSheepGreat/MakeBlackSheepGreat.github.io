@@ -15,7 +15,7 @@ function labeledContainer(md, name, className) {
 }
 
 // 站点主域名：绑定自定义域名后，把这里换成新域名即可（sitemap / canonical / og:url 会一起生效）
-const SITE = 'https://liteblacksheep.asia'
+const SITE = 'https://home.liteblacksheep.asia'
 const ORCID = 'https://orcid.org/0009-0006-7544-5954'
 const GITHUB = 'https://github.com/MakeBlackSheepGreat'
 
