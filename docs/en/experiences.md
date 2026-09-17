@@ -70,16 +70,6 @@ Participated in CANN operator competition problems: 2D convolution (FP16 / FP32 
 Responsible for the association's hardware track: organising study material, contributing to technical sessions and event organisation, and helping junior members get started with circuits and embedded systems.
 :::
 
-::: card Red Cross first-aid training and certification
-<p class="entry-meta">2025.12 · organised by the School of Economics and Management volunteer centre</p>
-Completed the Red Cross first-aid training, passed the assessment and obtained the first-aider certificate.
-:::
-
-::: card Campus volunteering and events
-<p class="entry-meta">2025 – 2026</p>
-Took part in the School of Computer Science "Technology Lights Up Dreams" volunteer activity, the YiBan National Day activity, the Mid-Autumn on-campus event, the School of Materials and Chemistry "Warm Hearts" activity and a cloisonné handicraft workshop, as well as the "KaiXin Society" recruitment talk and a series of lectures on AI-enabled employment and postgraduate planning.
-:::
-
 ## TIMELINE
 
 **Middle school** — First contact with circuits, programming and sensors in the school Arduino club; built line-following robots and similar projects.

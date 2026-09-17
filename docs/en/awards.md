@@ -31,16 +31,9 @@ The entry was the breast ultrasound diagnosis support system; this was the first
 | 2026.05 | Provincial undergraduate innovation training project | Interpretable pulmonary nodule classification and risk grading from chest CT; ongoing, I handle data processing and model experiments |
 | 2025.10 | "One Student One Chip" study group | Self-study of Verilog and RISC-V, progressed to the E5 stage of RTL simulation |
 
-## University and faculty awards
+## University award
 
-| Year | Award | Level |
-| --- | --- | --- |
-| 2026 | SWUST Science and Technology Innovation Award | University |
-| 2026 | SWUST Outstanding Academic Performance Award | University |
-| 2026 | Faculty of Life Science and Agriculture Science and Technology Innovation Award | Faculty |
-| 2026 | Faculty of Life Science and Agriculture Outstanding Academic Performance Award | Faculty |
-
-These are the awards tied to the 2025–2026 comprehensive evaluation, assigned by evaluation ranking.
+- SWUST Science and Technology Innovation Award (2026)
 
 ## Competitions entered without a prize
 
