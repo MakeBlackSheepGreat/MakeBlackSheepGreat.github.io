@@ -17,10 +17,16 @@ yzj876762330@163.com ｜ [github.com/MakeBlackSheepGreat](https://github.com/Mak
 ## EDUCATION
 
 ::: card Southwest University of Science and Technology · Electronic Information Engineering (Honors) · B.Eng.
-<p class="entry-meta">2025.09 – 2029.06 (expected) · Mianyang, China</p>
+<p class="entry-meta">2026.09 – 2029.06 (expected) · Mianyang, China</p>
+
+Transferred from Pharmaceutical Engineering in September 2026; currently in the second year. This semester: complex functions and integral transforms, probability and statistics, analog electronics, university physics, Japanese, software technology fundamentals. The electronics core (digital electronics, signals and systems) follows in later semesters.
+:::
+
+::: card Southwest University of Science and Technology · Pharmaceutical Engineering · first year
+<p class="entry-meta">2025.09 – 2026.09 · Mianyang, China</p>
 <span class="badge">Comprehensive evaluation 99.81 / 100</span> <span class="badge">Top 12% of major</span> <span class="badge">1st in innovation credits</span>
 
-Transferred from Pharmaceutical Engineering in September 2026. Core courses: circuit analysis, analog electronics, signals and systems, fundamentals of artificial intelligence, programming (Python), calculus, linear algebra, probability and statistics.
+Ranked 7th in the major (top 12%); Programming Fundamentals (Python) 100, Fundamentals and Applications of AI 87, Calculus B1 88, Japanese 88 / 87. Also passed the National Computer Rank Examination (Level 2) and CJT4.
 :::
 
 ## RESEARCH EXPERIENCE
