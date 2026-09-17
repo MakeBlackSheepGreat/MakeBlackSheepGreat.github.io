@@ -37,8 +37,21 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
+      - name: Install CJK fonts and Playwright Chromium
+        run: sudo apt-get update && sudo apt-get install -y fonts-noto-cjk && npx playwright install --with-deps chromium
+        run: npx playwright install --with-deps chromium
+
       - name: Build site
         run: pnpm build
+
+      - name: Generate CV PDFs
+        run: |
+          npx vitepress preview docs --port 4173 > /tmp/preview.log 2>&1 &
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:4173/ > /dev/null && break
+            sleep 1
+          done
+          node scripts/make-cv-pdf.mjs
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

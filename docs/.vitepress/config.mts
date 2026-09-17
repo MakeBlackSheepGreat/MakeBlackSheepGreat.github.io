@@ -76,7 +76,7 @@ export default defineConfig({
     head.push(['link', { rel: 'canonical', href: SITE + path }])
     head.push(['link', { rel: 'alternate', hreflang: isEn ? 'en' : 'zh-CN', href: SITE + path }])
     head.push(['link', { rel: 'alternate', hreflang: isEn ? 'zh-CN' : 'en', href: SITE + alt }])
-    head.push(['link', { rel: 'alternate', hreflang: 'x-default', href: SITE + path }])
+    head.push(['link', { rel: 'alternate', hreflang: 'x-default', href: SITE + (isEn ? alt : path) }])
     head.push(['meta', { property: 'og:url', content: SITE + path }])
     const siteName = isEn ? 'LiteBlackSheep' : 'LiteBlackSheep'
     const pageTitle = pageData.title ? `${pageData.title} | ${siteName}` : siteName
@@ -154,6 +154,12 @@ export default defineConfig({
         },
         docFooter: { prev: '上一页', next: '下一页' },
         lastUpdated: { text: '最后更新于' },
+        notFound: {
+          title: '页面不存在',
+          quote: '这个地址没有对应的内容，可能是链接已过期或路径写错了。',
+          linkLabel: '回到首页',
+          linkText: '返回首页'
+        },
         darkModeSwitchLabel: '外观',
         darkModeSwitchTitle: '切换到深色模式',
         lightModeSwitchTitle: '切换到浅色模式',
@@ -216,6 +222,12 @@ export default defineConfig({
         },
         docFooter: { prev: 'Previous', next: 'Next' },
         lastUpdated: { text: 'Last updated' },
+        notFound: {
+          title: 'Page not found',
+          quote: 'There is no content at this address — the link may be outdated or the path mistyped.',
+          linkLabel: 'go to home',
+          linkText: 'Take me home'
+        },
         darkModeSwitchLabel: 'Appearance',
         darkModeSwitchTitle: 'Switch to dark theme',
         lightModeSwitchTitle: 'Switch to light theme',

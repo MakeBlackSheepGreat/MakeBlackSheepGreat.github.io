@@ -1,4 +1,10 @@
 :root {
+  /* 系统字体栈：中文走系统 UI 字体，不再下载 Inter 子集 */
+  --vp-font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans SC", "Noto Sans CJK SC",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --vp-font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    "Liberation Mono", monospace;
   --vp-c-brand-1: #4f46e5;
   --vp-c-brand-2: #4338ca;
   --vp-c-brand-3: #3730a3;
@@ -75,10 +81,6 @@
 
 .lead p {
   margin: 0.25rem 0;
-}
-
-.lead .lead-label {
-  display: none;
 }
 
 /* 结构化页面（经历 / 论文 / CV）的分组小标题 */
@@ -179,12 +181,10 @@
   border: 1px solid var(--vp-c-divider);
 }
 
+/* 窄屏不显示照片占位图：避免它排在姓名标题之前 */
 @media (max-width: 640px) {
   .profile-photo {
-    float: none;
-    display: block;
-    width: 150px;
-    margin: 0 0 1rem;
+    display: none;
   }
 }
 

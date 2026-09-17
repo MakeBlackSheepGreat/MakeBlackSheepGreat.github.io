@@ -6,11 +6,12 @@
   "type": "module",
   "scripts": {
     "dev": "vitepress dev docs",
-    "build": "vitepress build docs",
+    "build": "vitepress build docs && node scripts/prune-fonts.mjs",
     "preview": "vitepress preview docs"
   },
   "devDependencies": {
     "markdown-it-container": "^4.0.0",
+    "playwright": "^1.63.0",
     "vitepress": "^1.6.4"
   },
   "pnpm": {
