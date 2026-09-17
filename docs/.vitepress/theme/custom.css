@@ -14,27 +14,9 @@
   --vp-c-brand-soft: rgba(106, 155, 255, 0.16);
 }
 
-/* 中英双语块 */
-.bi-en {
-  margin: 0.75rem 0 1.75rem;
-  padding: 0.25rem 0 0.25rem 0.9rem;
-  border-left: 3px solid var(--vp-c-brand-1);
-  color: var(--vp-c-text-2);
-  font-size: 0.92rem;
-  line-height: 1.65;
-}
-
-.bi-en p {
-  margin: 0.35rem 0;
-}
-
-.bi-en .bi-en-label {
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: var(--vp-c-brand-1);
-  margin-bottom: 0.3rem;
+/* 隐藏 VitePress 自带的语言下拉，改用导航栏里的切换按钮 */
+.VPNavBarTranslations {
+  display: none !important;
 }
 
 /* 条目卡片 */
@@ -92,12 +74,16 @@
   text-decoration: none;
 }
 
-/* 表格首列与第二列不换行，避免日期和标签被折成两行 */
+/* 表格首列（多为日期或标签）不换行 */
 .vp-doc table th:first-child,
-.vp-doc table td:first-child,
-.vp-doc table th:nth-child(2),
-.vp-doc table td:nth-child(2) {
+.vp-doc table td:first-child {
   white-space: nowrap;
+}
+
+/* 最后一列给足空间，避免长文本被挤成窄条 */
+.vp-doc table th:last-child,
+.vp-doc table td:last-child {
+  min-width: 9rem;
 }
 
 .VPFeature {

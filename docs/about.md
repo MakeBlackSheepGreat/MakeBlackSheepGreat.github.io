@@ -4,11 +4,6 @@
 
 我从初中开始接触嵌入式和编程，高中自学了 Linux、Python 和鸿蒙 ArkTS 开发，考取了华为鸿蒙应用开发者认证。进入大学后，我的兴趣逐渐集中到医学影像的深度学习算法上，并在这个方向上做竞赛、进实验室、申请项目。目前我在医学影像方向的实验室参与项目开发，主要负责算法与软件实现，同时在课余折腾 Agent 系统和服务部署。
 
-::: en About
-I am ZhiJie Yang, an undergraduate in Electronic Information Engineering (Honors) at Southwest University of Science and Technology, class of 2025, currently in class 电卓2501. In September 2026 I transferred into this major from Pharmaceutical Engineering.
-
-I started with embedded systems and programming in middle school, and taught myself Linux, Python and HarmonyOS ArkTS development in high school, earning the Huawei HarmonyOS application developer certification. At university my interest narrowed to deep learning for medical imaging, where I have been taking part in competitions, joining a lab and applying for research projects. I currently work on medical-imaging projects in a medical imaging lab, mainly on algorithms and software implementation, and spend my spare time on agent systems and deployment.
-:::
 
 ## 教育背景
 
@@ -21,9 +16,6 @@ I started with embedded systems and programming in middle school, and taught mys
 
 大二上学期我在修：复变函数与积分变换、概率论与数理统计、模拟电子技术、大学物理、大学日语、软件技术基础。转专业学生需要补的电子信息类课程，我计划在接下来两个学期内补齐，信号与系统、数字电子技术这些会优先安排。
 
-::: en Current coursework
-This semester: complex functions and integral transforms, probability and statistics, analog electronics, university physics, Japanese, and software technology fundamentals. As a transfer student I still have catch-up courses to take, and plan to finish the electronics core — signals and systems, digital electronics first — within the next two semesters.
-:::
 
 ## 学业情况
 
@@ -32,12 +24,6 @@ This semester: complex functions and integral transforms, probability and statis
 - 已通过全国计算机等级考试二级、大学日语四级考试（CJT4）
 - 无挂科记录
 
-::: en Academic record
-- First-year comprehensive evaluation: **99.81 / 100**, top 12% of the major; ranked 4th in academic performance and **1st in innovation-related credits**
-- Course highlights: Programming Fundamentals (Python) 100, Fundamentals and Applications of AI 87, Calculus B1 88, Japanese 88 / 87
-- Passed the National Computer Rank Examination (Level 2) and the College Japanese Test Band 4 (CJT4)
-- No failed courses
-:::
 
 ## 研究方向
 
@@ -45,11 +31,6 @@ This semester: complex functions and integral transforms, probability and statis
 - **多智能体（Agent）系统**：多智能体协作编排、面向科研流程的工作流工具
 - **工程与部署**：Linux 服务器、模型推理服务、Web 服务与公网访问
 
-::: en Research interests
-- **Deep learning for medical imaging**: breast ultrasound classification, pulmonary nodule risk grading on chest CT, fluorescence-guided osteomyelitis imaging; with emphasis on interpretability and external validation
-- **Multi-agent systems**: agent orchestration and workflow tooling for research pipelines
-- **Engineering and deployment**: Linux servers, model serving, web services and public access
-:::
 
 ## 实验室与项目
 
@@ -61,11 +42,6 @@ This semester: complex functions and integral transforms, probability and statis
 
 在此之前，我还在 2025 年 10 月加入了计科的"一生一芯"学习小组，自学 Verilog 与 RISC-V 处理器设计，进行到 E5 阶段的 RTL 代码仿真。这段经历把我带进了数字设计的世界，虽然现在的主线是算法，但底层的东西我一直没放下。
 
-::: en Lab and projects
-In April 2026 I joined a medical imaging lab (Dong 6b 501), where my work is mainly algorithm and software implementation inside the group's projects — data processing, model training and result visualisation. Concretely: the algorithms and demo system behind a breast ultrasound CAD tool (which supported three competition awards), the data processing and model experiments for a provincial undergraduate innovation project, and a doctor-workstation prototype for a fluorescence-guided osteomyelitis contest problem.
-
-Earlier, in October 2025, I joined the "One Student One Chip" study group and taught myself Verilog and RISC-V processor design up to the E5 stage of RTL simulation. That experience brought me into digital design; my main line is algorithms now, but I have not put the lower layers down.
-:::
 
 ## 我平时怎么做事
 
@@ -74,12 +50,6 @@ Earlier, in October 2025, I joined the "One Student One Chip" study group and ta
 - **做实验的习惯**：判定标准写在实验开始之前，失败实验和成功实验用同样的格式记录
 - **做交付的习惯**：能自动检查的交给脚本，只有人能判断的部分（排版、语气、是否符合场景）才交给人，但必须真的看一眼
 
-::: en How I work
-- **Toolchain**: Linux for daily development, uv for Python environments, Git and GitHub for code, self-hosted servers for deployment
-- **Working with AI**: I use coding agents as long-term project partners, running several role-based sub-agents (explore, implement, review) in parallel, and keeping a rules file and a memory file per project so the same mistakes are not repeated
-- **Experiments**: judging criteria are written down before the run, and failed runs are documented in the same format as successful ones
-- **Delivery**: anything machine-checkable is checked by scripts; things only a human can judge (layout, tone, whether it fits the scenario) are checked by actually looking at them
-:::
 
 ## 联系方式
 

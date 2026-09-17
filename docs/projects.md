@@ -2,9 +2,6 @@
 
 大部分代码在 GitHub 上开源，这里按方向分组。私有仓库只写名字和一句话说明，不挂链接。
 
-::: en Projects
-Most of my code is open-sourced on GitHub, grouped by direction below. Private repositories are listed by name only, without links.
-:::
 
 ## 医学影像 AI
 

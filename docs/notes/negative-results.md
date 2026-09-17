@@ -2,9 +2,6 @@
 
 > 我做了一个模块，实验前我认为它会让模型更准，实验后它把准确率从 77.23% 拉到了 56.78%。
 
-::: en Abstract
-A module I designed to improve a classifier dropped accuracy from 77.23% to 56.78% and collapsed mid-training. This note is about how the failure was recorded, why the pre-registered threshold was left untouched, and what the diagnosis actually taught me.
-:::
 
 ## 背景
 

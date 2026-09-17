@@ -2,9 +2,6 @@
 
 这里按时间把我做过的事情串一遍，从初中第一次接触电路到现在的方向。写这些不是为了显得履历好看——很多阶段我做得并不好，把它们写下来是因为后一段的每个决定，基本都是被前一段推着做出来的。
 
-::: en Journey
-A timeline of what I have done, from the first circuit board in middle school to the direction I am working on now. Not a highlight reel — several stages went badly, and I keep them here because each later decision was more or less pushed into place by the one before it.
-:::
 
 ## 初中 · 第一次接触硬件
 
@@ -76,10 +73,3 @@ A timeline of what I have done, from the first circuit board in middle school to
 - 把日语 N2 考下来
 - 把一个想法做得再深一点：现在手上有不少"能跑"的东西，但缺少"做得足够深、拿出来经得起追问"的东西
 
-::: en What is next
-- Catch up on the electronics core curriculum, especially the maths and signals foundation
-- Keep going on medical imaging: reproducible experiment records for the ongoing project, and the methodological details written up properly
-- Prepare for competitions such as the electronic design contest and the Loongson Cup
-- Pass JLPT N2
-- Go deeper rather than wider: I have plenty of things that run, and too few that would survive a serious follow-up question
-:::

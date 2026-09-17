@@ -1,8 +1,5 @@
 # 获奖与立项
 
-::: en Awards and projects
-Competitions and project approvals, most recent first.
-:::
 
 ## 学科竞赛
 
@@ -46,13 +43,6 @@ Competitions and project approvals, most recent first.
 - **CANN 算子天梯赛 8 月赛题**：二维卷积、HardSwish、量化 GEMM 等几道国产 AI 芯片算子题
 - **高教社杯全国大学生数学建模竞赛（2026 年 9 月）**：B 题，负责建模、求解与结果验证
 
-::: en Competitions entered without a prize
-- China International College Students' Innovation Competition, campus selection round (2026) — two projects, algorithms and system implementation
-- 15th "China Software Cup" College Student Software Design Competition — backend and algorithms
-- China Youth Science and Technology Innovation "Open Competition" (2026) — fluorescence-guided osteomyelitis diagnosis
-- CANN operator contest (August 2026) — convolution, HardSwish and quantised GEMM kernels on domestic AI chips
-- CUMCM mathematical modelling contest (September 2026) — problem B, modelling and verification
-:::
 
 ## 更早
 
@@ -60,6 +50,3 @@ Competitions and project approvals, most recent first.
 
 高中阶段考取了华为鸿蒙应用开发者认证，属于自学阶段的第一个"证书式"成果。
 
-::: en Earlier
-In middle school I took part in Arduino-based science competitions, winning a first prize at provincial level and a second prize at municipal level in Guangdong. That was when I first discovered that hardware and code together can actually make something move. In high school I earned the Huawei HarmonyOS application developer certification — my first certificate from self-directed study.
-:::

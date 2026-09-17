@@ -31,9 +31,6 @@ features:
 
 我是西南科技大学电子信息工程（卓越）专业的本科生，2026 年 9 月由制药工程转入信控学院。课程之外，时间主要花在三件事上：把医学影像的算法做扎实，把 Agent 系统放进真实的科研流程里用起来，以及把服务真正部署到服务器上跑通——而不是只在自己电脑上跑得起来。
 
-::: en What I am working on
-I am an undergraduate in Electronic Information Engineering (Honors) at Southwest University of Science and Technology, after transferring from Pharmaceutical Engineering in September 2026. Outside coursework I spend my time on three things: building medical-imaging models that actually hold up, putting multi-agent systems to work in real research workflows, and shipping services that run on a server rather than only on my own laptop.
-:::
 
 ## 最近动态
 
@@ -42,12 +39,6 @@ I am an undergraduate in Electronic Information Engineering (Honors) at Southwes
 - **2026.06** 获第六届四川省大学生生物医学工程创新设计大赛省级二等奖；通过大学日语四级
 - **2026.05** 入选"军工信息技术"创新实践班；参与省级大学生创新训练计划项目立项
 
-::: en Recent
-- **2026.09** Transferred into Electronic Information Engineering (Honors); took part in the CUMCM mathematical modelling contest
-- **2026.07** National third prize, 11th National College Student Biomedical Engineering Innovation Design Competition
-- **2026.06** Provincial second prize, 6th Sichuan Provincial Biomedical Engineering Innovation Design Competition; passed CJT4
-- **2026.05** Admitted to the Military Information Technology innovation class; joined a provincial-level undergraduate innovation training project
-:::
 
 ## 快速入口
 

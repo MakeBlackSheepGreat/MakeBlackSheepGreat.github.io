@@ -16,15 +16,17 @@ pnpm preview      # 预览构建结果，默认 http://localhost:4173
 
 ## 目录结构
 
+站点为中英双语，通过 VitePress 的 locales 实现，导航栏右侧的「简体中文 / English」是语言切换入口，切换时会跳到对应语言的同一页面。
+
 ```
 docs/
 ├─ .vitepress/
-│  ├─ config.mts          # 站点配置：导航、侧边栏、搜索、自定义容器
+│  ├─ config.mts          # 站点配置：locales（中/英）、导航、侧边栏、搜索、自定义容器
 │  └─ theme/
 │     ├─ index.ts         # 继承默认主题
-│     └─ custom.css       # 品牌色、双语块、条目卡片样式
+│     └─ custom.css       # 品牌色、条目卡片样式
 ├─ public/                # 头像与站点图标
-├─ index.md               # 首页
+├─ index.md               # 中文首页
 ├─ about.md               # 关于我
 ├─ journey.md             # 经历时间线
 ├─ projects.md            # 项目
@@ -32,18 +34,17 @@ docs/
 ├─ awards.md              # 获奖与立项
 ├─ skills.md              # 技能
 ├─ acknowledgements.md    # 致谢
-└─ notes/                 # 技术笔记
+├─ notes/                 # 技术笔记
+└─ en/                    # 英文站点，文件与中文一一对应
 ```
+
+新增页面时，中英文两边都要建同名文件，语言切换才能对应上；导航与侧边栏分别在 `config.mts` 的 `root` 和 `en` 两个 locale 里配置。
 
 ## 自定义容器
 
-配置里注册了两个 markdown 容器：
+配置里注册了 `card` 容器，用来做条目卡片：
 
 ```md
-::: en English title
-英文摘要内容，支持 markdown。
-:::
-
 ::: card 标题
 卡片内容，支持 markdown 与链接。
 :::

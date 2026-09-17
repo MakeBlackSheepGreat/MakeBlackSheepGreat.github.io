@@ -2,9 +2,6 @@
 
 我的研究方向是医学影像的深度学习，重点关注两件事：模型在真实数据上是否真的有效，以及它的判断能不能被人看懂。
 
-::: en Research
-My research direction is deep learning for medical imaging, with two recurring concerns: whether a model genuinely holds up on real data, and whether its decisions can be understood by a human reader.
-:::
 
 ## 在做的工作
 
@@ -34,11 +31,6 @@ My research direction is deep learning for medical imaging, with two recurring c
 
 代码：[osteo-vision](https://github.com/MakeBlackSheepGreat/osteo-vision)
 
-::: en Ongoing work
-- **Breast ultrasound classification**: binary benign/malignant classification trained on BUS-BRA and tested externally on BUSI, with emphasis on cross-dataset generalisation rather than single-set scores. Evaluation reports AUC, sensitivity, specificity, precision and F1 together under a fixed threshold policy — in a clinical setting a missed malignancy and a false alarm cost very different things, and accuracy alone hides that. The model also exposes Grad-CAM maps so a reader can see which part of the lesion drove the decision. This work supported three competition awards.
-- **Pulmonary nodule grading on chest CT**: a provincial undergraduate innovation project aiming at detection, classification and malignancy risk grading with interpretable evidence, starting from public datasets such as LIDC-IDRI. I handle data processing and model experiments — nodule extraction and preprocessing, training and evaluation, and keeping records reproducible. We are currently fixing splits, evaluation protocol and seeds; without those three pinned down, no later comparison means anything.
-- **Fluorescence-guided osteomyelitis imaging**: an end-to-end system from imaging to a clinical workstation — lesion analysis, registration of white-light and fluorescence views, and the operator workflow. Here the software engineering side had to be complete, because it ships on a disc and has to run on someone else's machine: page-by-page layout review, no dead buttons, and two build configurations (GPU accelerated and CPU fallback) for different hardware.
-:::
 
 ## 数据与实验环境
 
@@ -52,17 +44,6 @@ My research direction is deep learning for medical imaging, with two recurring c
 
 显存只有 8 GB，这逼着我从一开始就得考虑批次大小、混合精度和模型规模——现在回头看，这未必是坏事。
 
-::: en Data and setup
-| Stage | What I use |
-| --- | --- |
-| Public datasets | BUS-BRA and BUSI (breast ultrasound), LIDC-IDRI (chest CT nodules) |
-| Framework | PyTorch |
-| Local compute | RTX 5060 Laptop (8 GB VRAM) with 32 GB RAM, Linux under WSL2 |
-| Server | Self-hosted Ubuntu machine for inference services and batch jobs |
-| Experiment management | Fixed splits and seeds; an experiment registry recording every configuration and conclusion |
-
-8 GB of VRAM forces decisions about batch size, mixed precision and model size from the start — in hindsight, not a bad constraint to have.
-:::
 
 ## 方法上的几个坚持
 
@@ -72,18 +53,8 @@ My research direction is deep learning for medical imaging, with two recurring c
 - **过程可复现**。数据划分、随机种子、评估脚本都留在仓库里，换台机器能跑出同样的结果。
 - **指标要分场景看**。医学影像里敏感度和特异度往往比准确率更值得讨论，报指标的时候把阈值写清楚。
 
-::: en Method notes
-- **Set the threshold before the run.** Judging criteria are written down before experiments start and never adjusted afterwards.
-- **Negative results are recorded too.** One of my modules dropped accuracy from 77.23% to 56.78% and the training collapsed midway; the failure is fully documented because it says more than a lucky success would.
-- **External validation first.** Scores on the same dataset say little about generalisation, so I look for independent test sets.
-- **Reproducible by construction.** Splits, seeds and evaluation scripts stay in the repository so results can be reproduced elsewhere.
-- **Metrics depend on the scenario.** In medical imaging, sensitivity and specificity usually deserve more discussion than accuracy, and the threshold belongs next to the numbers.
-:::
 
 ## 关于论文
 
 目前我还没有正式发表的论文，相关工作以竞赛作品、在研项目和开源代码的形式推进。我正在做的准备是：把手上的实验整理成可复现的记录，把方法上的细节写清楚，再考虑投稿。比起赶一篇出来，我更想先把"这个结果为什么成立"讲明白。
 
-::: en Publications
-I do not have formally published papers yet; the work so far has taken the form of competition entries, an ongoing research project and open-source code. What I am doing now is turning the experiments into reproducible records and writing the details up before considering submission — I would rather be able to explain why a result holds than rush one out.
-:::

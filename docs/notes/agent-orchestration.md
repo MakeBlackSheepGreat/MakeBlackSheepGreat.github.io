@@ -2,9 +2,6 @@
 
 > 我经常同时开着好几个 AI 编程助手干活：一个负责查代码找原因，一个负责改，一个专门挑毛病，还有几个在跑互不相干的实验。带了半年多，有几条经验是用失败换来的。
 
-::: en Abstract
-Practical lessons from running multiple coding agents at once: how to split roles, how to keep long-running tasks recoverable, and how to write acceptance criteria that an agent cannot quietly talk its way around.
-:::
 
 ## 角色要分开，而且不能是同一个"脑子"
 

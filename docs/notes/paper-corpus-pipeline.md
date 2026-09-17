@@ -2,9 +2,6 @@
 
 > 2026 年 8 月。目标是把三万多篇论文变成可检索、可追溯的知识条目，而不是一堆躺在硬盘上的 PDF。
 
-::: en Abstract
-A pipeline that ingested 30,031 papers in 11.2 hours using a mixed local/cloud inference setup, finishing at 99.96% with self-healing after network drops. The interesting part was not the model but the engineering: checkpointing, idempotency and keeping an evidence trail from every extracted claim back to the source paper.
-:::
 
 ## 问题在哪
 

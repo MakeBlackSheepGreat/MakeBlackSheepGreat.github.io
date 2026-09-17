@@ -2,9 +2,6 @@
 
 > 2026 年 9 月。服务在本机跑得好好的，一旦放到公网，问题全都变成了"登录不上"。
 
-::: en Abstract
-Publishing a self-hosted agent service to the public internet. Most of the pain was not the reverse proxy but session semantics: process-scoped secrets, cookies that silently expire on restart, and a frontend that disables configuration whenever it sees a non-loopback address.
-:::
 
 ## 先说结论
 

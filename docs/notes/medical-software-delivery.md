@@ -2,9 +2,6 @@
 
 > 2026 年 8 月。比赛要求把软件刻录到光盘上交。在这之前，我写的所有东西都只在"我这台电脑上跑得起来"。
 
-::: en Abstract
-A medical imaging workstation had to be delivered on a physical disc for a competition. Going from "it runs on my laptop" to "it runs on a stranger's machine, from a disc, without internet" changes what you have to think about: hardware fallbacks, dependency hygiene, and verifying the interface rather than assuming it.
-:::
 
 ## 交付和演示是两件事
 

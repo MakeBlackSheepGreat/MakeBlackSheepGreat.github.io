@@ -2,9 +2,6 @@
 
 把我自己在工程里踩过的坑写下来。都是真做过的事，具体到能复现的程度，但不涉及任何私有信息。
 
-::: en Notes
-Field notes from things I have actually built. Concrete enough to reproduce, with no private details involved.
-:::
 
 ## 文章列表
 

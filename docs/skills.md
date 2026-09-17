@@ -2,9 +2,6 @@
 
 这里只写我确实用过的东西，用过的程度也照实说，不给自己加星。
 
-::: en Skills
-Only what I have actually used, with an honest note on how far I have taken each one.
-:::
 
 ## 深度学习
 
@@ -23,12 +20,6 @@ Only what I have actually used, with an honest note on how far I have taken each
 - **上下文与记忆管理**：把踩过的坑写进项目记忆与规则文件，减少重复试错
 - **工具链开发**：写过面向 Agent 的 PDF 检索工具、编码智能体技能与文档站，也基于开源项目改过自己的编码智能体
 
-::: en Agent systems
-- **Multi-agent orchestration**: role-based sub-agents (explore, implement, review) dispatched in parallel, with progress checkpointing for long runs
-- **Workflow design**: literature reading, experiments and write-up chained into repeatable pipelines
-- **Context and memory management**: keeping hard-won lessons in project memory and rules files
-- **Tooling**: a PDF retrieval tool for agents, agent skills and a documentation site; plus a personal coding-agent build based on an open-source project
-:::
 
 ## 工程与部署
 
@@ -38,13 +29,6 @@ Only what I have actually used, with an honest note on how far I have taken each
 - **Git 与 GitHub**：分支、变基、历史清理、GitHub Actions 自动构建与发布
 - **测试与交付**：用自动化测试对界面做全量回归，发行包打包与跨机器验证
 
-::: en Engineering and deployment
-- **Linux**: daily development environment; service deployment, process supervision and log triage on servers
-- **Services and networking**: reverse proxies, private networking, tunnels, domain and HTTPS setup
-- **Python engineering**: uv/venv environments, dependency troubleshooting, scripts and CLI tools
-- **Git and GitHub**: branching, rebasing, history cleanup, GitHub Actions CI and deployment
-- **Testing and delivery**: automated full-page UI regression, packaging release builds and verifying them on other machines
-:::
 
 ## 科研工作方式
 
@@ -52,11 +36,6 @@ Only what I have actually used, with an honest note on how far I have taken each
 - **可复现性**：数据划分、随机种子、评估脚本入库；换机器能跑出同样的结果
 - **领域知识**：熟悉医学影像任务的基本评价体系（AUC、敏感度、特异度、F1），知道这些指标在临床场景里各自的含义和局限
 
-::: en Research practice
-- **Record-keeping**: criteria fixed before the run, failed runs documented in the same format as successful ones, configurations and conclusions kept in a registry
-- **Reproducibility**: splits, seeds and evaluation scripts in the repository, so results reproduce on another machine
-- **Domain knowledge**: comfortable with the standard evaluation set for medical imaging (AUC, sensitivity, specificity, F1) and aware of what each does and does not mean clinically
-:::
 
 ## 语言与平台
 
@@ -67,14 +46,6 @@ Only what I have actually used, with an honest note on how far I have taken each
 - **日语**：已通过大学日语四级，正在准备 JLPT N2
 - **英语**：能读论文和技术文档，写作还在练
 
-::: en Languages
-- **Python**: primary working language
-- **C**: basic level, coursework and embedded exercises
-- **HarmonyOS ArkTS**: certified HarmonyOS application developer
-- **Verilog**: learning stage, RTL simulation within the "One Student One Chip" project
-- **Japanese**: passed CJT4, preparing for JLPT N2
-- **English**: comfortable reading papers and technical documentation; writing still improving
-:::
 
 ## 硬件与设计工具
 
@@ -82,11 +53,6 @@ Only what I have actually used, with an honest note on how far I have taken each
 - **烧录与调试**：Keil 环境、烧录端口与编译缓存问题的排查
 - **基础电子实践**：传感器、串口、OLED 等模块的动手练习
 
-::: en Hardware and design tools
-- **LCEDA**: schematic and PCB layout of an STM32F407 minimum system board, including a ready-to-order BOM
-- **Flashing and debugging**: Keil toolchain, flashing port and build-cache troubleshooting
-- **Basic electronics**: hands-on work with sensors, serial links and OLED modules
-:::
 
 ## 文档与表达
 
@@ -94,8 +60,3 @@ Only what I have actually used, with an honest note on how far I have taken each
 - 做过面向老师的项目答辩材料：技术方案、实验记录、PPT 与讲稿
 - 习惯把"为什么这么做"和"踩了什么坑"写下来——这个网站的[笔记](/notes/)栏目就是这么来的
 
-::: en Documentation
-- Full technical documentation and project write-ups (architecture, interfaces, deployment steps), plus a documentation site
-- Presentation material for project reviews: technical proposals, experiment records, slides and scripts
-- A habit of writing down both the reasoning and the mistakes — the [notes](/notes/) section of this site comes from it
-:::
