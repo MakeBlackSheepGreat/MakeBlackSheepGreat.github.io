@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://makeblacksheepgreat.github.io/sitemap.xml
+Sitemap: https://liteblacksheep.asia/sitemap.xml
