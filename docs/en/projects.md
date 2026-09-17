@@ -1,3 +1,7 @@
+---
+pageClass: labels
+---
+
 # Projects
 
 Projects are grouped by direction below. Private repositories are listed by name only, without links.
@@ -7,7 +11,7 @@ Projects are grouped by direction below. Private repositories are listed by name
 ::: card Breast ultrasound classification (bucad)
 Binary benign/malignant classification on breast ultrasound images. Trained on BUS-BRA and tested externally on BUSI, producing lesion region hints, risk stratification and Grad-CAM visualisation for review.
 
-Responsibilities: implementing and tuning the CNN classifier, fixing the evaluation metrics and threshold policy, building the Grad-CAM module, and packaging the inference demo. This work supported three competition awards.
+Responsibilities: implementing and tuning the CNN classifier, fixing the evaluation metrics and threshold policy, building the Grad-CAM module, and packaging the inference demo. This work supported two competition awards (a university-level second prize and a national third prize).
 
 Stack: Python · PyTorch · medical imaging · Grad-CAM
 

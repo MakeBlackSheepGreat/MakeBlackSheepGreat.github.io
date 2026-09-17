@@ -1,6 +1,6 @@
 # Choosing and switching agent frameworks: the criteria a year produced
 
-> I have used several agent frameworks seriously on this machine within a year, and rebuilt one of my own. It looks like frequent switching, but every migration answered the same question: **has the current framework's capability boundary started to block the kind of work I am doing?**
+> I have used several agent frameworks seriously on this machine within the last half year, and rebuilt one of my own. It looks like frequent switching, but every migration answered the same question: **has the current framework's capability boundary started to block the kind of work I am doing?**
 
 ## 1. The dimensions that proved useful
 
@@ -29,7 +29,7 @@ Only when the capability you need is one **the upstream project cannot provide**
 
 ## 5. The real assets are not in the framework
 
-The most important conclusion of the year: **memory, rules and method should not live inside any framework.** They live as files in the project directory, and the framework is just an execution layer that can be replaced.
+The most important conclusion of the last half year: **memory, rules and method should not live inside any framework.** They live as files in the project directory, and the framework is just an execution layer that can be replaced.
 
 Seen that way, the number of frameworks is not the point — what matters is that **each migration left the real assets behind in place**.
 

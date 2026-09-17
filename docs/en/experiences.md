@@ -28,7 +28,7 @@ First-year comprehensive evaluation 99.81, ranked 7th in the major (top 12%), wi
 ::: card Medical imaging · algorithms and software implementation
 <p class="entry-meta">2026.04 – present</p>
 
-**Breast ultrasound benign/malignant classification and diagnosis support** (2026.03 – 2026.07): binary classification trained on BUS-BRA and evaluated on the independent BUSI test set for external validation. Implemented the CNN training and evaluation pipeline, fixed the evaluation metrics and decision threshold policy, and produced Grad-CAM attention visualisations. This work supported three competition awards.
+**Breast ultrasound benign/malignant classification and diagnosis support** (2026.03 – 2026.07): binary classification trained on BUS-BRA and evaluated on the independent BUSI test set for external validation. Implemented the CNN training and evaluation pipeline, fixed the evaluation metrics and decision threshold policy, and produced Grad-CAM attention visualisations. This work supported two competition awards (a university-level second prize and a national third prize).
 
 **Provincial undergraduate innovation training project: interpretable pulmonary nodule classification and malignancy risk grading from chest CT** (approved 2026.05, ongoing): responsible for data processing and model experiments, including fixed data splits, random seeds and evaluation scripts to ensure reproducibility. Current stage: validating the stability of the evaluation protocol and consolidating experiment records.
 

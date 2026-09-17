@@ -1,6 +1,6 @@
 # Memory and rules: turning mistakes into process
 
-> When the same trap catches you a second time, the problem is rarely the agent's intelligence — it is that nothing in the process remembers. A habit I built this year: **anything that recurs gets upgraded from "how do I fix it now" to "how do I never handle it again".**
+> When the same trap catches you a second time, the problem is rarely the agent's intelligence — it is that nothing in the process remembers. A habit I built over the last half year: **anything that recurs gets upgraded from "how do I fix it now" to "how do I never handle it again".**
 
 ## 1. A rules file per project: the environment's exceptions
 

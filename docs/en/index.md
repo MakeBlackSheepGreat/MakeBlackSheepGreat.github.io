@@ -18,7 +18,7 @@ Current work includes pulmonary nodule classification and malignancy risk gradin
 
 
 
-## news
+## News
 
 <ul class="news">
 <li><span class="news-date">2026.09</span><span>Personal site is live; transferred into Electronic Information Engineering (Honors); took part in the CUMCM mathematical modelling contest</span></li>

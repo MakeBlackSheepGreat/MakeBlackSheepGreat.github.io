@@ -68,6 +68,7 @@ Code and further repositories: [github.com/MakeBlackSheepGreat](https://github.c
 - **SWUST Biomedical Engineering Innovation Design Competition** · University-level second prize (2026.05)
 - **"Xuechuang Cup" National College Student Entrepreneurship Simulation Competition** · University-level third prize (2026)
 - **Provincial undergraduate innovation training project**, approved 2026.05 (ongoing)
+- **SWUST Science and Technology Innovation Award** · university level (2026)
 
 ## SKILLS
 

@@ -43,7 +43,7 @@ An end-to-end chain from image processing to a clinical workstation interface fo
 ::: card Literature corpus knowledge base and ingestion pipeline
 <p class="entry-meta">2026.08</p>
 
-A local knowledge base built to make literature review more efficient: content-hash idempotency, a task table driving resumable execution, and mixed local-GPU and cloud inference scheduling. 30,031 papers were processed, completing 30,018 (99.96%) in 11.2 hours — about 2.5 seconds per paper. Every knowledge entry carries evidence links back to the source paper, with a pending-review queue promoted by human checking, so retrieved results remain traceable.
+A local knowledge base built to make literature review more efficient: content-hash idempotency, a task table driving resumable execution, and mixed local-GPU and cloud inference scheduling. 30,031 papers were processed, completing 30,018 (99.96%) in 11.2 hours — roughly 1.3 seconds per paper. Every knowledge entry carries evidence links back to the source paper, with a pending-review queue promoted by human checking, so retrieved results remain traceable.
 
 <span class="badge">Retrieval augmentation</span> <span class="badge">Pipeline engineering</span> <span class="badge">Evidence trail</span>
 :::

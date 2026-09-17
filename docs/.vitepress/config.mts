@@ -91,7 +91,7 @@ export default defineConfig({
     head.push(['link', { rel: 'alternate', hreflang: isEn ? 'zh-CN' : 'en', href: SITE + alt }])
     head.push(['link', { rel: 'alternate', hreflang: 'x-default', href: SITE + (isEn ? alt : path) }])
     head.push(['meta', { property: 'og:url', content: SITE + path }])
-    const siteName = isEn ? 'LiteBlackSheep' : 'LiteBlackSheep'
+    const siteName = 'LiteBlackSheep'
     const pageTitle = pageData.title ? `${pageData.title} | ${siteName}` : siteName
     head.push(['meta', { property: 'og:title', content: pageTitle }])
   },
@@ -129,7 +129,8 @@ export default defineConfig({
           { text: '获奖', link: '/awards' },
           { text: '技能', link: '/skills' },
           { text: '笔记', link: '/notes/' },
-          { text: 'CV', link: '/cv' }
+          { text: 'CV', link: '/cv' },
+          { text: '致谢', link: '/acknowledgements' }
         ],
         sidebar: {
           '/notes/': [
@@ -137,13 +138,13 @@ export default defineConfig({
               text: '智能体协作方法',
               items: [
                 { text: '全部笔记', link: '/notes/' },
+                { text: '半年里用过的四套框架：数据复盘', link: '/notes/agent-frameworks-retrospective' },
                 { text: '把问题拆成可执行的任务', link: '/notes/task-decomposition' },
                 { text: 'AI 时代的工程能力', link: '/notes/skills-in-agent-era' },
                 { text: '上下文管理', link: '/notes/context-management' },
-                { text: '多用一年智能体框架的数据复盘', link: '/notes/agent-frameworks-retrospective' },
                 { text: '多智能体分工：角色、并行与验收', link: '/notes/multi-agent-roles' },
                 { text: '长任务的工程化', link: '/notes/long-task-engineering' },
-                { text: '记忆与规则：把坑变成制度', link: '/notes/memory-and-rules' },
+                { text: '记忆与规则：把踩过的坑变成制度', link: '/notes/memory-and-rules' },
                 { text: '协作与交付', link: '/notes/collaboration-and-delivery' },
                 { text: '工具选型与迁移', link: '/notes/agent-tool-selection' }
               ]
@@ -224,7 +225,8 @@ export default defineConfig({
           { text: 'awards', link: '/en/awards' },
           { text: 'skills', link: '/en/skills' },
           { text: 'notes', link: '/en/notes/' },
-          { text: 'cv', link: '/en/cv' }
+          { text: 'cv', link: '/en/cv' },
+          { text: 'thanks', link: '/en/acknowledgements' }
         ],
         sidebar: {
           '/en/notes/': [
@@ -232,10 +234,10 @@ export default defineConfig({
               text: 'Working with agents',
               items: [
                 { text: 'All notes', link: '/en/notes/' },
+                { text: 'Four agent frameworks in half a year', link: '/en/notes/agent-frameworks-retrospective' },
                 { text: 'Decomposing problems into tasks', link: '/en/notes/task-decomposition' },
                 { text: 'Engineering skills in the agent era', link: '/en/notes/skills-in-agent-era' },
                 { text: 'Context management', link: '/en/notes/context-management' },
-                { text: 'Four agent frameworks: the data', link: '/en/notes/agent-frameworks-retrospective' },
                 { text: 'Multi-agent division of labour', link: '/en/notes/multi-agent-roles' },
                 { text: 'Long-running tasks', link: '/en/notes/long-task-engineering' },
                 { text: 'Memory and rules', link: '/en/notes/memory-and-rules' },

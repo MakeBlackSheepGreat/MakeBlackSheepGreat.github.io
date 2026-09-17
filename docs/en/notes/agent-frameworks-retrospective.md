@@ -1,4 +1,4 @@
-# Four agent frameworks in one year: what the data says
+# Four agent frameworks in half a year: what the data says
 
 > From March to September 2026 I used Codex, Claude Code, ZCode and a build of my own in earnest on this machine. This is not a review — it is an attempt to check my own judgements against the records the tools left behind.
 

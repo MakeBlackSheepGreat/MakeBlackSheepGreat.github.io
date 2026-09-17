@@ -2,7 +2,7 @@
 
 > I recently read a public essay by an engineer who optimises GPU operators (its title translates as "I had to bury my talent in yesterday"). He makes two points: AI has moved from "help me read the docs" to "reading assembly, analysing instruction stalls and optimising operators on its own"; so he does not expect to lose his job, but he does expect to change profession — from writing operators by hand to being the pilot of an agent mecha. He also worries that students who let AI do their lab work will lose the engineering abilities underneath: organising code, building systems, anticipating requirements.
 
-I have spent this year using several agent frameworks on real projects — research workflows, corpus processing, service deployment, a hardware design pipeline — and I have opinions on both claims.
+I have spent the last half year using several agent frameworks on real projects — research workflows, corpus processing, service deployment, a hardware design pipeline — and I have opinions on both claims.
 
 ::: info Short version
 - **What loses value is the speed of writing; what gains is defining and verifying**;

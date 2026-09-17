@@ -22,4 +22,4 @@ Most of this work stands on open-source foundations: PyTorch and public medical 
 
 ## Note
 
-This site contains only my own work and publicly available information. It does not include student identifiers, contact details or any unpublished information belonging to third parties.
+This site contains only my own work and publicly available information. It does not include student identifiers, phone numbers or national ID numbers; the only contact channels are the public email, WeChat and GitHub links. No other person's name appears on the site, and no unpublished third-party information is used.

@@ -1,3 +1,7 @@
+---
+pageClass: labels
+---
+
 # Awards and project approvals
 
 ## Competitions
@@ -43,7 +47,7 @@ Competitions entered without an award are listed below as well.
 - **15th "China Software Cup" College Student Software Design Competition**: team entry, backend and algorithm modules.
 - **China Youth Science and Technology Innovation "Open Competition" (2026)**: problem on fluorescence-guided diagnosis and treatment of osteomyelitis of the jaw.
 - **CANN operator contest, August round**: several operator problems on domestic AI chips, including 2D convolution, HardSwish and quantised GEMM.
-- **CUMCM national mathematical modelling contest (September 2026)**: problem B, responsible for modelling, solving and verifying results.
+- **CUMCM national mathematical modelling contest (September 2026)**: problem B, responsible for modelling, solving and verifying results (results pending).
 
 ## Earlier
 

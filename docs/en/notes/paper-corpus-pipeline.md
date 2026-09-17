@@ -14,7 +14,7 @@
 | --- | --- |
 | Papers | 30,031 |
 | Completed | 30,018 (99.96%) |
-| Wall clock | 11.2 hours (about 2.5 s per paper) |
+| Wall clock | 11.2 hours (about 1.3 s per paper) |
 | Knowledge entries | 102 published |
 | Evidence links | 18,125 |
 | Pending review | 177 drafts, promoted after human check |

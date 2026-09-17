@@ -4,9 +4,9 @@ Records of problem diagnosis and design trade-offs from real projects, plus the 
 
 ## 1. Working with agents
 
-Methods that came out of a year of daily use, independent of any particular framework.
+Methods that came out of half a year of daily use, independent of any particular framework.
 
-- [Four agent frameworks in one year: what the data says](/en/notes/agent-frameworks-retrospective) — checking my own judgements against the records: what actually triggered migrations, the session counts that mislead, and the one asset that survives every move
+- [Four agent frameworks in half a year: what the data says](/en/notes/agent-frameworks-retrospective) — checking my own judgements against the records: what actually triggered migrations, the session counts that mislead, and the three assets that survive every move: rules, memory and the habit of verifying
 - [Decomposing a problem into tasks an agent can execute](/en/notes/task-decomposition) — four levels, three questions before splitting, granularity and serial/parallel rules, and three common decomposition errors
 - [Engineering skills in the agent era](/en/notes/skills-in-agent-era) — one practical test, seven abilities gaining value, and a checklist for the "mecha pilot"
 - [Context management: what to feed an agent](/en/notes/context-management) — four layers, what belongs in rules versus memory files, clean sub-task context, externalising conclusions

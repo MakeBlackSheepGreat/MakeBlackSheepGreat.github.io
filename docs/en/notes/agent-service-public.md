@@ -2,9 +2,11 @@
 
 > September 2026. The service ran fine on my machine. The moment it went public, every problem turned into "I cannot log in".
 
-## The short version
+::: info Short version
 
 When self-hosting a service on the public internet, the time does not go into "how do I make it reachable from outside" — it goes into "why can I not log in, and why does it break every time the process restarts". A few things I now remember:
+
+:::
 
 ## Process-scoped secrets
 

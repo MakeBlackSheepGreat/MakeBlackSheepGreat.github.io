@@ -20,7 +20,7 @@ The solution was to maintain two release configurations, each tested and package
 
 The software has more than a dozen pages and over two hundred clickable elements. Clicking through manually takes half a day, and you will not know what you missed.
 
-So I drove the real desktop application with automated tests, clicking every button and recording totals: 13 pages, 265 buttons, 192 actual clicks, zero failures. That number went into the delivery notes — far more convincing than "the interface was checked".
+So I drove the real desktop application with automated tests, auditing every clickable element and recording totals: 13 pages, 265 clickable elements audited, 192 clicks executed, zero failures. That number went into the delivery notes — far more convincing than "the interface was checked".
 
 One detail worth recording: **being clickable is not the same as doing something useful.** Automation covers "the button does not throw, the UI does not crash", but "is this button's business logic correct" still needs a human. So the script owns coverage and a person spot-checks the critical flows.
 

@@ -1,6 +1,6 @@
 # One person, a team of agents: roles, concurrency and acceptance
 
-> I have run several agents at once for most of this year. This note is about the three questions that decide whether that saves time or wastes it: how to split roles, how far to parallelise, and how to accept the result.
+> I have run several agents at once for most of the last half year. This note is about the three questions that decide whether that saves time or wastes it: how to split roles, how far to parallelise, and how to accept the result.
 
 ::: info Short version
 - The value of splitting is not parallelism — it is **making sure the one proposing a solution is not the one verifying it**;
@@ -33,7 +33,7 @@ retries = enable only for classes where retry helps (e.g. rate limits);
           everything else is recorded with its reason and skipped
 ```
 
-**3. Acceptance must be automatically judgeable.** "Check whether there are problems" is not a requirement. Usable criteria look like: all tests pass with a count; every clickable element was actually clicked with counts of total and failed clicks; exported images were rendered and looked at, not merely confirmed to exist.
+**3. Acceptance must be automatically judgeable.** "Check whether there are problems" is not a requirement. Usable criteria look like: all tests pass with a count; every clickable element is audited, with counts of clicks executed and failures; exported images were rendered and looked at, not merely confirmed to exist.
 
 ::: tip Best value for effort
 Turn acceptance criteria into executable checks and let the main flow run them. After that, a human only looks at conclusions at key points.
