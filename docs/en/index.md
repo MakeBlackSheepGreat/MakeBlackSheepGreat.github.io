@@ -7,7 +7,11 @@ Undergraduate in Electronic Information Engineering (Honors) · Southwest Univer
 :::
 
 ::: lead
-**Chinese** Native ｜ **English** CET-4 ｜ **Japanese** CJT4 (College Japanese Test Band 4), preparing for JLPT N2
+**Chinese** Native ｜ **Japanese** CJT4 (College Japanese Test Band 4), preparing for JLPT N2
+:::
+
+::: lead
+[github.com/MakeBlackSheepGreat](https://github.com/MakeBlackSheepGreat) ｜ yzj876762330@163.com
 :::
 
 I am an undergraduate in Electronic Information Engineering (Honors) at the School of Information and Control Engineering, Southwest University of Science and Technology, class of 2025, after transferring from Pharmaceutical Engineering in September 2026. My research direction is deep learning for medical imaging — whether a model genuinely holds up on real data, and whether its decisions can be understood by a reader. Alongside that I use multi-agent systems in real research workflows.

@@ -66,6 +66,5 @@ Code and more repositories: [github.com/MakeBlackSheepGreat](https://github.com/
 ## LANGUAGES
 
 - **Chinese**: native
-- **English**: CET-4; comfortable reading papers and technical documentation
 - **Japanese**: CJT4, preparing for JLPT N2
 

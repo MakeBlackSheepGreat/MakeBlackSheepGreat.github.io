@@ -42,7 +42,7 @@ Self-study of Verilog and RISC-V processor design, starting from digital logic a
 
 ## VOLUNTEER & SERVICE
 
-::: card CAIT Computing Club · hardware track lead
+::: card Computing and Artificial Intelligence Association · Vice President (hardware track)
 <p class="entry-meta">2025.10 – present</p>
 Responsible for the club's hardware track: organising study material, contributing to technical sessions and helping junior students get started with circuits and embedded systems.
 :::
@@ -54,7 +54,7 @@ Took part in team building, activity design and material preparation for a volun
 
 ## TIMELINE
 
-**Middle school** — First contact with circuits, code and sensors in the school Arduino club: line-following robots and similar projects, a few provincial and municipal competitions, a first prize at provincial level and a second prize at municipal level in Guangdong. Back then I could not have explained what "embedded" meant; I only knew that a few lines of code plus a few wires made a toy car turn.
+**Middle school** — First contact with circuits, code and sensors in the school Arduino club: line-following robots and similar projects. Back then I could not have explained what "embedded" meant; I only knew that a few lines of code plus a few wires made a toy car turn.
 
 **High school** — Self-taught Linux, Python and HarmonyOS ArkTS development, earning the Huawei HarmonyOS application developer certification; also spent a lot of time on Android rooting, flashing and recovering phones. Scattered learning, but it built two habits: look things up myself first, and refuse to believe I have learned something until it runs.
 

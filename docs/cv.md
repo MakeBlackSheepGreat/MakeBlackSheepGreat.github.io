@@ -66,6 +66,5 @@ yzj876762330@163.com ｜ [github.com/MakeBlackSheepGreat](https://github.com/Mak
 ## 语言能力
 
 - **中文**：母语
-- **英语**：大学英语四级，可阅读论文与技术文档
 - **日语**：大学日语四级（CJT4），备考 JLPT N2
 

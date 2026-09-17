@@ -44,6 +44,6 @@ These did not win anything. I list them anyway — they consumed as much time as
 
 ## Earlier
 
-In middle school I entered Arduino-based science competitions and won a first prize at provincial level and a second prize at municipal level in Guangdong. That was when I discovered that hardware and code together can actually make something move.
+In middle school I joined the school Arduino club and got my hands on circuits and sensors — that was when I discovered that hardware and code together can actually make something move.
 
 In high school I earned the Huawei HarmonyOS application developer certification — the first certificate to come out of my self-directed study.

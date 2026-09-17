@@ -40,7 +40,6 @@ Only what I have actually used, with an honest note on how far I have taken each
 - **HarmonyOS ArkTS**: certified HarmonyOS application developer
 - **Verilog**: learning stage, RTL simulation within the "One Student One Chip" project
 - **Japanese**: passed CJT4, preparing for JLPT N2
-- **English**: comfortable reading papers and technical documentation; writing still improving
 
 ## Hardware and design tools
 
