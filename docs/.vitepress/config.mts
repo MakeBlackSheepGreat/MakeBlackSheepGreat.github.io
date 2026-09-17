@@ -1,21 +1,37 @@
 import { defineConfig } from 'vitepress'
 import container from 'markdown-it-container'
 
+function labeledContainer(md, name, className) {
+  md.use(container, name, {
+    render(tokens, idx) {
+      const t = tokens[idx]
+      if (t.nesting === 1) {
+        const label = (t.info || '').trim().slice(name.length).trim()
+        return `<div class="${className}"><p class="${className}-label">${label}</p>\n`
+      }
+      return '</div>\n'
+    }
+  })
+}
+
 export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
-    ['meta', { name: 'theme-color', content: '#2f6df6' }]
+    ['meta', { name: 'theme-color', content: '#4f46e5' }]
   ],
   markdown: {
     config(md) {
+      // 副标题 / 语言能力行：::: lead
+      labeledContainer(md, 'lead', 'lead')
+      // 经历条目卡片：::: card 标题
       md.use(container, 'card', {
         render(tokens, idx) {
           const t = tokens[idx]
           if (t.nesting === 1) {
             const title = (t.info || '').trim().slice(4).trim()
-            return `<div class="entry-card"><p class="entry-card-title">${title}</p>\n`
+            return `<div class="entry"><p class="entry-title">${title}</p>\n`
           }
           return '</div>\n'
         }
@@ -24,21 +40,22 @@ export default defineConfig({
   },
   locales: {
     root: {
-      label: '简体中文',
+      label: '中文',
       lang: 'zh-CN',
       title: '杨智杰',
       description: '杨智杰的个人主页：医学影像深度学习、多智能体系统与工程实践',
       themeConfig: {
         logo: '/avatar.svg',
+        siteTitle: '杨智杰',
         nav: [
-          { text: '关于', link: '/about' },
-          { text: '经历', link: '/journey' },
+          { text: '关于', link: '/' },
+          { text: '经历', link: '/experiences' },
+          { text: '论文', link: '/publications' },
           { text: '项目', link: '/projects' },
-          { text: '科研', link: '/research' },
           { text: '获奖', link: '/awards' },
           { text: '技能', link: '/skills' },
           { text: '笔记', link: '/notes/' },
-          { text: '致谢', link: '/acknowledgements' }
+          { text: 'CV', link: '/cv' }
         ],
         sidebar: {
           '/notes/': [
@@ -61,18 +78,18 @@ export default defineConfig({
           provider: 'local',
           options: {
             translations: {
-              button: { buttonText: '搜索文档', buttonAriaLabel: '搜索文档' },
+              button: { buttonText: '搜索', buttonAriaLabel: '搜索' },
               modal: {
-                noResultsText: '无法找到相关结果',
-                resetButtonTitle: '清除查询条件',
+                noResultsText: '没有找到相关内容',
+                resetButtonTitle: '清除',
                 footer: { selectText: '选择', navigateText: '切换', closeText: '关闭' }
               }
             }
           }
         },
         footer: {
-          message: '持续更新中，内容以学习与项目记录为主',
-          copyright: '© 2026 杨智杰 / ZhiJie Yang'
+          message: 'Powered by VitePress · Hosted on GitHub Pages',
+          copyright: '© 2026 杨智杰 ZhiJie Yang'
         },
         docFooter: { prev: '上一页', next: '下一页' },
         lastUpdated: { text: '最后更新于' },
@@ -91,15 +108,16 @@ export default defineConfig({
       description: 'ZhiJie Yang — medical imaging deep learning, multi-agent systems and engineering practice',
       themeConfig: {
         logo: '/avatar.svg',
+        siteTitle: 'ZhiJie Yang',
         nav: [
-          { text: 'About', link: '/en/about' },
-          { text: 'Journey', link: '/en/journey' },
-          { text: 'Projects', link: '/en/projects' },
-          { text: 'Research', link: '/en/research' },
-          { text: 'Awards', link: '/en/awards' },
-          { text: 'Skills', link: '/en/skills' },
-          { text: 'Notes', link: '/en/notes/' },
-          { text: 'Thanks', link: '/en/acknowledgements' }
+          { text: 'about', link: '/en/' },
+          { text: 'experiences', link: '/en/experiences' },
+          { text: 'publications', link: '/en/publications' },
+          { text: 'projects', link: '/en/projects' },
+          { text: 'awards', link: '/en/awards' },
+          { text: 'skills', link: '/en/skills' },
+          { text: 'notes', link: '/en/notes/' },
+          { text: 'cv', link: '/en/cv' }
         ],
         sidebar: {
           '/en/notes/': [
@@ -125,14 +143,14 @@ export default defineConfig({
               button: { buttonText: 'Search', buttonAriaLabel: 'Search' },
               modal: {
                 noResultsText: 'No results found',
-                resetButtonTitle: 'Reset search',
+                resetButtonTitle: 'Reset',
                 footer: { selectText: 'select', navigateText: 'navigate', closeText: 'close' }
               }
             }
           }
         },
         footer: {
-          message: 'Continuously updated — mostly learning and project records',
+          message: 'Powered by VitePress · Hosted on GitHub Pages',
           copyright: '© 2026 ZhiJie Yang'
         },
         docFooter: { prev: 'Previous', next: 'Next' },

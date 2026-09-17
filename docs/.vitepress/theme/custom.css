@@ -1,102 +1,265 @@
 :root {
-  --vp-c-brand-1: #2f6df6;
-  --vp-c-brand-2: #1e5ae0;
-  --vp-c-brand-3: #1b4fc4;
-  --vp-c-brand-soft: rgba(47, 109, 246, 0.14);
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: linear-gradient(120deg, #2f6df6 20%, #12b3a6 80%);
+  --vp-c-brand-1: #4f46e5;
+  --vp-c-brand-2: #4338ca;
+  --vp-c-brand-3: #3730a3;
+  --vp-c-brand-soft: rgba(79, 70, 229, 0.14);
+  --vp-layout-max-width: 1200px;
+  --home-hero-name-bg: none;
 }
 
 .dark {
-  --vp-c-brand-1: #6a9bff;
-  --vp-c-brand-2: #4f86ff;
-  --vp-c-brand-3: #2f6df6;
-  --vp-c-brand-soft: rgba(106, 155, 255, 0.16);
+  --vp-c-brand-1: #818cf8;
+  --vp-c-brand-2: #6366f1;
+  --vp-c-brand-3: #4f46e5;
+  --vp-c-brand-soft: rgba(129, 140, 248, 0.16);
 }
 
-/* 隐藏 VitePress 自带的语言下拉，改用导航栏里的切换按钮 */
+/* 内容列收窄，贴近学术主页的窄栏排版 */
+.VPDoc .container {
+  max-width: 940px;
+}
+
+.VPDoc.has-aside .content-container {
+  max-width: 100%;
+}
+
+.vp-doc h1 {
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.35rem;
+}
+
+.vp-doc h2 {
+  font-size: 1.15rem;
+  margin-top: 2.4rem;
+  padding-top: 0;
+  border-top: none;
+  font-weight: 650;
+}
+
+.vp-doc h3 {
+  font-size: 1.02rem;
+}
+
+.vp-doc h2::after {
+  content: '';
+  display: block;
+  margin-top: 0.45rem;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+/* 导航更轻 */
+.VPNavBar .nav a,
+.VPNavBarMenuLink {
+  font-size: 14px;
+  font-weight: 450;
+}
+
+.VPNavBarTitle .title {
+  font-weight: 650;
+  font-size: 15px;
+}
+
+/* 语言切换按钮 */
 .VPNavBarTranslations {
   display: none !important;
 }
 
-/* 条目卡片 */
-.entry-card {
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 10px;
-  padding: 0.9rem 1.1rem 0.6rem;
-  margin: 1rem 0;
-  background: var(--vp-c-bg-soft);
-  transition: border-color 0.2s ease, transform 0.2s ease;
+/* 副标题 / 语言能力行 */
+.lead {
+  margin: 0.2rem 0 1.1rem;
+  padding: 0;
+  color: var(--vp-c-text-2);
+  font-size: 0.95rem;
 }
 
-.entry-card:hover {
-  border-color: var(--vp-c-brand-1);
-  transform: translateY(-1px);
+.lead p {
+  margin: 0.25rem 0;
 }
 
-.entry-card .entry-card-title {
+.lead .lead-label {
+  display: none;
+}
+
+/* 结构化页面（经历 / 论文 / CV）的分组小标题 */
+.labels .vp-doc h2 {
+  margin: 2.4rem 0 0.9rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--vp-c-divider);
+  font-size: 0.82rem;
   font-weight: 700;
-  font-size: 1.02rem;
-  margin: 0 0 0.4rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--vp-c-brand-1);
+}
+
+.labels .vp-doc h2::after {
+  content: none;
+}
+
+.labels .vp-doc h1 {
+  margin-bottom: 0.5rem;
+}
+
+/* CV 下载按钮 */
+.cv-download {
+  margin: 1.2rem 0 0.5rem;
+}
+
+.cv-download a {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 18px;
+  border: 1px solid var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cv-download a:hover {
+  background: var(--vp-c-brand-1);
+  color: #fff;
+}
+
+/* 经历条目 */
+.entry {
+  margin: 0.9rem 0 1.2rem;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 0;
+}
+
+.entry:hover {
+  border: none;
+  transform: none;
+}
+
+.entry .entry-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 650;
   color: var(--vp-c-text-1);
 }
 
-.entry-card p {
+.entry p {
   margin: 0.3rem 0;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--vp-c-text-2);
 }
 
-.entry-card .meta {
+.entry .entry-meta {
+  font-size: 0.86rem;
+  font-style: italic;
   color: var(--vp-c-text-3);
-  font-size: 0.85rem;
 }
 
-/* 首页 */
-.VPHero .VPImage {
-  max-width: 190px;
-  max-height: 190px;
+.entry .badge {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 1px 8px;
+  border-radius: 10px;
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.6;
 }
 
-.VPHero .text {
-  max-width: none;
+/* 首页：简介 + 照片 */
+.profile-photo {
+  float: right;
+  width: 200px;
+  margin: 0.2rem 0 1rem 1.6rem;
+  border-radius: 10px;
+  border: 1px solid var(--vp-c-divider);
 }
 
-@media (min-width: 960px) {
-  .VPHero .text {
-    font-size: 46px;
+@media (max-width: 640px) {
+  .profile-photo {
+    float: none;
+    display: block;
+    width: 150px;
+    margin: 0 0 1rem;
   }
 }
 
-/* 标题里的链接不要下划线 */
-.vp-doc h1 a,
-.vp-doc h2 a,
-.vp-doc h3 a,
-.vp-doc h4 a {
-  text-decoration: none;
+/* news 列表 */
+.news {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0 0;
 }
 
-/* 表格首列（多为日期或标签）不换行 */
+.news li {
+  display: flex;
+  gap: 12px;
+  padding: 5px 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.news .news-date {
+  flex: 0 0 92px;
+  color: var(--vp-c-text-3);
+  font-variant-numeric: tabular-nums;
+}
+
+/* 表格 */
+.vp-doc table {
+  display: table;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
 .vp-doc table th:first-child,
 .vp-doc table td:first-child {
   white-space: nowrap;
 }
 
-/* 最后一列给足空间，避免长文本被挤成窄条 */
 .vp-doc table th:last-child,
 .vp-doc table td:last-child {
   min-width: 9rem;
 }
 
+/* 打印：导出 CV PDF 时只保留正文 */
+@media print {
+  .VPNav,
+  .VPNavBar,
+  .VPLocalNav,
+  .VPSidebar,
+  .VPDocAside,
+  .VPFooter,
+  .VPDocFooter,
+  .cv-download,
+  .VPBackdrop {
+    display: none !important;
+  }
+
+  .VPDoc .container,
+  .VPDoc .content {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .vp-doc h2 {
+    break-after: avoid;
+  }
+
+  .entry {
+    break-inside: avoid;
+  }
+}
+
+/* 首页主区块（若使用内置 home 布局时的兜底样式） */
+.VPHero .name {
+  font-size: 2.2rem;
+}
+
 .VPFeature {
   border-radius: 10px;
-}
-
-.vp-doc h2 {
-  margin-top: 2.4rem;
-  padding-top: 1.2rem;
-  border-top: 1px solid var(--vp-c-divider);
-}
-
-.vp-doc table {
-  display: table;
-  width: 100%;
 }

@@ -1,52 +1,43 @@
----
-layout: home
+<img src="/photo-placeholder.svg" class="profile-photo" alt="Photo placeholder">
 
-hero:
-  name: ZhiJie Yang
-  text: Medical Imaging AI<br>Multi-Agent Systems
-  tagline: Southwest University of Science and Technology · Electronic Information Engineering (Honors)
-  image:
-    src: /avatar.svg
-    alt: ZhiJie Yang
-  actions:
-    - theme: brand
-      text: Projects
-      link: /en/projects
-    - theme: alt
-      text: GitHub
-      link: https://github.com/MakeBlackSheepGreat
+# ZhiJie Yang
 
-features:
-  - title: Medical imaging
-    details: Breast ultrasound classification, pulmonary nodule risk grading on chest CT, and fluorescence-guided osteomyelitis imaging. Training, evaluation and interpretability (Grad-CAM, ROC) implemented by me.
-  - title: Multi-agent systems
-    details: I built a multi-agent collaboration system for small and mid-sized models, and turned literature reading, experiments and writing into a pipeline.
-  - title: Engineering and deployment
-    details: Model serving and web services on Linux servers — private networking, reverse proxies, process supervision and public access.
-  - title: Open source
-    details: Most code for medical imaging, agent tooling and chip-operator exercises is on GitHub; the lessons are written up as notes.
----
+::: lead
+Undergraduate in Electronic Information Engineering (Honors) · Southwest University of Science and Technology
+:::
 
-## What I am working on
+::: lead
+**Chinese** Native ｜ **English** CET-4 ｜ **Japanese** CJT4 (College Japanese Test Band 4), preparing for JLPT N2
+:::
 
-I am an undergraduate in Electronic Information Engineering (Honors) at Southwest University of Science and Technology, after transferring from Pharmaceutical Engineering in September 2026. Outside coursework I spend my time on three things: building medical-imaging models that actually hold up, putting multi-agent systems to work in real research workflows, and shipping services that run on a server rather than only on my own laptop.
+I am an undergraduate in Electronic Information Engineering (Honors) at the School of Information and Control Engineering, Southwest University of Science and Technology, class of 2025, after transferring from Pharmaceutical Engineering in September 2026. My research direction is deep learning for medical imaging — whether a model genuinely holds up on real data, and whether its decisions can be understood by a reader. Alongside that I use multi-agent systems in real research workflows.
 
-## Recent
+Three things take most of my time now: building medical-imaging algorithms that hold up (breast ultrasound classification, pulmonary nodule risk grading on chest CT, fluorescence-guided osteomyelitis imaging); putting agent systems into the research loop (multi-agent collaboration and research workflow tooling); and actually shipping services rather than only running them locally (Linux servers, model serving, public access).
 
-- **2026.09** Transferred into Electronic Information Engineering (Honors); took part in the CUMCM mathematical modelling contest
-- **2026.07** National third prize, 11th National College Student Biomedical Engineering Innovation Design Competition
-- **2026.06** Provincial second prize, 6th Sichuan Provincial Biomedical Engineering Innovation Design Competition; passed CJT4
-- **2026.05** Admitted to the Military Information Technology innovation class; joined a provincial-level undergraduate innovation training project
+I am happy to talk with anyone interested in medical imaging, agent systems or engineering details.
+
+<SocialRow />
+
+## news
+
+<ul class="news">
+<li><span class="news-date">2026.09</span><span>Personal site is live; transferred into Electronic Information Engineering (Honors); took part in the CUMCM mathematical modelling contest</span></li>
+<li><span class="news-date">2026.07</span><span>National third prize for the breast ultrasound diagnosis support system at the 11th National College Student Biomedical Engineering Innovation Design Competition</span></li>
+<li><span class="news-date">2026.06</span><span>Provincial second prize at the 6th Sichuan Provincial Biomedical Engineering Innovation Design Competition; passed CJT4</span></li>
+<li><span class="news-date">2026.05</span><span>Admitted to the Military Information Technology innovation class; a provincial undergraduate innovation training project was approved</span></li>
+<li><span class="news-date">2026.04</span><span>Started working on medical imaging research projects, responsible for algorithms and software implementation</span></li>
+<li><span class="news-date">2025.10</span><span>Joined the "One Student One Chip" study group; self-study of Verilog and RISC-V processor design</span></li>
+</ul>
 
 ## Quick links
 
 | Page | What is there |
 | --- | --- |
-| [About](/en/about) | Background, coursework, contact |
-| [Journey](/en/journey) | A timeline from self-study in school to transferring majors and joining a lab |
-| [Projects](/en/projects) | Medical imaging, agent tooling and open-source repositories |
-| [Research](/en/research) | What I am working on and how I run experiments |
-| [Awards](/en/awards) | Competitions, project approvals and the ones I entered without winning |
-| [Skills](/en/skills) | Deep learning, agents, engineering and languages |
-| [Notes](/en/notes/) | Field notes from things I actually built |
-| [Thanks](/en/acknowledgements) | For teachers, teammates, family and open source |
+| [experiences](/en/experiences) | Education, research experience and service |
+| [publications](/en/publications) | Ongoing work and manuscript plans |
+| [projects](/en/projects) | Medical imaging, agent tooling and open-source repositories |
+| [awards](/en/awards) | Competitions, project approvals and entries without a prize |
+| [skills](/en/skills) | Deep learning, agents, engineering and languages |
+| [notes](/en/notes/) | Field notes from things I actually built |
+| [cv](/en/cv) | Full CV with a downloadable PDF |
+| [thanks](/en/acknowledgements) | For teachers, teammates, family and open source |

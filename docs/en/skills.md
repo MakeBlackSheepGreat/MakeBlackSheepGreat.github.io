@@ -53,3 +53,10 @@ Only what I have actually used, with an honest note on how far I have taken each
 - Full technical documentation and project write-ups (architecture, interfaces, deployment steps), plus a documentation site
 - Presentation material for project reviews: technical proposals, experiment records, slides and scripts
 - A habit of writing down both the reasoning and the mistakes — the [notes](/en/notes/) section of this site comes from it
+
+## How I work
+
+- **Toolchain**: Linux for daily development, uv for Python environments, Git and GitHub for code, self-hosted servers for deployment
+- **Working with AI**: coding agents as long-term project partners, several role-based sub-agents (explore, implement, review) in parallel, and a rules file plus a memory file per project so the same mistakes are not repeated
+- **Experiments**: judging criteria written down before the run, failed runs documented in the same format as successful ones
+- **Delivery**: anything machine-checkable goes to a script; what only a human can judge (layout, tone, whether it fits the scenario) goes to a person — who actually looks at it
