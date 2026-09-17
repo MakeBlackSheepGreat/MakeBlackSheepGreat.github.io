@@ -121,15 +121,38 @@ export default defineConfig({
         sidebar: {
           '/notes/': [
             {
-              text: '技术笔记',
+              text: '智能体协作方法',
               items: [
                 { text: '全部笔记', link: '/notes/' },
-                { text: '把三万篇论文灌进知识库', link: '/notes/paper-corpus-pipeline' },
-                { text: 'Agent 服务的公网部署', link: '/notes/agent-service-public' },
-                { text: '负面结果也是一份结果', link: '/notes/negative-results' },
-                { text: '一个人怎么带一群 Agent', link: '/notes/agent-orchestration' },
-                { text: '把医学影像软件刻成光盘交付', link: '/notes/medical-software-delivery' }
+                { text: '多智能体分工：角色、并行与验收', link: '/notes/multi-agent-roles' },
+                { text: '长任务的工程化', link: '/notes/long-task-engineering' },
+                { text: '记忆与规则：把坑变成制度', link: '/notes/memory-and-rules' },
+                { text: '协作与交付', link: '/notes/collaboration-and-delivery' },
+                { text: '工具选型与迁移', link: '/notes/agent-tool-selection' }
               ]
+            },
+            {
+              text: '能力扩展与自研工具',
+              items: [
+                { text: 'MCP 服务与插件体系', link: '/notes/agent-capability-plugins' },
+                { text: '自研编码智能体', link: '/notes/own-coding-agent' },
+                { text: 'WeftMesh：设备互联', link: '/notes/weftmesh-device-mesh' },
+                { text: '多智能体做硬件设计', link: '/notes/pcb-multi-agent-pipeline' }
+              ]
+            },
+            {
+              text: '工程实践',
+              items: [
+                { text: '论文语料摄取流水线', link: '/notes/paper-corpus-pipeline' },
+                { text: '科研流程工具化', link: '/notes/research-workflow-suite' },
+                { text: 'Agent 服务公网部署', link: '/notes/agent-service-public' },
+                { text: '医学软件离线交付', link: '/notes/medical-software-delivery' },
+                { text: '算子层实践', link: '/notes/chip-operator-practice' }
+              ]
+            },
+            {
+              text: '研究记录',
+              items: [{ text: '负面结果也是一份结果', link: '/notes/negative-results' }]
             }
           ]
         },
@@ -189,15 +212,38 @@ export default defineConfig({
         sidebar: {
           '/en/notes/': [
             {
-              text: 'Notes',
+              text: 'Working with agents',
               items: [
                 { text: 'All notes', link: '/en/notes/' },
-                { text: 'Ingesting 30k papers', link: '/en/notes/paper-corpus-pipeline' },
-                { text: 'Publishing an agent service', link: '/en/notes/agent-service-public' },
-                { text: 'Negative results count too', link: '/en/notes/negative-results' },
-                { text: 'Running a team of agents', link: '/en/notes/agent-orchestration' },
-                { text: 'Shipping medical software on a disc', link: '/en/notes/medical-software-delivery' }
+                { text: 'Multi-agent division of labour', link: '/en/notes/multi-agent-roles' },
+                { text: 'Long-running tasks', link: '/en/notes/long-task-engineering' },
+                { text: 'Memory and rules', link: '/en/notes/memory-and-rules' },
+                { text: 'Collaboration and delivery', link: '/en/notes/collaboration-and-delivery' },
+                { text: 'Choosing and switching frameworks', link: '/en/notes/agent-tool-selection' }
               ]
+            },
+            {
+              text: 'Capability and tooling',
+              items: [
+                { text: 'MCP services and plugins', link: '/en/notes/agent-capability-plugins' },
+                { text: 'Building my own coding agent', link: '/en/notes/own-coding-agent' },
+                { text: 'WeftMesh: device mesh', link: '/en/notes/weftmesh-device-mesh' },
+                { text: 'Multi-agent hardware design', link: '/en/notes/pcb-multi-agent-pipeline' }
+              ]
+            },
+            {
+              text: 'Engineering practice',
+              items: [
+                { text: 'Paper corpus pipeline', link: '/en/notes/paper-corpus-pipeline' },
+                { text: 'Research workflow tooling', link: '/en/notes/research-workflow-suite' },
+                { text: 'Publishing an agent service', link: '/en/notes/agent-service-public' },
+                { text: 'Shipping medical software on a disc', link: '/en/notes/medical-software-delivery' },
+                { text: 'Operator-level practice', link: '/en/notes/chip-operator-practice' }
+              ]
+            },
+            {
+              text: 'Research notes',
+              items: [{ text: 'Negative results count too', link: '/en/notes/negative-results' }]
             }
           ]
         },
