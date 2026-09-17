@@ -16,10 +16,6 @@ Current work includes pulmonary nodule classification and malignancy risk gradin
 
 <SocialRow />
 
-<div class="wechat-block">
-  <img src="/wechat-qr.png" alt="微信二维码" class="wechat-qr">
-  <p class="wechat-note">微信 / WeChat<br>扫码添加，请注明来意</p>
-</div>
 
 
 ## news

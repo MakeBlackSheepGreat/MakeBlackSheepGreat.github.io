@@ -1,16 +1,51 @@
 <script setup lang="ts">
+import { ref, onMounted, onUnmounted } from 'vue'
+
 withDefaults(
   defineProps<{
     email?: string
     github?: string
     orcid?: string
+    wechatQr?: string
   }>(),
   {
     email: 'yzj876762330@163.com',
     github: 'https://github.com/MakeBlackSheepGreat',
-    orcid: 'https://orcid.org/0009-0006-7544-5954'
+    orcid: 'https://orcid.org/0009-0006-7544-5954',
+    wechatQr: '/wechat-qr.png'
   }
 )
+
+const hovered = ref(false)
+const pinned = ref(false)
+const root = ref<HTMLElement | null>(null)
+
+const visible = () => hovered.value || pinned.value
+
+function close() {
+  pinned.value = false
+  hovered.value = false
+}
+
+function onKeydown(e: KeyboardEvent) {
+  if (e.key === 'Escape') close()
+}
+
+function onDocClick(e: MouseEvent) {
+  if (pinned.value && root.value && !root.value.contains(e.target as Node)) {
+    pinned.value = false
+  }
+}
+
+onMounted(() => {
+  document.addEventListener('keydown', onKeydown)
+  document.addEventListener('click', onDocClick)
+})
+
+onUnmounted(() => {
+  document.removeEventListener('keydown', onKeydown)
+  document.removeEventListener('click', onDocClick)
+})
 </script>
 
 <template>
@@ -28,7 +63,7 @@ withDefaults(
         />
       </svg>
     </a>
-    <a :href="orcid" title="ORCID" aria-label="ORCID" target="_blank" rel="noreferrer" class="orcid-link">
+    <a :href="orcid" title="ORCID" aria-label="ORCID" target="_blank" rel="noreferrer">
       <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
         <circle cx="12" cy="12" r="10" fill="#a6ce39" />
         <path d="M8.2 7.3h1.5v9.4H8.2z" fill="#fff" />
@@ -39,6 +74,37 @@ withDefaults(
         />
       </svg>
     </a>
+
+    <span
+      ref="root"
+      class="wechat-item"
+      @mouseenter="hovered = true"
+      @mouseleave="hovered = false"
+    >
+      <button
+        type="button"
+        class="wechat-btn"
+        :aria-expanded="visible()"
+        aria-label="微信二维码"
+        title="微信"
+        @click="pinned = !pinned"
+      >
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+          <path
+            d="M9.1 3C5.2 3 2 5.7 2 9c0 1.9 1 3.5 2.7 4.6l-.7 2.1 2.4-1.2c.8.2 1.6.4 2.5.4h.5a5.6 5.6 0 0 1-.2-1.5c0-3.2 3-5.8 6.6-5.8h.6C15.6 5 12.7 3 9.1 3zm-2.4 3a.95.95 0 1 1 0 1.9.95.95 0 0 1 0-1.9zm4.9 0a.95.95 0 1 1 0 1.9.95.95 0 0 1 0-1.9z"
+          />
+          <path
+            d="M22 15.1c0-2.7-2.7-4.9-6-4.9s-6 2.2-6 4.9 2.7 4.9 6 4.9c.7 0 1.4-.1 2-.3l1.9 1-.5-1.7c1.6-.9 2.6-2.3 2.6-3.9zm-7.9-1.4a.8.8 0 1 1 0-1.6.8.8 0 0 1 0 1.6zm3.8 0a.8.8 0 1 1 0-1.6.8.8 0 0 1 0 1.6z"
+          />
+        </svg>
+      </button>
+
+      <span v-show="visible()" class="wechat-pop" role="dialog" aria-label="微信二维码">
+        <img :src="wechatQr" alt="微信二维码" />
+        <span class="wechat-pop-note">扫码添加，请注明来意</span>
+      </span>
+    </span>
+
     <slot />
   </div>
 </template>
@@ -52,16 +118,56 @@ withDefaults(
   color: var(--vp-c-text-2);
 }
 
-.social-row a {
+.social-row a,
+.wechat-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.social-row a:hover {
+.social-row a:hover,
+.wechat-btn:hover {
   color: var(--vp-c-brand-1);
   transform: translateY(-1px);
+}
+
+.wechat-item {
+  position: relative;
+  display: inline-flex;
+}
+
+.wechat-pop {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 190px;
+  padding: 10px 10px 8px;
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
+  text-align: center;
+  z-index: 30;
+}
+
+.wechat-pop img {
+  display: block;
+  width: 168px;
+  height: 168px;
+  margin: 0 auto 6px;
+}
+
+.wechat-pop-note {
+  display: block;
+  font-size: 0.76rem;
+  line-height: 1.5;
+  color: var(--vp-c-text-3);
 }
 </style>
