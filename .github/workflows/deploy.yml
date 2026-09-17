@@ -39,7 +39,6 @@ jobs:
 
       - name: Install CJK fonts and Playwright Chromium
         run: sudo apt-get update && sudo apt-get install -y fonts-noto-cjk && npx playwright install --with-deps chromium
-        run: npx playwright install --with-deps chromium
 
       - name: Build site
         run: pnpm build
