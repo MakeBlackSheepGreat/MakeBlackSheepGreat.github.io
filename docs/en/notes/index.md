@@ -1,25 +1,25 @@
 # Notes
 
-Field notes from things I have actually built. Concrete enough to reproduce, with no private details involved.
+Records of problem diagnosis and design trade-offs from actual projects. Detailed enough to reproduce, with no private information involved.
 
 ## All notes
 
 ### [Ingesting 30,000 papers into a knowledge base](/en/notes/paper-corpus-pipeline)
 
-An 11-hour ingestion pipeline: 30k papers, a mixed local/cloud inference setup, self-healing after network drops and an evidence trail. The design decisions that actually decided whether it worked.
+Design record of a corpus ingestion pipeline: mixed local/cloud inference scheduling, idempotency, resumable execution and an evidence trail.
 
 ### [Publishing an agent service to the internet](/en/notes/agent-service-public)
 
-What went wrong when a self-hosted service went public: process-scoped secrets, cookies that silently expire on restart, reverse proxies and process supervision — and why I did not use an SSH tunnel.
+Diagnosing a self-hosted service published to the internet: session secret lifetime, cookie scope, reverse proxying and process supervision, and why an SSH tunnel was not used.
 
 ### [Negative results count too](/en/notes/negative-results)
 
-A module I designed dropped accuracy from 77.23% to 56.78% and the training collapsed. How the failure was recorded, and why a pre-registered threshold must not be moved afterwards.
+An ablation that dropped accuracy from 77.23% to 56.78%: how the failure was recorded and why a pre-registered threshold must not be moved.
 
 ### [Running a team of agents](/en/notes/agent-orchestration)
 
-Practising what I preach with several sub-agents at once: how to split roles, how to make long tasks recoverable, and how to write acceptance criteria an agent cannot talk its way around.
+Running multiple sub-agents in parallel: role separation, recoverable long-running tasks, and verifiable acceptance criteria.
 
 ### [Shipping medical software on a disc](/en/notes/medical-software-delivery)
 
-Going from "it runs on my laptop" to "it runs on a stranger's machine, offline, from a disc" — hardware fallbacks, full interface regression, and verifying on a clean machine.
+Engineering constraints of offline delivery: hardware fallback builds, full-interface regression and clean-machine verification.

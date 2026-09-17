@@ -1,27 +1,25 @@
-# Acknowledgements
+# acknowledgements
 
-This page is for my teachers, teammates, family and the open-source community. Everything else on this site is about what I did; in truth, hardly anything here was done entirely on my own.
+The work presented on this site is my own, but much of it depended on guidance, collaboration and public resources. This page records those debts.
 
 ## Teachers
 
-The first thanks go to the teachers who guided me along the way. I started working on projects in my first year, when I could not even describe a basic image-processing pipeline properly. They started from the very basics — how to split a dataset, how to keep experiment records — and, more importantly, allowed me to spend a lot of time on debugging that produced nothing visible. I had far more failed experiments than successful ones that year, and was never once blamed for the failures. That tolerance is what made me willing to try new things.
+Thanks to the teachers who supervised my research training. I started participating in projects in my first year, beginning with data splits and experiment records and gradually taking on algorithm implementation. During a period when most experiments failed, my supervisors allowed ample room for trial and error while correcting my methods, which shaped how I design and document experiments.
 
-Finally, thanks to the teachers in my original major. I studied pharmaceutical engineering in my first year and had a lot to catch up on before transferring; several of them gave me very practical encouragement along the way.
+Thanks also to the teachers in my original major, who gave concrete advice during my cross-disciplinary study and transfer preparation.
 
-## Teammates and classmates
+## Teammates and collaborators
 
-Almost every competition I have entered was a team effort. Thanks to the teammates who built the ultrasound system with me: five of us, from biomedical engineering and computer science backgrounds, splitting the work clearly — algorithms and software on my side, medical context, data organisation and presentation on theirs. Thanks also to the senior student in the "One Student One Chip" group, who invited me in and gave me my first contact with digital design and processors.
-
-In research, talking to classmates is often more useful than reading documentation. Many problems are not unanswerable — you just do not know that you are asking the wrong question. Someone to restate the problem with you solves half of it.
+Competitions and projects were mostly team efforts. The medical imaging projects involved members with biomedical engineering and computer science backgrounds, while I focused on algorithms and software implementation. I am grateful for their work on data organisation, clinical context and written material.
 
 ## Family
 
-Thanks to my parents, who never pushed me towards a safer path when I decided to transfer majors and to pour my time into competitions and projects. They do not really understand what I am working on, but they have supported it regardless, and that matters a great deal to me.
+Thanks to my family for their support and understanding of my decision to transfer majors and of the time I have spent on competitions and research.
 
 ## Open source
 
-Most of what I build stands on other people's work: PyTorch, the public medical-imaging datasets and open implementations that let an undergraduate run experiments on real data; VitePress, which made this site cheap to build; and the coding agents I use daily, which are themselves extensions of open-source projects. The most practical way I can give back is to open-source my own code and write down what went wrong along the way — which is what the [notes](/en/notes/) section is for.
+Most of this work stands on open-source foundations: PyTorch and public medical imaging datasets, VitePress and a wide range of tooling; much of my troubleshooting drew on public documentation and community discussion. In return, I open-source my own code and write up engineering experience as [notes](/en/notes/).
 
-## One last note
+## Note
 
-And thanks to everyone who took time to answer a question over these two years: strangers on forums, people who maintain documentation, seniors who answer things off-hand in group chats. I am still on the receiving end for now, and hope to gradually become someone with room to help others.
+This site contains only my own work and publicly available information. It does not include student identifiers, contact details or any unpublished information belonging to third parties.

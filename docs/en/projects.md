@@ -1,13 +1,13 @@
 # Projects
 
-Most of my code is open-sourced on GitHub, grouped by direction below. Private repositories are listed by name only, without links.
+Projects are grouped by direction below. Private repositories are listed by name only, without links.
 
 ## Medical imaging AI
 
 ::: card Breast ultrasound classification (bucad)
 Binary benign/malignant classification on breast ultrasound images. Trained on BUS-BRA and tested externally on BUSI, producing lesion region hints, risk stratification and Grad-CAM visualisation for review.
 
-My part: implementing and tuning the CNN classifier, fixing the evaluation metrics and threshold policy, building the Grad-CAM module, and packaging the inference demo. This project later supported three competition awards.
+Responsibilities: implementing and tuning the CNN classifier, fixing the evaluation metrics and threshold policy, building the Grad-CAM module, and packaging the inference demo. This work supported three competition awards.
 
 Stack: Python · PyTorch · medical imaging · Grad-CAM
 
@@ -37,7 +37,7 @@ Stack: Vue3 · FastAPI · Three.js · Electron · Playwright
 ## Agent and research tooling
 
 ::: card SWUST Code — a terminal-native coding agent (swust-code)
-A personal build based on an open-source coding agent, extended with persistent memory, multi-agent workflows on smaller models, and goal-driven autonomy, plus its own documentation site. It is usable day to day and I have used it to write other projects — using it to develop itself was the most interesting tooling experience of my year.
+A personal build based on an open-source coding agent, extended with persistent memory, multi-agent workflows on smaller models, and goal-driven autonomy, plus its own documentation site. It is usable day to day and has been used to develop other projects.
 
 Stack: TypeScript · Node.js · multi-agent · CLI
 
@@ -45,7 +45,7 @@ Stack: TypeScript · Node.js · multi-agent · CLI
 :::
 
 ::: card IPC Vision — seven-model MNIST comparison (IPC_vision)
-An exercise that walks the whole path from model to application: BP, CNN, ConvNeXt, LeNet-5, ResNet, ViT and MobileNetV2 compared under one dataset and evaluation protocol, wrapped with a Flask API, a web frontend and an Electron desktop app. The point was to see the real gap between model sizes on a single task instead of trusting paper numbers.
+An exercise that walks the whole path from model to application: BP, CNN, ConvNeXt, LeNet-5, ResNet, ViT and MobileNetV2 compared under one dataset and evaluation protocol, wrapped with a Flask API, a web frontend and an Electron desktop app. The aim was to compare model scales on one task under a single evaluation protocol.
 
 Stack: Python · PyTorch · Flask · Electron
 
@@ -53,7 +53,7 @@ Stack: Python · PyTorch · Flask · Electron
 :::
 
 ::: card PDF vector search (pdf-vector-search)
-A local PDF knowledge-base retrieval tool for agents: documents are chunked and embedded into a local vector store, exposed through a command-line interface for an upper-layer agent to call — used for literature search and question answering. I built it because I did not want to feed papers to a model one at a time; I wanted retrieved answers that carry their sources.
+A local PDF knowledge-base retrieval tool for agents: documents are chunked and embedded into a local vector store, exposed through a command-line interface for an upper-layer agent to call — used for literature search and question answering. The design goal is retrieval results that carry their sources, rather than feeding papers to a model one at a time.
 
 Stack: Python · vector search · RAG · CLI
 
@@ -62,18 +62,18 @@ Stack: Python · vector search · RAG · CLI
 
 ## Engineering practice
 
-These have no dedicated repository, but I spent no less time on them than on writing code.
+These have no dedicated repository, though they took no less time than coding work.
 
 ::: card Paper corpus ingestion pipeline
-Turning 30,000 papers into searchable, traceable knowledge entries: tiered concurrency, content-hash idempotency, and mixed local/cloud inference. It finished 30,018 of 30,031 papers in 11.2 hours (99.96%) and attached evidence links back to the source for every entry. The full story of what went wrong is in the [notes](/en/notes/paper-corpus-pipeline).
+Turning 30,000 papers into searchable, traceable knowledge entries: tiered concurrency, content-hash idempotency, and mixed local/cloud inference. It finished 30,018 of 30,031 papers in 11.2 hours (99.96%) and attached evidence links back to the source for every entry. Engineering details are in the [notes](/en/notes/paper-corpus-pipeline).
 :::
 
 ::: card Agent service deployment and operations
-Getting a self-hosted service running on the public internet: process supervision and boot persistence, credential persistence, reverse proxy and HTTPS, private networking. The traps included a process-scoped random secret that invalidated every session on restart, and cookie scope rules — written up in the [notes](/en/notes/agent-service-public).
+Getting a self-hosted service running on the public internet: process supervision and boot persistence, credential persistence, reverse proxy and HTTPS, private networking. Issues included a process-scoped random secret that invalidated sessions on restart and cookie scope constraints, written up in the [notes](/en/notes/agent-service-public).
 :::
 
 ::: card Domestic AI chip operator exercises
-Several CANN operator contest problems: 2D convolution (FP16/FP32/BF16), the HardSwish activation, and a quantised GEMM optimisation task. It was my first serious look at address spaces, tiling and vectorisation at the operator level, and the first time I felt how much performance depends on how the same semantics are written.
+Several CANN operator contest problems: 2D convolution (FP16/FP32/BF16), the HardSwish activation, and a quantised GEMM optimisation task. This involved address spaces, tiling and vectorisation at the operator level.
 :::
 
 ## Private workspaces
@@ -89,7 +89,7 @@ These are research and engineering workspaces I use daily. They are private for 
 ## Small tools and archives
 
 ::: card BearPi-Pico H3863 development archive (BearPi-Pico-H3863)
-Documentation, chip manuals, firmware and source-code pointers for the BearPi-Pico H3863, archived because the material was scattered everywhere and painful to find. Tidying it up saves the next person some time.
+Documentation, chip manuals, firmware and source-code pointers for the BearPi-Pico H3863, archived because the material was scattered; the archive makes it easier to consult and reproduce.
 
 Stack: embedded · documentation
 
@@ -97,7 +97,7 @@ Stack: embedded · documentation
 :::
 
 ::: card HTML long-image export skill (html-png-exporter-skill)
-A skill for coding agents: render a long HTML page into a previewable full-page image and export it as PNG using native Canvas. Built because generated reports and posters need to be *seen* before they can be judged.
+A skill for coding agents: render a long HTML page into a previewable full-page image and export it as PNG using native Canvas. Built so that generated reports and posters can be inspected before revision.
 
 Stack: JavaScript · Canvas · agent skill
 
@@ -105,7 +105,7 @@ Stack: JavaScript · Canvas · agent skill
 :::
 
 ::: card dsh-OHDSH — an agent runtime on HarmonyOS (dsh-OHDSH)
-An attempt to bring a reproducible implementation of DeepSeek Harness to HarmonyOS. Most of the time went into debugging a startup crash on a real device, which ended up traced to several system-level restrictions with workarounds for each.
+An attempt to bring a reproducible implementation of DeepSeek Harness to HarmonyOS. Most of the effort went into diagnosing a startup failure on a real device, traced to several system-level restrictions with workarounds for each.
 
 Stack: HarmonyOS · ArkTS · C
 
