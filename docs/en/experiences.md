@@ -60,13 +60,13 @@ Took part in team building, activity design and material preparation for a volun
 
 **2025.09** — Entered SWUST, admitted to Pharmaceutical Engineering. That did not match my interests, so from day one I kept drifting towards computing and electronics: sitting in on lectures, joining technical clubs, looking for projects.
 
-**2025.10** — Joined the "One Student One Chip" study group and taught myself Verilog and RISC-V up to E5-stage RTL simulation. The hardest self-study I have done: no lab manual, no final exam, just a goal and a codebase far beyond my level.
+**2025.10** — Joined the "One Student One Chip" study group and taught myself Verilog and RISC-V up to E5-stage RTL simulation. The hardest self-study I have done: no textbook, no final exam, just a goal and a codebase far beyond my level.
 
 **2026.03** — Started working in a cross-disciplinary technical environment and sat in on circuit analysis up to chapter seven. This was when I realised that every application asks what you have actually built, so I started approaching teachers and projects.
 
 **2026.04** — Started working on medical imaging projects; my role changed from "following along" to "I write this". I learned how a segmentation annotation for an ultrasound image is produced, and how easily a classifier's score can be inflated by the way data is split.
 
-**2026.05 – 07** — Second prize at the university competition, admission to the innovation class, approval of the provincial project; then a provincial second prize and a national third prize. In the same period I finished a complete seven-model MNIST comparison project.
+**2026.05 – 07** — Second prize at the university competition, approval of the provincial project; then a provincial second prize and a national third prize. In the same period I finished a complete seven-model MNIST comparison project.
 
 **2026.07 – 08** — Stayed on campus for the summer and bet the time on engineering: putting agents into real research workflows (a 30,000-paper ingestion pipeline, a multi-agent collaboration system), learning deployment and operations properly, and touching domestic AI chip operator problems.
 

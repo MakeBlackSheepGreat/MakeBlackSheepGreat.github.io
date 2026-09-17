@@ -28,7 +28,7 @@
 <li><span class="news-date">2026.09</span><span>个人主页上线；转入信息与控制工程学院电子信息工程（卓越）班，参加高教社杯全国大学生数学建模竞赛</span></li>
 <li><span class="news-date">2026.07</span><span>《基于超声影像的乳腺肿瘤良恶性分类辅助诊断系统设计》获第十一届全国大学生生物医学工程创新设计大赛国家级三等奖</span></li>
 <li><span class="news-date">2026.06</span><span>获第六届四川省大学生生物医学工程创新设计大赛省级二等奖；通过大学日语四级考试</span></li>
-<li><span class="news-date">2026.05</span><span>入选"军工信息技术"创新实践班；参与的省级大学生创新训练计划项目立项</span></li>
+<li><span class="news-date">2026.05</span><span>参与的省级大学生创新训练计划项目立项</span></li>
 <li><span class="news-date">2026.04</span><span>开始参与医学影像方向的科研项目，负责算法与软件实现</span></li>
 <li><span class="news-date">2025.10</span><span>加入"一生一芯"学习小组，自学 Verilog 与 RISC-V 处理器设计</span></li>
 </ul>

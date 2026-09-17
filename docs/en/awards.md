@@ -29,7 +29,6 @@ The entry was the breast ultrasound diagnosis support system, and it was the fir
 | Date | Project | Notes |
 | --- | --- | --- |
 | 2026.05 | Provincial undergraduate innovation training project | Interpretable pulmonary nodule classification and risk grading from chest CT; ongoing, I handle data processing and model experiments |
-| 2026.05 | "Military Information Technology" innovation class | Selected through competitive admission; weekend seminars and training |
 | 2025.10 | "One Student One Chip" study group | Self-study of Verilog and RISC-V, progressed to the E5 stage of RTL simulation |
 
 ## Competitions entered without a prize
