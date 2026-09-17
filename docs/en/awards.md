@@ -11,7 +11,7 @@ The entry was a breast tumour benign/malignant classification and diagnosis supp
 ::: card 6th Sichuan Provincial Biomedical Engineering Innovation Design Competition · Provincial second prize
 June 2026, hosted by the Sichuan Provincial Department of Education.
 
-The provincial round of the same competition series, in the medical imaging diagnosis support track. Team composition and entry shifted between the provincial and national rounds; I worked on algorithms and software in both.
+The entry was *Interpretable pulmonary nodule classification and malignancy risk grading from chest CT*, a four-person team; I handled data processing and model experiments. The same work was approved as a provincial undergraduate innovation training project.
 :::
 
 ::: card SWUST Biomedical Engineering Innovation Design Competition · University-level second prize
@@ -30,6 +30,17 @@ The entry was the breast ultrasound diagnosis support system; this was the first
 | --- | --- | --- |
 | 2026.05 | Provincial undergraduate innovation training project | Interpretable pulmonary nodule classification and risk grading from chest CT; ongoing, I handle data processing and model experiments |
 | 2025.10 | "One Student One Chip" study group | Self-study of Verilog and RISC-V, progressed to the E5 stage of RTL simulation |
+
+## University and faculty awards
+
+| Year | Award | Level |
+| --- | --- | --- |
+| 2026 | SWUST Science and Technology Innovation Award | University |
+| 2026 | SWUST Outstanding Academic Performance Award | University |
+| 2026 | Faculty of Life Science and Agriculture Science and Technology Innovation Award | Faculty |
+| 2026 | Faculty of Life Science and Agriculture Outstanding Academic Performance Award | Faculty |
+
+These are the awards tied to the 2025–2026 comprehensive evaluation, assigned by evaluation ranking.
 
 ## Competitions entered without a prize
 

@@ -1,8 +1,26 @@
+/* 设备匹配字体：小米设备自带 MiSans、华为自带 HarmonyOS Sans、OPPO / vivo 各自有，
+   这些设备直接用本机字体（零下载）；其它设备回退到站点自带的 MiSans Web 子集。 */
+@font-face {
+  font-family: "MiSans Web";
+  src: url("/fonts/misans-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MiSans Web";
+  src: url("/fonts/misans-demibold.woff2") format("woff2");
+  font-weight: 500 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  /* 系统字体栈：中文走系统 UI 字体，不再下载 Inter 子集 */
-  --vp-font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans SC", "Noto Sans CJK SC",
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --vp-font-family-base: "MiSans", "HarmonyOS Sans SC", "HarmonyOS Sans", "OPPO Sans", "vivo Sans",
+    "MiSans Web", system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --vp-font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
     "Liberation Mono", monospace;
   --vp-c-brand-1: #4f46e5;
