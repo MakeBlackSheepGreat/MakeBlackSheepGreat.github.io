@@ -14,13 +14,74 @@ function labeledContainer(md, name, className) {
   })
 }
 
+// 站点主域名：绑定自定义域名后，把这里换成新域名即可（sitemap / canonical / og:url 会一起生效）
+const SITE = 'https://makeblacksheepgreat.github.io'
+const ORCID = 'https://orcid.org/0009-0006-7544-5954'
+const GITHUB = 'https://github.com/MakeBlackSheepGreat'
+
 export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
+  sitemap: { hostname: SITE },
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
-    ['meta', { name: 'theme-color', content: '#4f46e5' }]
+    ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }],
+    ['meta', { name: 'theme-color', content: '#4f46e5' }],
+    ['meta', { name: 'author', content: '杨智杰 (LiteBlackSheep)' }],
+    ['meta', { name: 'robots', content: 'index, follow' }],
+    // 社交分享卡片
+    ['meta', { property: 'og:type', content: 'profile' }],
+    ['meta', { property: 'og:site_name', content: 'LiteBlackSheep' }],
+    ['meta', { property: 'og:image', content: `${SITE}/og-card.jpg` }],
+    ['meta', { property: 'og:image:width', content: '1200' }],
+    ['meta', { property: 'og:image:height', content: '630' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:image', content: `${SITE}/og-card.jpg` }],
+    // 结构化数据，便于搜索引擎把主页与 ORCID / GitHub 关联
+    [
+      'script',
+      { type: 'application/ld+json' },
+      JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: '杨智杰',
+        alternateName: ['LiteBlackSheep', 'ZhiJie Yang'],
+        url: SITE,
+        affiliation: {
+          '@type': 'CollegeOrUniversity',
+          name: 'Southwest University of Science and Technology'
+        },
+        knowsAbout: [
+          'Medical imaging',
+          'Deep learning',
+          'Multi-agent systems',
+          'Model deployment'
+        ],
+        sameAs: [ORCID, GITHUB]
+      })
+    ]
   ],
+  transformPageData(pageData) {
+    const clean = pageData.relativePath.replace(/index\.md$/, '').replace(/\.md$/, '')
+    const path = '/' + clean
+    const isEn = path === '/en/' || path.startsWith('/en/')
+    const alt = isEn
+      ? path === '/en/'
+        ? '/'
+        : path.replace(/^\/en/, '')
+      : path === '/'
+        ? '/en/'
+        : '/en' + path
+    const head = ((pageData.frontmatter as any).head ??= [])
+    head.push(['link', { rel: 'canonical', href: SITE + path }])
+    head.push(['link', { rel: 'alternate', hreflang: isEn ? 'en' : 'zh-CN', href: SITE + path }])
+    head.push(['link', { rel: 'alternate', hreflang: isEn ? 'zh-CN' : 'en', href: SITE + alt }])
+    head.push(['link', { rel: 'alternate', hreflang: 'x-default', href: SITE + path }])
+    head.push(['meta', { property: 'og:url', content: SITE + path }])
+    const siteName = isEn ? 'LiteBlackSheep' : 'LiteBlackSheep'
+    const pageTitle = pageData.title ? `${pageData.title} | ${siteName}` : siteName
+    head.push(['meta', { property: 'og:title', content: pageTitle }])
+  },
   markdown: {
     config(md) {
       // 副标题 / 语言能力行：::: lead
@@ -42,7 +103,7 @@ export default defineConfig({
     root: {
       label: '中文',
       lang: 'zh-CN',
-      title: '杨智杰',
+      title: 'LiteBlackSheep · 杨智杰',
       description: '杨智杰的个人主页：医学影像深度学习、多智能体系统与工程实践',
       themeConfig: {
         logo: '/avatar.svg',
@@ -104,7 +165,7 @@ export default defineConfig({
     en: {
       label: 'English',
       lang: 'en-US',
-      title: 'ZhiJie Yang',
+      title: 'LiteBlackSheep · ZhiJie Yang',
       description: 'ZhiJie Yang — medical imaging deep learning, multi-agent systems and engineering practice',
       themeConfig: {
         logo: '/avatar.svg',

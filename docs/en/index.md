@@ -10,15 +10,17 @@ Undergraduate in Electronic Information Engineering (Honors) · Southwest Univer
 Research interests: medical imaging deep learning ｜ multi-agent systems ｜ model deployment and engineering
 :::
 
-::: lead
-**[ORCID](https://orcid.org/0009-0006-7544-5954)** ｜ [github.com/MakeBlackSheepGreat](https://github.com/MakeBlackSheepGreat) ｜ yzj876762330@163.com
-:::
-
 I am an undergraduate in Electronic Information Engineering (Honors) at the School of Information and Control Engineering, Southwest University of Science and Technology, having transferred from Pharmaceutical Engineering in September 2026. My research interests centre on two directions: deep learning for medical imaging, with emphasis on generalisation to independent datasets and on interpretability; and multi-agent systems, with emphasis on their engineering use in research workflows.
 
 Current work includes pulmonary nodule classification and malignancy risk grading on chest CT (provincial undergraduate innovation training project; data processing and model experiments), benign/malignant breast ultrasound classification with cross-dataset external validation, and the software system for fluorescence-guided osteomyelitis imaging. On the engineering side, my work covers model serving deployment, retrieval-augmented literature knowledge bases, and automated research workflows.
 
 <SocialRow />
+
+<div class="wechat-block">
+  <img src="/wechat-qr.png" alt="微信二维码" class="wechat-qr">
+  <p class="wechat-note">微信 / WeChat<br>扫码添加，请注明来意</p>
+</div>
+
 
 ## news
 

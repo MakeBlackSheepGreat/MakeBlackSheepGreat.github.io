@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://makeblacksheepgreat.github.io/sitemap.xml

@@ -12,7 +12,7 @@ Undergraduate in Electronic Information Engineering (Honors) · Medical imaging 
 ORCID [0009-0006-7544-5954](https://orcid.org/0009-0006-7544-5954) ｜ [github.com/MakeBlackSheepGreat](https://github.com/MakeBlackSheepGreat) ｜ yzj876762330@163.com
 :::
 
-<p class="cv-download"><a href="/cv.pdf" download>Download PDF version</a></p>
+<p class="cv-download"><a href="/cv-en.pdf" download>Download PDF version</a></p>
 
 ## EDUCATION
 
