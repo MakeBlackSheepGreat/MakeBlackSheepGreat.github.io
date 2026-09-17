@@ -1,0 +1,63 @@
+---
+layout: home
+
+hero:
+  name: 杨智杰
+  text: 医学影像深度学习<br>多智能体系统
+  tagline: 西南科技大学 · 信息与控制工程学院 · 电子信息工程（卓越）
+  image:
+    src: /avatar.svg
+    alt: 杨智杰
+  actions:
+    - theme: brand
+      text: 看项目
+      link: /projects
+    - theme: alt
+      text: GitHub 主页
+      link: https://github.com/MakeBlackSheepGreat
+
+features:
+  - title: 医学影像深度学习
+    details: 乳腺超声良恶性分类、胸部 CT 肺结节风险分级、颌骨骨髓炎荧光影像诊疗。训练、评估和可解释性分析（Grad-CAM、ROC）由我自己实现。
+  - title: 多智能体系统
+    details: 搭过面向中小型大模型的多智能体协作系统，也把读文献、跑实验、写东西做成了一条流水线工具。
+  - title: 工程与部署
+    details: 在 Linux 服务器上部署模型推理与 Web 服务，处理过内网组网、反向代理、进程托管和公网访问这一整套。
+  - title: 开源与记录
+    details: 医学影像、Agent 工具链、算子练习等代码大部分在 GitHub 开源，踩过的坑整理成了技术笔记。
+---
+
+## 我在做什么
+
+我是西南科技大学电子信息工程（卓越）专业的本科生，2026 年 9 月由制药工程转入信控学院。课程之外，时间主要花在三件事上：把医学影像的算法做扎实，把 Agent 系统放进真实的科研流程里用起来，以及把服务真正部署到服务器上跑通——而不是只在自己电脑上跑得起来。
+
+::: en What I am working on
+I am an undergraduate in Electronic Information Engineering (Honors) at Southwest University of Science and Technology, after transferring from Pharmaceutical Engineering in September 2026. Outside coursework I spend my time on three things: building medical-imaging models that actually hold up, putting multi-agent systems to work in real research workflows, and shipping services that run on a server rather than only on my own laptop.
+:::
+
+## 最近动态
+
+- **2026.09** 转入电子信息工程（卓越）班；参加高教社杯全国大学生数学建模竞赛
+- **2026.07** 获第十一届全国大学生生物医学工程创新设计大赛国家级三等奖
+- **2026.06** 获第六届四川省大学生生物医学工程创新设计大赛省级二等奖；通过大学日语四级
+- **2026.05** 入选"军工信息技术"创新实践班；参与省级大学生创新训练计划项目立项
+
+::: en Recent
+- **2026.09** Transferred into Electronic Information Engineering (Honors); took part in the CUMCM mathematical modelling contest
+- **2026.07** National third prize, 11th National College Student Biomedical Engineering Innovation Design Competition
+- **2026.06** Provincial second prize, 6th Sichuan Provincial Biomedical Engineering Innovation Design Competition; passed CJT4
+- **2026.05** Admitted to the Military Information Technology innovation class; joined a provincial-level undergraduate innovation training project
+:::
+
+## 快速入口
+
+| 页面 | 内容 |
+| --- | --- |
+| [关于我](/about) | 教育背景、学业情况、联系方式 |
+| [经历](/journey) | 从初高中自学到转专业、进实验室、打比赛的时间线 |
+| [项目](/projects) | 医学影像、智能体工具链与开源仓库 |
+| [科研](/research) | 在做的研究方向和实验方法 |
+| [获奖](/awards) | 竞赛获奖与项目立项 |
+| [技能](/skills) | 深度学习、Agent、工程部署与语言能力 |
+| [笔记](/notes/) | 工程实践里踩过的坑 |
+| [致谢](/acknowledgements) | 写给老师、队友、家人和开源社区 |

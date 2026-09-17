@@ -1,0 +1,59 @@
+# 致谢
+
+这一页写给我的老师、同学、家人和开源社区。网站上前面的内容都是"我做了什么"，但说实话，里面几乎没有一件事是我一个人从头到尾独立完成的。
+
+::: en Acknowledgements
+This page is for my teachers, teammates, family and the open-source community. Everything else on this site is about what I did; in truth, hardly anything here was done entirely on my own.
+:::
+
+## 老师
+
+最先要感谢的是实验室的指导老师。我在大一就进了实验室，那时候我连最基本的图像处理流程都说不清楚，是老师从数据怎么划分、实验该怎么记录这些最基础的事情开始教，也是老师允许我把大量时间花在"看起来不产出结果"的调试上。这一年里我做砸的实验远多于做成的，但从来没有因为失败被责备过——这种容错的环境，是我敢去尝试新方法的底气。
+
+也要感谢创新实践班的组织老师。创新班的选拔、组会和培训占用了老师们大量的课余时间，我从中获得的不仅是知识，还有"怎么把一个想法讲清楚"的能力。
+
+还要感谢我在原专业的任课老师。我大一读的是制药工程，转专业之前需要补很多东西，几位老师对我的跨专业学习给了很实在的鼓励。
+
+::: en Teachers
+The first thanks go to my lab advisors. I joined the lab in my first year, when I could not even describe a basic image-processing pipeline properly. They started from the very basics — how to split a dataset, how to keep experiment records — and, more importantly, allowed me to spend a lot of time on debugging that produced nothing visible. I had far more failed experiments than successful ones that year, and was never once blamed for the failures. That tolerance is what made me willing to try new things.
+
+I am also grateful to the teachers who run the innovation class. Their time outside working hours made the selection, seminars and training possible, and what I took away was not only knowledge but the ability to explain an idea clearly.
+
+Finally, thanks to the teachers in my original major. I studied pharmaceutical engineering in my first year and had a lot to catch up on before transferring; several of them gave me very practical encouragement along the way.
+:::
+
+## 队友和同学
+
+我参加的比赛基本都是团队项目。感谢一起做超声影像那套系统的队友——我们五个人里有学医工的、有学计算机的，分工很清楚：我做算法和软件，他们做医学背景、数据整理和答辩材料。也感谢"一生一芯"小组里的学长，是他邀请我加入，我才第一次接触到数字设计和处理器。
+
+做科研的路上，同学之间的讨论往往比查资料有用。很多问题不是查不到答案，而是不知道自己问错了问题——这时候能有人一起把问题重新描述一遍，事情就解决了一半。
+
+::: en Teammates
+Almost every competition I have entered was a team effort. Thanks to the teammates who built the ultrasound system with me: five of us, from biomedical engineering and computer science backgrounds, splitting the work clearly — algorithms and software on my side, medical context, data organisation and presentation on theirs. Thanks also to the senior student in the "One Student One Chip" group, who invited me in and gave me my first contact with digital design and processors.
+
+In research, talking to classmates is often more useful than reading documentation. Many problems are not unanswerable — you just do not know that you are asking the wrong question. Someone to restate the problem with you solves half of it.
+:::
+
+## 家人
+
+感谢父母在我决定转专业、决定把时间大量投到比赛和实验室的时候，没有要求我"选一个稳妥的路"。他们看不懂我在做什么，但一直选择支持，这件事对我很重要。
+
+::: en Family
+Thanks to my parents, who never pushed me towards a safer path when I decided to transfer majors and to pour my time into competitions and the lab. They do not really understand what I am working on, but they have supported it regardless, and that matters a great deal to me.
+:::
+
+## 开源社区
+
+我做的东西大部分建立在别人的工作上：PyTorch、以及医学影像领域那些公开数据集和开源实现，让我这样的本科生也能动手做真实数据上的实验；VitePress 让这个网站得以用很低的成本搭起来；我平时用的各种编码智能体本身也都是开源项目的延伸。我能做的最实际的回报大概就是：把自己的代码也开源出去，把踩过的坑写成笔记——就是[笔记](/notes/)那一页在做的事。
+
+::: en Open source
+Most of what I build stands on other people's work: PyTorch, the public medical-imaging datasets and open implementations that let an undergraduate run experiments on real data; VitePress, which made this site cheap to build; and the coding agents I use daily, which are themselves extensions of open-source projects. The most practical way I can give back is to open-source my own code and write down what went wrong along the way — which is what the [notes](/notes/) section is for.
+:::
+
+## 还有一句
+
+最后想感谢这两年遇到的每一位愿意花时间回答问题的人：论坛里的陌生人、维护文档的人、群里顺手答疑的前辈。我现在还处在被帮助的位置，希望以后能慢慢变成有余力帮助别人的人。
+
+::: en One last note
+And thanks to everyone who took time to answer a question over these two years: strangers on forums, people who maintain documentation, seniors who answer things off-hand in group chats. I am still on the receiving end for now, and hope to gradually become someone with room to help others.
+:::

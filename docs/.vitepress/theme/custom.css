@@ -1,0 +1,116 @@
+:root {
+  --vp-c-brand-1: #2f6df6;
+  --vp-c-brand-2: #1e5ae0;
+  --vp-c-brand-3: #1b4fc4;
+  --vp-c-brand-soft: rgba(47, 109, 246, 0.14);
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #2f6df6 20%, #12b3a6 80%);
+}
+
+.dark {
+  --vp-c-brand-1: #6a9bff;
+  --vp-c-brand-2: #4f86ff;
+  --vp-c-brand-3: #2f6df6;
+  --vp-c-brand-soft: rgba(106, 155, 255, 0.16);
+}
+
+/* 中英双语块 */
+.bi-en {
+  margin: 0.75rem 0 1.75rem;
+  padding: 0.25rem 0 0.25rem 0.9rem;
+  border-left: 3px solid var(--vp-c-brand-1);
+  color: var(--vp-c-text-2);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.bi-en p {
+  margin: 0.35rem 0;
+}
+
+.bi-en .bi-en-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--vp-c-brand-1);
+  margin-bottom: 0.3rem;
+}
+
+/* 条目卡片 */
+.entry-card {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem 0.6rem;
+  margin: 1rem 0;
+  background: var(--vp-c-bg-soft);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.entry-card:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-1px);
+}
+
+.entry-card .entry-card-title {
+  font-weight: 700;
+  font-size: 1.02rem;
+  margin: 0 0 0.4rem;
+  color: var(--vp-c-text-1);
+}
+
+.entry-card p {
+  margin: 0.3rem 0;
+}
+
+.entry-card .meta {
+  color: var(--vp-c-text-3);
+  font-size: 0.85rem;
+}
+
+/* 首页 */
+.VPHero .VPImage {
+  max-width: 190px;
+  max-height: 190px;
+}
+
+.VPHero .text {
+  max-width: none;
+}
+
+@media (min-width: 960px) {
+  .VPHero .text {
+    font-size: 46px;
+  }
+}
+
+/* 标题里的链接不要下划线 */
+.vp-doc h1 a,
+.vp-doc h2 a,
+.vp-doc h3 a,
+.vp-doc h4 a {
+  text-decoration: none;
+}
+
+/* 表格首列与第二列不换行，避免日期和标签被折成两行 */
+.vp-doc table th:first-child,
+.vp-doc table td:first-child,
+.vp-doc table th:nth-child(2),
+.vp-doc table td:nth-child(2) {
+  white-space: nowrap;
+}
+
+.VPFeature {
+  border-radius: 10px;
+}
+
+.vp-doc h2 {
+  margin-top: 2.4rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc table {
+  display: table;
+  width: 100%;
+}

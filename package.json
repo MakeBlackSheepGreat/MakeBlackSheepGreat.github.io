@@ -1,0 +1,21 @@
+{
+  "name": "personal-site",
+  "private": true,
+  "version": "0.1.0",
+  "description": "杨智杰的个人主页 / Personal site built with VitePress",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "markdown-it-container": "^4.0.0",
+    "vitepress": "^1.6.4"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}
