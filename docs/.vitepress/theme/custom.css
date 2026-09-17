@@ -230,21 +230,48 @@
   font-variant-numeric: tabular-nums;
 }
 
-/* 表格 */
+/* 表格：宽屏保持首列不换行、末列有最小宽度 */
 .vp-doc table {
   display: table;
   width: 100%;
   font-size: 0.9rem;
 }
 
-.vp-doc table th:first-child,
-.vp-doc table td:first-child {
-  white-space: nowrap;
+@media (min-width: 769px) {
+  .vp-doc table th:first-child,
+  .vp-doc table td:first-child {
+    white-space: nowrap;
+  }
+
+  .vp-doc table th:last-child,
+  .vp-doc table td:last-child {
+    min-width: 9rem;
+  }
 }
 
-.vp-doc table th:last-child,
-.vp-doc table td:last-child {
-  min-width: 9rem;
+/* 窄屏：表格改为可横向滚动，单元格恢复换行，避免撑破页面 */
+@media (max-width: 768px) {
+  .vp-doc table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .vp-doc table th,
+  .vp-doc table td {
+    white-space: normal;
+    min-width: 0;
+    word-break: break-word;
+  }
+
+  .vp-doc table th:first-child,
+  .vp-doc table td:first-child,
+  .vp-doc table th:last-child,
+  .vp-doc table td:last-child {
+    white-space: normal;
+    min-width: 0;
+  }
 }
 
 /* 打印：导出 CV PDF 时只保留正文 */
