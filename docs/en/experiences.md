@@ -11,15 +11,14 @@ Education, research experience and service, most recent first.
 ## EDUCATION
 
 ::: card Electronic Information Engineering (Honors) · B.Eng. in progress
-<p class="entry-meta">Southwest University of Science and Technology · School of Information and Control Engineering · 2025.09 – present · Mianyang, China</p>
-<span class="badge">Comprehensive evaluation 99.81 / 100</span> <span class="badge">Top 12% of major</span> <span class="badge">1st in innovation credits</span>
+<p class="entry-meta">Southwest University of Science and Technology · School of Information and Control Engineering · 2026.09 – present · Mianyang, China</p>
 
-Transferred in from Pharmaceutical Engineering in September 2026. Coursework includes circuit analysis, signals and systems, analog electronics, fundamentals of artificial intelligence and programming in Python; currently catching up on the electronics core.
+Transferred in from Pharmaceutical Engineering in September 2026; currently in the second year. This semester: complex functions and integral transforms, probability and statistics, analog electronics, university physics, Japanese, software technology fundamentals. The electronics core (digital electronics, signals and systems) follows in later semesters.
 :::
 
 ::: card Pharmaceutical Engineering · first year
 <p class="entry-meta">Southwest University of Science and Technology · School of Life Science and Agriculture · 2025.09 – 2026.09 · Mianyang, China</p>
-<span class="badge">Academic rank 4 / 60</span> <span class="badge">No failed courses</span>
+<span class="badge">Comprehensive evaluation 99.81 / 100</span> <span class="badge">Top 12% of major</span> <span class="badge">1st in innovation credits</span> <span class="badge">No failed courses</span>
 
 First-year comprehensive evaluation 99.81, ranked 7th in the major (top 12%). Programming Fundamentals (Python) 100, Fundamentals and Applications of AI 87, Calculus B1 88, Japanese 88 / 87. Also passed the National Computer Rank Examination (Level 2) and CJT4 during this year.
 :::
