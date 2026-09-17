@@ -189,7 +189,7 @@ export default defineConfig({
           }
         },
         footer: {
-          message: 'Powered by VitePress · Hosted on GitHub Pages',
+          message: '由 VitePress 构建 · 部署于 Cloudflare Pages 与 GitHub Pages',
           copyright: '© 2026 杨智杰 ZhiJie Yang'
         },
         docFooter: { prev: '上一页', next: '下一页' },
@@ -284,7 +284,7 @@ export default defineConfig({
           }
         },
         footer: {
-          message: 'Powered by VitePress · Hosted on GitHub Pages',
+          message: 'Powered by VitePress · Deployed on Cloudflare Pages and GitHub Pages',
           copyright: '© 2026 ZhiJie Yang'
         },
         docFooter: { prev: 'Previous', next: 'Next' },
