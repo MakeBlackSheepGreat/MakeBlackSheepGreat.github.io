@@ -2,6 +2,12 @@
 
 > July 2026. Hardware design differs from software in one decisive way: **mistakes are expensive and feedback is slow**. A fabrication run takes weeks, so thinking before acting is a cost issue rather than a matter of style. This project split the design flow into stages that multiple agents can work through.
 
+::: info Short version
+- Staging with artifacts as preconditions keeps design and layout from interfering;
+- Skill modules make each stage verifiable on its own;
+- Hardware is strongly serial, so the payoff is verifiability rather than parallelism.
+:::
+
 ## Stages, not one long session
 
 The pipeline runs through several stages: topology discussion and part selection, then schematic capture, then layout, then manufacturing output. Each stage has defined inputs and outputs — **the previous stage's artifacts are the next stage's preconditions** — and a stage does not start until they are complete.

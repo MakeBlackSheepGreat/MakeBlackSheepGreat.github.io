@@ -2,6 +2,12 @@
 
 > September 2026. The starting point was an everyday annoyance: I run agents on a laptop, a server, a NAS and a phone, and they are all isolated — each needs its own configuration, its own credentials, its own progress checking, and coordination between them means moving things by hand.
 
+::: info Short version
+- A star topology centralises state and authentication so devices can come and go;
+- Executing code across devices means permissions start closed and are granted per device;
+- Reconnection belongs on the normal path, not the exception path.
+:::
+
 ## The goal in one sentence
 
 **Every device is a complete agent, and devices can borrow each other's environments.** When a session on the laptop needs the GPU on the server, the task is handed to the other device and the result returns to the original session.

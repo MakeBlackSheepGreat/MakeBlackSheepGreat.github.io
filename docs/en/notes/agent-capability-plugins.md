@@ -2,6 +2,12 @@
 
 > August–September 2026. What general-purpose agents actually lack is not intelligence but two other things: **domain capability** (they cannot see your paper library or reach your design tools) and **long-term state** (a new session forgets the last one's conclusions). This group of projects addresses both.
 
+::: info Short version
+- Capability grows better outside the prompt, as a service or a plugin;
+- State kept outside the tool is what survives changing devices and frameworks;
+- Extending capability must keep a fallback so a new component cannot take the main flow down.
+:::
+
 ## 1. Turning domain knowledge into an MCP service
 
 **PaperRAG_MCP** turns a personal paper library into something an agent can call directly: paper notes → vector retrieval → published as an MCP service on Cloudflare Workers (vector store and key-value storage from the platform), so any agent speaking MCP can use it.

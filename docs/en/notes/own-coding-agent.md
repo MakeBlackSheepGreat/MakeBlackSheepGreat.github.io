@@ -2,6 +2,12 @@
 
 > June–September 2026. The motivation was practical: off-the-shelf coding agents are good at being general, but the things I wanted — persistent memory, multi-agent workflows driven by smaller models, goal-driven long-running execution — were either missing or beyond my control.
 
+::: info Short version
+- Porting incrementally onto an open-source base beats rewriting;
+- Design the client protocol around task semantics, not a general mobile design system;
+- The value of a personal build is control: memory, workflow and execution defined by me.
+:::
+
 ## Rebuilding, not rewriting from scratch
 
 I started from an open-source coding agent and **ported only the incremental features I actually needed** (nine in the end), keeping the upstream structure otherwise. That keeps maintenance tractable: fewer conflicts when upstream moves, and it stays clear whether a bug is in my changes or in the base.

@@ -124,6 +124,9 @@ export default defineConfig({
               text: '智能体协作方法',
               items: [
                 { text: '全部笔记', link: '/notes/' },
+                { text: '把问题拆成可执行的任务', link: '/notes/task-decomposition' },
+                { text: 'AI 时代的工程能力', link: '/notes/skills-in-agent-era' },
+                { text: '上下文管理', link: '/notes/context-management' },
                 { text: '多用一年智能体框架的数据复盘', link: '/notes/agent-frameworks-retrospective' },
                 { text: '多智能体分工：角色、并行与验收', link: '/notes/multi-agent-roles' },
                 { text: '长任务的工程化', link: '/notes/long-task-engineering' },
@@ -216,6 +219,9 @@ export default defineConfig({
               text: 'Working with agents',
               items: [
                 { text: 'All notes', link: '/en/notes/' },
+                { text: 'Decomposing problems into tasks', link: '/en/notes/task-decomposition' },
+                { text: 'Engineering skills in the agent era', link: '/en/notes/skills-in-agent-era' },
+                { text: 'Context management', link: '/en/notes/context-management' },
                 { text: 'Four agent frameworks: the data', link: '/en/notes/agent-frameworks-retrospective' },
                 { text: 'Multi-agent division of labour', link: '/en/notes/multi-agent-roles' },
                 { text: 'Long-running tasks', link: '/en/notes/long-task-engineering' },
