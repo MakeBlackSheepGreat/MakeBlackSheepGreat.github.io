@@ -1,29 +1,77 @@
-# Ingesting 30,000 papers into a knowledge base
+# Ingesting 30,000 papers: one 11-hour pipeline
 
-> August 2026. The goal: turn just over thirty thousand papers into searchable, traceable knowledge entries, rather than a pile of PDFs on a disk.
+> August 2026. The goal was modest: make literature search return its sources. The result ran 11.2 hours over 30,031 papers with a 99.96% completion rate. The hard part was never the model — it was keeping a pipeline correct across tens of thousands of repetitions.
 
-## Where the problem actually was
+::: info Short version
+- Three things kept the long run alive: **content-hash idempotency, a task table driving resumption, and failures classified by cause**;
+- The mixed engine (local compute as the floor, cloud for volume) was not about speed but about **not being blocked by a single resource**;
+- Extracted content is not usable as a conclusion, so every entry carries **evidence links back to the source**.
+:::
 
-The first version was obvious: loop over the PDFs, feed each one to a model, store the summary. Around the few-hundred mark everything broke. An interrupted run had to start over. Re-processing a file wrote duplicate entries. A model returning malformed output poisoned the batch. The hard part was never calling the model — it was keeping a pipeline correct across tens of thousands of repetitions.
+## 1. What ran
 
-## The decisions that mattered
+| Metric | Value |
+| --- | --- |
+| Papers | 30,031 |
+| Completed | 30,018 (99.96%) |
+| Wall clock | 11.2 hours (about 2.5 s per paper) |
+| Knowledge entries | 102 published |
+| Evidence links | 18,125 |
+| Pending review | 177 drafts, promoted after human check |
+| Failures | one network drop, resumed automatically |
 
-**Tiered concurrency, cache before parallelise.** Each file gets a content hash first and is skipped if it has been done. Re-runs then cost almost nothing, and duplicate writes disappear by construction. Concurrency does not go to maximum immediately: parsing results land in a local cache first, and the inference service consumes at a steady rate. Blow up the model server once and everything behind it just waits for timeouts.
+## 2. Pipeline shape
 
-**A mixed inference engine.** The local GPU can run a 4B-class model, but throughput is limited; cloud calls are faster per paper but billed per call. The split that worked: local handles most short, well-structured papers, cloud handles long papers and salvage batches for parse failures, and both write into one task table where whichever finishes first commits the result.
+```text
+PDF directory
+  │
+  ├─ ① parse & chunk ──→ local cache (records content hash)
+  │
+  ├─ ② task table ─────→ pending / running / done / failed(reason)
+  │                       ↑ single source of truth, read on restart
+  ├─ ③ inference ──────┬─ local GPU (short, well-structured papers)
+  │                    └─ cloud (long papers, salvage batches)
+  │
+  └─ ④ store ──────────→ entries + evidence links + review queue
+```
 
-**The task table is the only source of truth.** Every paper's state (pending / running / done / failed-retry) lives in the table, so killing and restarting the process just resumes — no special "checkpoint resume" logic needed. Over the eleven hours the network dropped once; it picked up and finished on its own.
+Only step ③ involves anything intelligent; the other three are ordinary engineering.
 
-**Failures need categories.** "Model returned malformed output" and "the file itself is corrupt" are different problems: the first benefits from a retry, the second will fail ten thousand times. Recording them separately meant the final 0.04% could each be diagnosed at a glance.
+## 3. Three key decisions
 
-## Result and cost
+**1. Idempotency comes from a content hash, not from checkpoints.**
 
-30,018 of 30,031 papers completed — 99.96% — in 11.2 hours, about 2.5 seconds per paper.
+```python
+h = content_hash(pdf_path)
+if table.seen(h):
+    return                      # re-running is inherently safe
+table.enqueue(h, pdf_path)
+```
 
-The cost: extracted content is not usable as a conclusion on its own. So every knowledge entry carries links back to the source (over eighteen thousand of them), and anything the model was unsure about goes into a separate "draft pending review" queue to be promoted by a human. Automation raises throughput; the parts a person should look at still get looked at by a person.
+Re-runs then cost almost nothing, and there is no fragile "how far did I get" state to maintain.
 
-## If I did it again
+**2. The task table is the only source of truth.** Each paper's state lives in it, so killing and restarting the process just resumes. Over eleven hours the network dropped once; it picked up and finished.
 
-- Treat "why it failed" as a first-class field from version one
-- Use content hashing for idempotency from the start, not after finding duplicates
-- Verify end-to-end quality on a single paper before opening up concurrency — quality problems are batch problems, and they get more expensive the later you notice
+**3. Failures need categories.** "Model returned malformed output" benefits from a retry; "the file is corrupt" will fail ten thousand times. Once separated, every one of the final 0.04% could be diagnosed at a glance.
+
+::: tip Best value for effort
+Treat "why it failed" as a first-class field from version one. It costs almost nothing and turns the last 0.04% from a per-file investigation into a per-category one.
+:::
+
+## 4. Three pitfalls
+
+**1. Opening concurrency before fixing quality.** I started at maximum concurrency, which overwhelmed the model service and left everything queueing on timeouts. Caching first and letting the service consume at a steady rate was faster overall.
+
+::: warning Worth noting
+Set the concurrency cap by working backwards from the **service limit**, not from how fast you would like to go. This shows up most clearly with cloud APIs.
+:::
+
+**2. "Fastest wins" is the wrong rule for a mixed engine.** The local GPU has limited throughput; cloud calls are fast but billed per item. The working split was by paper characteristics (short local, long cloud), not by idleness.
+
+**3. Entries still need a human floor.** Extracted content cannot stand as a conclusion: part of it goes to a pending-review queue and is promoted only after human checking. Automation raises throughput; **what a person should look at still gets looked at.**
+
+## 5. If I ran it again
+
+- Classify failure reasons from version one
+- Use content hashing for idempotency from version one
+- Verify end-to-end quality on a single paper before opening concurrency — quality problems are batch problems, and they get more expensive the later you notice

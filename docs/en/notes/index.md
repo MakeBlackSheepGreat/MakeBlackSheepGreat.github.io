@@ -6,6 +6,7 @@ Records of problem diagnosis and design trade-offs from real projects, plus the 
 
 Methods that came out of a year of daily use, independent of any particular framework.
 
+- [Four agent frameworks in one year: what the data says](/en/notes/agent-frameworks-retrospective) — checking my own judgements against the records: what actually triggered migrations, the session counts that mislead, and the one asset that survives every move
 - [Multi-agent division of labour](/en/notes/multi-agent-roles) — why splitting is about separating proposal from verification; concurrency caps, failure classes and checkable acceptance criteria
 - [Long-running tasks: progress, budget and recovery](/en/notes/long-task-engineering) — state on disk, idempotent resumption, quota estimation, and treating interruption as the normal path
 - [Memory and rules: turning mistakes into process](/en/notes/memory-and-rules) — per-project rules files, cross-session memory, a requirements ledger, and the test "will this take effect on its own next time?"

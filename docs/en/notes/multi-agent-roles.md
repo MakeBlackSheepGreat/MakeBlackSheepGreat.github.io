@@ -1,37 +1,61 @@
-# Multi-agent division of labour: roles, parallelism and acceptance
+# One person, a team of agents: roles, concurrency and acceptance
 
-> Should one agent do the whole job, or several? I have run both for long stretches this year, and the conclusion is that **the value of splitting is not parallelism — it is making sure the one proposing a solution is not the one verifying it.**
+> I have run several agents at once for most of this year. This note is about the three questions that decide whether that saves time or wastes it: how to split roles, how far to parallelise, and how to accept the result.
 
-## How roles are split
+::: info Short version
+- The value of splitting is not parallelism — it is **making sure the one proposing a solution is not the one verifying it**;
+- Derive the concurrency cap from the **service limit**, and cache before parallelising;
+- Acceptance criteria must be **machine-checkable**, otherwise they are not requirements.
+:::
 
-Three roles, in practice:
+## 1. The scale of one typical task
 
-| Role | Only does | Explicitly does not |
-| --- | --- | --- |
-| Explore | Read-only inspection, conclusions with evidence | Change any file |
-| Implement | Make agreed changes within scope | Verify its own work |
-| Review | Hunt for problems against a checklist | **Change any code** |
+An ablation experiment, as it actually ran:
 
-The critical one is "the reviewer must not change code". The moment it can, it tends to fix problems in place — and the "finding problems" stage disappears, leaving just another implementer.
+| Role | Count | Only does | Explicitly does not |
+| --- | --- | --- | --- |
+| Main flow | 1 | split work, aggregate, report | implement anything itself |
+| Explore | 2–4 | read-only inspection with evidence | change any file |
+| Implement | 1–3 | change within agreed scope | verify its own work |
+| Review | 1–2 | find problems against a checklist | **change any code** |
 
-## Parallelism has a ceiling
+In the same body of records, **close to half of all execution units are sub-tasks rather than conversation turns** — most "sessions" are dispatched labour, not back-and-forth.
 
-I once dispatched more than a dozen sub-tasks at once: rate limits, everything waiting on everything else, retries burning the quota, and a longer wall-clock time than before. Three rules came out of it:
+## 2. Three hard rules
 
-1. **Cache before parallelising** — results land on disk first, so re-runs cost almost nothing
-2. **Cap concurrency** — derive the cap from the rate limit, not from how fast you would like to go
-3. **Classify failures before retrying** — "retry helps" (rate limit) and "retry is useless" (malformed input) are different problems
+**1. Reviewers do not change code.** The moment they can, they fix problems in place, the "finding problems" stage disappears, and you are left with one more implementer.
 
-## Acceptance criteria must be machine-checkable
+**2. Cache first, then parallelise.** Results land on disk so re-runs cost almost nothing, and the concurrency cap comes from the API limit rather than enthusiasm:
 
-"Check whether there are problems" is not a requirement. Usable criteria look like: all tests pass with a count of passing tests; every clickable element has actually been clicked with counts of total and failed clicks; exported images must be rendered and looked at rather than confirmed to exist.
+```text
+cap = min(rate_limit × 0.7, concurrency the local machine can sustain)
+retries = enable only for classes where retry helps (e.g. rate limits);
+          everything else is recorded with its reason and skipped
+```
 
-That last one is the most frequently skipped: **a file existing, being valid and having the right word count does not mean the deliverable is correct.**
+**3. Acceptance must be automatically judgeable.** "Check whether there are problems" is not a requirement. Usable criteria look like: all tests pass with a count; every clickable element was actually clicked with counts of total and failed clicks; exported images were rendered and looked at, not merely confirmed to exist.
 
-## Sub-tasks must be able to declare themselves done
+::: tip Best value for effort
+Turn acceptance criteria into executable checks and let the main flow run them. After that, a human only looks at conclusions at key points.
+:::
 
-Every sub-task needs its own definition of done, otherwise the main flow cannot tell whether to wait or collect. For long tasks my bar is: progress on disk, a defined artifact, and a timeout/retry policy — all three before dispatch.
+## 3. Three pitfalls
 
-## Closing thought
+**1. Maximum concurrency is a negative optimisation.** I once dispatched a dozen sub-tasks: rate limits, mutual waiting, retries burning the quota, and a longer wall clock. With a fixed cap, the same work finished sooner.
 
-The point of multi-agent work is not speed; it is **removing verification from the centre of human attention**. A person then checks conclusions at key points instead of watching every step.
+**2. A sub-task without a definition of done cannot converge.** Every sub-task must state what counts as finished, otherwise the main flow cannot tell whether to wait or collect. My bar: progress on disk, a defined artifact, and a timeout/retry policy — all three before dispatch.
+
+::: warning Worth noting
+Long tasks must write progress to a file, not keep it in the conversation. A dropped session takes conversational state with it; a file can be picked up by any process.
+:::
+
+**3. Sub-task context must stay clean.** Carrying irrelevant history into a sub-task measurably degrades its judgement. Give it what it needs, not everything it might touch.
+
+## 4. What I do by default now
+
+- Exploration and review are **read-only**; implementation and review are **separated**
+- Concurrency is capped and failures are retried by class
+- Acceptance criteria are written first, and anything a script can check never goes to a human
+- Long tasks keep progress on disk, so they can be interrupted, handed over and resumed
+
+With those four fixed, "one person with a team of agents" stops being a demo and becomes a usable way to work.

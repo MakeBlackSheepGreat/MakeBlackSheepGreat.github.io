@@ -124,6 +124,7 @@ export default defineConfig({
               text: '智能体协作方法',
               items: [
                 { text: '全部笔记', link: '/notes/' },
+                { text: '多用一年智能体框架的数据复盘', link: '/notes/agent-frameworks-retrospective' },
                 { text: '多智能体分工：角色、并行与验收', link: '/notes/multi-agent-roles' },
                 { text: '长任务的工程化', link: '/notes/long-task-engineering' },
                 { text: '记忆与规则：把坑变成制度', link: '/notes/memory-and-rules' },
@@ -215,6 +216,7 @@ export default defineConfig({
               text: 'Working with agents',
               items: [
                 { text: 'All notes', link: '/en/notes/' },
+                { text: 'Four agent frameworks: the data', link: '/en/notes/agent-frameworks-retrospective' },
                 { text: 'Multi-agent division of labour', link: '/en/notes/multi-agent-roles' },
                 { text: 'Long-running tasks', link: '/en/notes/long-task-engineering' },
                 { text: 'Memory and rules', link: '/en/notes/memory-and-rules' },
