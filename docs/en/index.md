@@ -21,7 +21,7 @@ Current work includes pulmonary nodule classification and malignancy risk gradin
 ## News
 
 <ul class="news">
-<li><span class="news-date">2026.09</span><span>Personal site is live; transferred into Electronic Information Engineering (Honors); took part in the CUMCM mathematical modelling contest</span></li>
+<li><span class="news-date">2026.09</span><span>Personal site is live; transferred into Electronic Information Engineering (Honors)</span></li>
 <li><span class="news-date">2026.08</span><span>Completed a paper-corpus ingestion pipeline for a literature knowledge base (30,031 papers, 11.2 hours, 99.96% completion) and open-sourced the software for the breast ultrasound diagnosis support system and the osteomyelitis workstation</span></li>
 <li><span class="news-date">2026.07</span><span>National third prize at the 11th National College Student Biomedical Engineering Innovation Design Competition for the breast ultrasound diagnosis support system</span></li>
 <li><span class="news-date">2026.06</span><span>Provincial second prize at the 6th Sichuan Provincial Biomedical Engineering Innovation Design Competition; passed CJT4</span></li>

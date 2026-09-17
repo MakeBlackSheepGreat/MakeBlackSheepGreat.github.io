@@ -88,7 +88,7 @@ Responsible for the association's hardware track: organising study material, con
 
 **2026.07 – 08** — Summer focused on engineering practice: the paper corpus pipeline, multi-agent collaboration systems, service deployment and operations, and domestic AI chip operator problems.
 
-**2026.09** — Transferred into Electronic Information Engineering (Honors); took part in the CUMCM mathematical modelling contest.
+**2026.09** — Transferred into Electronic Information Engineering (Honors) and started catching up on the electronics core.
 
 ## MORE
 

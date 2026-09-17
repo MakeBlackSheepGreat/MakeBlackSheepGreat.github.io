@@ -142,6 +142,9 @@ export default defineConfig({
                 { text: '把问题拆成可执行的任务', link: '/notes/task-decomposition' },
                 { text: 'AI 时代的工程能力', link: '/notes/skills-in-agent-era' },
                 { text: '上下文管理', link: '/notes/context-management' },
+                { text: '指令文件要分层', link: '/notes/instruction-files-layering' },
+                { text: '技能：按需加载的能力单元', link: '/notes/skill-design' },
+                { text: '环境故障排查手册', link: '/notes/env-troubleshooting' },
                 { text: '多智能体分工：角色、并行与验收', link: '/notes/multi-agent-roles' },
                 { text: '长任务的工程化', link: '/notes/long-task-engineering' },
                 { text: '记忆与规则：把踩过的坑变成制度', link: '/notes/memory-and-rules' },
@@ -165,7 +168,8 @@ export default defineConfig({
                 { text: '科研流程工具化', link: '/notes/research-workflow-suite' },
                 { text: 'Agent 服务公网部署', link: '/notes/agent-service-public' },
                 { text: '医学软件离线交付', link: '/notes/medical-software-delivery' },
-                { text: '算子层实践', link: '/notes/chip-operator-practice' }
+                { text: '算子层实践', link: '/notes/chip-operator-practice' },
+                { text: '环境类故障排查手册', link: '/notes/env-troubleshooting' }
               ]
             },
             {
@@ -238,6 +242,9 @@ export default defineConfig({
                 { text: 'Decomposing problems into tasks', link: '/en/notes/task-decomposition' },
                 { text: 'Engineering skills in the agent era', link: '/en/notes/skills-in-agent-era' },
                 { text: 'Context management', link: '/en/notes/context-management' },
+                { text: 'Instruction files need layers', link: '/en/notes/instruction-files-layering' },
+                { text: 'Skills, loaded on demand', link: '/en/notes/skill-design' },
+                { text: 'Environment troubleshooting', link: '/en/notes/env-troubleshooting' },
                 { text: 'Multi-agent division of labour', link: '/en/notes/multi-agent-roles' },
                 { text: 'Long-running tasks', link: '/en/notes/long-task-engineering' },
                 { text: 'Memory and rules', link: '/en/notes/memory-and-rules' },
@@ -261,7 +268,8 @@ export default defineConfig({
                 { text: 'Research workflow tooling', link: '/en/notes/research-workflow-suite' },
                 { text: 'Publishing an agent service', link: '/en/notes/agent-service-public' },
                 { text: 'Shipping medical software on a disc', link: '/en/notes/medical-software-delivery' },
-                { text: 'Operator-level practice', link: '/en/notes/chip-operator-practice' }
+                { text: 'Operator-level practice', link: '/en/notes/chip-operator-practice' },
+                { text: 'Environment troubleshooting', link: '/en/notes/env-troubleshooting' }
               ]
             },
             {

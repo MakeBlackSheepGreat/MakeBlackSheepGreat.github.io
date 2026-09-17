@@ -21,7 +21,7 @@
 ## 动态
 
 <ul class="news">
-<li><span class="news-date">2026.09</span><span>个人主页上线；转入信息与控制工程学院电子信息工程（卓越）专业；参加高教社杯全国大学生数学建模竞赛</span></li>
+<li><span class="news-date">2026.09</span><span>个人主页上线；转入信息与控制工程学院电子信息工程（卓越）专业</span></li>
 <li><span class="news-date">2026.08</span><span>完成面向文献知识库的论文语料摄取流水线（30,031 篇，11.2 小时，完成率 99.96%），并开源乳腺超声辅助诊断与颌骨骨髓炎医生工作站的软件代码</span></li>
 <li><span class="news-date">2026.07</span><span>参赛作品《基于超声影像的乳腺肿瘤良恶性分类辅助诊断系统设计》获第十一届全国大学生生物医学工程创新设计大赛国家级三等奖</span></li>
 <li><span class="news-date">2026.06</span><span>获第六届四川省大学生生物医学工程创新设计大赛省级二等奖；通过大学日语四级考试（CJT4）</span></li>
