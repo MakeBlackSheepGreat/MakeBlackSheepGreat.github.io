@@ -4,7 +4,10 @@ import { onMounted, ref } from 'vue'
 /**
  * 访问计数展示。
  * 数据来自本站自己的 Cloudflare Pages Function（/api/hits），不依赖第三方统计脚本。
- * 在 GitHub Pages 镜像、本地开发等没有该接口的环境下静默隐藏。
+ *
+ * - 在 Cloudflare Pages（home.liteblacksheep.asia）上走同源接口；
+ * - 在 GitHub Pages 镜像上没有该函数，则回退到 Cloudflare 域名上的同一接口（函数已开放跨域）；
+ * - 本地开发两者都不可用时静默隐藏，不产生任何报错。
  */
 const pv = ref<number | null>(null)
 const uv = ref<number | null>(null)
@@ -12,12 +15,16 @@ const failed = ref(false)
 
 const STORAGE_KEY = 'ls-visitor-id'
 const SESSION_KEY = 'ls-counted'
+const FALLBACK_ENDPOINT = 'https://home.liteblacksheep.asia/api/hits'
 
 function visitorId(): string {
   try {
     const existing = localStorage.getItem(STORAGE_KEY)
     if (existing) return existing
-    const id = crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2) + Date.now().toString(36)
+    const id =
+      typeof crypto !== 'undefined' && crypto.randomUUID
+        ? crypto.randomUUID()
+        : Math.random().toString(36).slice(2) + Date.now().toString(36)
     localStorage.setItem(STORAGE_KEY, id)
     return id
   } catch {
@@ -25,35 +32,50 @@ function visitorId(): string {
   }
 }
 
+async function callApi(base: string, counted: boolean) {
+  const res = counted
+    ? await fetch(base, { credentials: 'omit' })
+    : await fetch(base, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ id: visitorId() }),
+        credentials: 'omit'
+      })
+  if (!res.ok) throw new Error(String(res.status))
+  return res.json()
+}
+
 onMounted(async () => {
+  let counted = false
   try {
-    let counted = false
-    try {
-      counted = sessionStorage.getItem(SESSION_KEY) === '1'
-    } catch {
-      counted = false
-    }
-
-    const res = counted
-      ? await fetch('/api/hits')
-      : await fetch('/api/hits', {
-          method: 'POST',
-          headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({ id: visitorId() })
-        })
-
-    if (!res.ok) throw new Error(String(res.status))
-    const data = await res.json()
-    if (typeof data.pv !== 'number') throw new Error('bad payload')
-    pv.value = data.pv
-    uv.value = typeof data.uv === 'number' ? data.uv : null
-    try {
-      sessionStorage.setItem(SESSION_KEY, '1')
-    } catch {
-      /* 忽略存储失败 */
-    }
+    counted = sessionStorage.getItem(SESSION_KEY) === '1'
   } catch {
+    counted = false
+  }
+
+  let data: any = null
+  try {
+    data = await callApi('/api/hits', counted)
+  } catch {
+    try {
+      data = await callApi(FALLBACK_ENDPOINT, counted)
+    } catch {
+      failed.value = true
+      return
+    }
+  }
+
+  if (!data || typeof data.pv !== 'number') {
     failed.value = true
+    return
+  }
+
+  pv.value = data.pv
+  uv.value = typeof data.uv === 'number' ? data.uv : null
+  try {
+    sessionStorage.setItem(SESSION_KEY, '1')
+  } catch {
+    /* 忽略存储失败 */
   }
 })
 </script>
