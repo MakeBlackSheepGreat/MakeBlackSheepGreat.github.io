@@ -66,8 +66,13 @@ Participated in CANN operator competition problems: 2D convolution (FP16 / FP32 
 ## SERVICE
 
 ::: card Computing and Artificial Intelligence Association · Vice President (hardware track)
-<p class="entry-meta">2025.10 – present</p>
-Responsible for the association's hardware track: organising study material, contributing to technical sessions and event organisation, and helping junior members get started with circuits and embedded systems.
+<p class="entry-meta">Southwest University of Science and Technology · joined 2025.10 · Vice President since 2026.09</p>
+Joined in October 2025 and has served as Vice President (hardware track) since September 2026. Responsible for the association's hardware track: organising study material, contributing to technical sessions and event organisation, and helping junior members get started with circuits and embedded systems.
+:::
+
+::: card Jingguan Tianxia Photography Association · Council Member
+<p class="entry-meta">Southwest University of Science and Technology · 2026.09 – present</p>
+Involved in the association's routine affairs and event organisation.
 :::
 
 ## TIMELINE
@@ -88,7 +93,7 @@ Responsible for the association's hardware track: organising study material, con
 
 **2026.07 – 08** — Summer focused on engineering practice: the paper corpus pipeline, multi-agent collaboration systems, service deployment and operations, and domestic AI chip operator problems.
 
-**2026.09** — Transferred into Electronic Information Engineering (Honors) and started catching up on the electronics core.
+**2026.09** — Transferred into Electronic Information Engineering (Honors) and started catching up on the electronics core; took up the roles of Vice President (hardware track) of the Computing and Artificial Intelligence Association and Council Member of the Jingguan Tianxia Photography Association.
 
 ## MORE
 

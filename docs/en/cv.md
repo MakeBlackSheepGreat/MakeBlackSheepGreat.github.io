@@ -84,4 +84,5 @@ Code and further repositories: [github.com/MakeBlackSheepGreat](https://github.c
 
 ## SERVICE
 
-- **Computing and Artificial Intelligence Association · Vice President (hardware track)** (2025.10 – present)
+- **Computing and Artificial Intelligence Association · Vice President (hardware track)** (joined 2025.10, Vice President since 2026.09)
+- **Jingguan Tianxia Photography Association · Council Member** (2026.09 – present)
