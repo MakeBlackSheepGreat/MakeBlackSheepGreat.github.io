@@ -97,16 +97,45 @@ msedge --headless=new --disable-gpu --no-pdf-header-footer \
 | 声明 | `docs/public/robots.txt` | 逐条屏蔽 AI 训练与检索爬虫；`Content-Signal` 声明 `ai-train=no, ai-input=no` |
 | 声明 | `docs/public/_headers` | `X-Robots-Tag: noai, noimageai` 与 `TDM-Reservation: 1` |
 | 声明 | `docs/tdm-reservation.md` / `docs/en/` | 可读的权利保留条款页，页脚有入口 |
-| 诱饵 | `docs/.vitepress/theme/AntiScrape.vue` | 对真人不可见的蜜罐链接、诱饵词与条款告知 |
+| 对抗 | `docs/.vitepress/theme/AntiScrape.vue` | 对真人不可见的蜜罐链接、条款告知、碎片化乱序诱饵 |
+| 对抗 | `docs/.vitepress/theme/decoy-pool.ts` | 101 词中性诱饵池，按页面哈希确定性取词 |
+| 对抗 | `docs/.vitepress/theme/watermark.ts` | 零宽字符水印，用于事后溯源 |
 | 强制 | `functions/_middleware.js` | 边缘拦截：AI 爬虫 UA 与蜜罐路径返回 403 |
+| 强制 | `functions/_trap/[[path]].js` | 蜜罐端点，返回 410 并打标 |
 
-验证防护效果（需先启动 `pnpm preview`）：
+### 对抗层的三项强化混淆
+
+- **诱饵池扩容**：101 个中性名词（自然科学 / 工艺工程 / 音乐体育 / 历史制度），
+  24 个页面即可覆盖全部词，抓取器无法靠「多次抓取取交集」识别诱饵。
+- **碎片化 + DOM 顺序混淆**：每个诱饵词切 2 段，48 个碎片用 `order` 属性配合
+  `display:flex` 重排，解析 DOM 得到的文本是乱序碎片。
+- **零宽字符水印**：每页注入两段**各自完整可解**的水印（分处不同 DOM 位置），
+  编码「站点标识 + 页面摘要」，用于事后确认某段文字是否源自本站。
+
+> 设计取舍：全部使用中性名词，不注入假事实、不含指令性语句。被误抓时只产生降低信噪比的
+> 噪声，不会形成似是而非的错误知识，也不对下游模型行为产生诱导。
+
+### 验证
 
 ```bash
-PW_CHANNEL=msedge node scripts/verify-antiscrape.mjs
+node scripts/check-watermark.mjs    # 水印编解码 13 项（无需浏览器）
+node scripts/check-decoy.mjs        # 诱饵池与碎片乱序 13 项（无需浏览器）
+PW_CHANNEL=msedge node scripts/verify-antiscrape.mjs   # 浏览器实测，需先起 pnpm preview
 ```
 
-该脚本会逐页断言诱饵层对真人不可见、不可聚焦、不影响布局，任一不满足即非零退出。
+`verify-antiscrape.mjs` 会逐页断言：诱饵层对真人不可见、不可聚焦、不影响布局、
+碎片化与 CSS 重排生效、零宽水印已注入且**未污染正文可见文本**，任一不满足即非零退出。
+
+### 水印溯源用法
+
+```js
+import { decodeWatermark, decodeWatermarkAll } from './docs/.vitepress/theme/watermark.ts'
+
+decodeWatermark(疑似转载的文本)
+// → { found: true, site: 'LS', digest: 'b63bca1e', raw: 'LS|b63bca1e' }
+```
+
+`digest` 是页面路径加固定盐的 FNV-1a 哈希，可确认来源页面，且不泄露页面内容。
 
 > 注意：诱饵层的隐藏样式必须写成**内联 style**。VitePress 默认由 JS 注入 CSS，
 > 仅写 `<style scoped>` 会导致样式表加载前诱饵文字对人类可见。
