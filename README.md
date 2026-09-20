@@ -86,3 +86,30 @@ msedge --headless=new --disable-gpu --no-pdf-header-footer \
 - 不出现导师姓名与实验室具体名称，不出现队友姓名
 - 竞赛条目只写颁发单位、时间与本人承担的工作
 - 照片使用 `docs/public/photo-placeholder.svg` 占位，替换时改首页的 `<img>` 地址即可
+
+## 反 AI 抓取与蒸馏防护
+
+站点对内容使用作出了明确的权利保留，并实现了分层防护。完整说明见
+[`ANTI-AI-SCRAPING.md`](./ANTI-AI-SCRAPING.md)，要点如下：
+
+| 层 | 位置 | 作用 |
+|---|---|---|
+| 声明 | `docs/public/robots.txt` | 逐条屏蔽 AI 训练与检索爬虫；`Content-Signal` 声明 `ai-train=no, ai-input=no` |
+| 声明 | `docs/public/_headers` | `X-Robots-Tag: noai, noimageai` 与 `TDM-Reservation: 1` |
+| 声明 | `docs/tdm-reservation.md` / `docs/en/` | 可读的权利保留条款页，页脚有入口 |
+| 诱饵 | `docs/.vitepress/theme/AntiScrape.vue` | 对真人不可见的蜜罐链接、诱饵词与条款告知 |
+| 强制 | `functions/_middleware.js` | 边缘拦截：AI 爬虫 UA 与蜜罐路径返回 403 |
+
+验证防护效果（需先启动 `pnpm preview`）：
+
+```bash
+PW_CHANNEL=msedge node scripts/verify-antiscrape.mjs
+```
+
+该脚本会逐页断言诱饵层对真人不可见、不可聚焦、不影响布局，任一不满足即非零退出。
+
+> 注意：诱饵层的隐藏样式必须写成**内联 style**。VitePress 默认由 JS 注入 CSS，
+> 仅写 `<style scoped>` 会导致样式表加载前诱饵文字对人类可见。
+
+**搜索引擎不会被屏蔽** —— Googlebot / Bingbot / Baiduspider 等始终放行，否则站点会从搜索结果中消失。
+

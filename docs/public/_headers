@@ -1,21 +1,38 @@
+# Cloudflare Pages 响应头配置
+# 除安全头外，这里还向合规爬虫声明「禁止把本站内容用于 AI 训练与实时模型输入」。
+
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=(), interest-cohort=()
   Strict-Transport-Security: max-age=15552000
+  # 禁止 AI 训练与实时摄取（被 Google / Bing / Yandex 等识别的扩展指令）
+  X-Robots-Tag: noai, noimageai, max-snippet:-1, max-image-preview:large
+  # 显式声明文本与数据挖掘权利保留（EU Directive 2019/790 第 4 条）
+  TDM-Reservation: 1
+  # 内容使用信号，与 robots.txt 中的 Content-Signal 保持一致
+  Content-Signal: search=yes, ai-train=no, ai-input=no
 
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 
 /*.pdf
   Cache-Control: public, max-age=86400
+  X-Robots-Tag: noai, noimageai
+  TDM-Reservation: 1
 
 /*.jpg
   Cache-Control: public, max-age=86400
+  X-Robots-Tag: noai, noimageai
+  TDM-Reservation: 1
 
 /*.png
   Cache-Control: public, max-age=86400
+  X-Robots-Tag: noai, noimageai
+  TDM-Reservation: 1
 
 /*.svg
   Cache-Control: public, max-age=86400
+  X-Robots-Tag: noai, noimageai
+  TDM-Reservation: 1
