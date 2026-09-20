@@ -8,15 +8,15 @@ Thanks to the teachers who supervised my research training. I started participat
 
 ### School of Life Science and Agriculture
 
-**Cui Yujing** (counsellor) — During my first year in Pharmaceutical Engineering, Ms. Cui gave concrete guidance on the major-transfer process, course planning and academic direction. When I decided to move from Pharmaceutical Engineering to Electronic Information Engineering, she laid out the procedural milestones and timeline and flagged the real workload of catching up on courses after the transfer.
+**Yujing Cui** (counsellor) — During my first year in Pharmaceutical Engineering, Ms. Cui gave concrete guidance on the major-transfer process, course planning and academic direction. When I decided to move from Pharmaceutical Engineering to Electronic Information Engineering, she laid out the procedural milestones and timeline and flagged the real workload of catching up on courses after the transfer.
 
-**Zhang Mingyao** — Offered specific guidance on subject knowledge and study methods, including how to approach the course material and how to pace independent study.
+**Mingyao Zhang** — Offered specific guidance on subject knowledge and study methods, including how to approach the course material and how to pace independent study.
 
-**Wu Jun** — Advised on the direction of the major and on subsequent development, which helped me form a clearer picture of the sequence in which the courses build on one another.
+**Jun Wu** — Advised on the direction of the major and on subsequent development, which helped me form a clearer picture of the sequence in which the courses build on one another.
 
 ### School of Information and Control Engineering
 
-**Jin Yuhong** (lecturer, Circuit Analysis Fundamentals) — I began sitting in on this course in March 2026. As the first foundation course I encountered after crossing into electronic information engineering, Ms. Jin answered my questions patiently and allowed me to attend lectures and join the office hours, which let me build a basic framework of circuit analysis before formally transferring into the major.
+**Yuhong Jin** (lecturer, Circuit Analysis Fundamentals) — I began sitting in on this course in March 2026. As the first foundation course I encountered after crossing into electronic information engineering, Ms. Jin answered my questions patiently and allowed me to attend lectures and join the office hours, which let me build a basic framework of circuit analysis before formally transferring into the major.
 
 Thanks also to the other teachers in my original major, who gave concrete advice during my cross-disciplinary study and transfer preparation.
 
