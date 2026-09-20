@@ -83,9 +83,23 @@ msedge --headless=new --disable-gpu --no-pdf-header-footer \
 ## 内容约定
 
 - 公开信息只包含姓名、学校、专业、项目与竞赛内容；学号、手机号、生日、身份证等个人信息不写入站点
-- 不出现导师姓名与实验室具体名称，不出现队友姓名
+- **仅在致谢页**可写出经本人同意的师长姓名与职务；其余页面不出现导师姓名与实验室具体名称，也不出现队友姓名
 - 竞赛条目只写颁发单位、时间与本人承担的工作
 - 照片使用 `docs/public/photo-placeholder.svg` 占位，替换时改首页的 `<img>` 地址即可
+
+## 许可证
+
+本站采用代码与内容分离的双许可证：
+
+| 文件 | 覆盖范围 | 授权 |
+|---|---|---|
+| `LICENSE` | 源码：`package.json`、`docs/.vitepress/`、`scripts/`、`functions/` | MIT |
+| `LICENSE-CONTENT` | 内容：`docs/` 下正文、笔记、图片（`.vitepress/` 除外） | 保留所有权利 |
+
+内容侧明确保留文本与数据挖掘权利（TDM Reservation Protocol、欧盟 2019/790 号指令第 4 条），
+与 `docs/public/_headers`、`robots.txt` 中的机器可读声明一致。
+
+致谢页的「开源协议」章节面向读者说明这些条款，改动许可证时需同步该章节与两个许可证文件。
 
 ## 反 AI 抓取与蒸馏防护
 
