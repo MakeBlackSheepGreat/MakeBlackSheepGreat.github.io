@@ -1,6 +1,6 @@
 /**
  * 获奖页渲染核验：在真实浏览器里打开 /awards 与 /en/awards，
- * 断言新条目存在、旧措辞已移除、卡片结构完好、无横向溢出。
+ * 断言条目内容、旧措辞已移除、卡片结构完好、无横向溢出。
  *
  * 用法：先启动 dev 或 preview 服务，再执行本脚本。
  *   DEV_URL=http://127.0.0.1:5199 PW_CHANNEL=msedge node scripts/check-awards-page.mjs
@@ -23,6 +23,7 @@ const CASES = [
     path: '/awards',
     lang: 'zh',
     must: [
+      // 揭榜挂帅条目
       '揭榜挂帅',
       '国家级二等奖',
       '共青团中央',
@@ -32,11 +33,31 @@ const CASES = [
       'Electron',
       'PyTorch',
       'FastAPI',
-      '国家级三等奖'
+      // 国赛条目：作品名 + 方法细节
+      '国家级三等奖',
+      '基于超声影像的乳腺肿瘤良恶性分类辅助诊断系统设计',
+      '双模型互补集成',
+      '病例级五折交叉验证',
+      '测试时增强',
+      'logit 空间融合',
+      '面积门控',
+      'Grad-CAM',
+      // 省赛条目：方法细节
+      '2.5D 六通道',
+      '外部验证队列',
+      '概率校准',
+      // 贡献口径
+      '本人承担软件开发与项目报告的技术部分',
+      '其余工作由团队其他成员完成'
     ],
-    mustNot: ['OSTEO VISION：面向颌骨骨髓炎辅助判读', 'github.com/MakeBlackSheepGreat/osteo-vision'],
-    // 该赛事不应再出现在「参赛经历（未获奖）」区
-    goneFromUnrewarded: '赛题为面向颌骨骨髓炎的智能化荧光诊疗'
+    mustNot: [
+      'OSTEO VISION：面向颌骨骨髓炎辅助判读',
+      'github.com/MakeBlackSheepGreat/osteo-vision',
+      '团队 5 人',
+      '校赛阶段的参赛作品为乳腺超声辅助诊断系统'
+    ],
+    goneFromUnrewarded: '赛题为面向颌骨骨髓炎的智能化荧光诊疗',
+    expectCards: 5
   },
   {
     path: '/en/awards',
@@ -51,10 +72,28 @@ const CASES = [
       'Electron',
       'PyTorch',
       'FastAPI',
-      'National third prize'
+      'National third prize',
+      'A benign/malignant classification and diagnosis support system for breast tumours on ultrasound images',
+      'complementary dual-model ensemble',
+      'patient-level five-fold cross-validation',
+      'test-time augmentation',
+      'logit space',
+      'area gate',
+      'Grad-CAM',
+      '2.5D six-channel',
+      'external cohort',
+      'probability calibration',
+      'I did the software development and the technical part of the project report',
+      'The remaining work was done by other team members'
     ],
-    mustNot: ['OSTEO VISION: a fluorescence', 'github.com/MakeBlackSheepGreat/osteo-vision'],
-    goneFromUnrewarded: 'problem on fluorescence-guided diagnosis and treatment'
+    mustNot: [
+      'OSTEO VISION: a fluorescence',
+      'github.com/MakeBlackSheepGreat/osteo-vision',
+      'Five-person team',
+      'The entry was the breast ultrasound diagnosis support system'
+    ],
+    goneFromUnrewarded: 'problem on fluorescence-guided diagnosis and treatment',
+    expectCards: 5
   }
 ]
 
@@ -92,7 +131,7 @@ for (const c of CASES) {
 
   // 卡片数量
   const cardCount = await page.evaluate(() => document.querySelectorAll('.entry').length)
-  check('卡片结构存在', cardCount > 0, `${cardCount} 张卡片`)
+  check('卡片数量正确', cardCount === c.expectCards, `${cardCount} 张（预期 ${c.expectCards}）`)
 
   // 横向溢出
   const overflow = await page.evaluate(
