@@ -3,5 +3,8 @@ node_modules
 .vitepress/dist
 docs/.vitepress/dist
 docs/.vitepress/cache
+docs/.vitepress/.temp
+docs/.vitepress/config.mts.timestamp-*
+docs/.vitepress/*.png
 .DS_Store
 *.log

@@ -6,6 +6,16 @@ pageClass: labels
 
 ## Competitions
 
+::: card China Youth Science and Technology Innovation "Open Competition" (2026) · National second prize
+October 2026, hosted by the Communist Youth League Central Committee. The problem set was intelligent fluorescence-guided diagnosis and treatment of osteomyelitis of the jaw, posted by Chengdu Keaoda Optoelectronic Technology Co., Ltd.
+
+The entry was *An intelligent fluorescence-guided diagnosis and treatment platform for precise debridement of osteomyelitis of the jaw, and its industrial application*. It takes the form of an offline medical imaging workstation covering file admission, case management, image processing, AI candidate hints, manual annotation, physician review and evidence export, all within one traceable flow.
+
+Inputs cover white-light and fluorescence JPEGs, single-channel or three-view MP4 video, and CBCT or STL three-dimensional reference data. Outputs are fused views, pseudo-colour images, risk maps, uncertainty maps and a structured evidence bundle. The platform frames its results as intraoperative reference signals and review material, and keeps physician review as the final decision layer.
+
+The stack is a Python 3.11 and FastAPI backend, a Vue 3 front-end and PyTorch inference. Three-dimensional rendering is split into a separate Three.js runtime, and an Electron host packages the desktop build for offline distribution. I designed the platform and implemented all of it, covering backend services and data contracts, the front-end workstation, the inference pipeline and model adapters, the three-dimensional runtime, the test suite and desktop packaging.
+:::
+
 ::: card 11th National College Student Biomedical Engineering Innovation Design Competition · National third prize
 July 2026, hosted by the Chinese Society of Biomedical Engineering.
 
@@ -45,7 +55,6 @@ Competitions entered without an award are listed below as well.
 
 - **China International College Students' Innovation Competition, campus selection round (2026)**: two projects — a lightweight ultrasound screening system for primary care, and a drug-storage environment monitoring system for township clinics. I worked on algorithms and system implementation.
 - **15th "China Software Cup" College Student Software Design Competition**: team entry, backend and algorithm modules.
-- **China Youth Science and Technology Innovation "Open Competition" (2026)**: problem on fluorescence-guided diagnosis and treatment of osteomyelitis of the jaw.
 - **CANN operator contest, August round**: several operator problems on domestic AI chips, including 2D convolution, HardSwish and quantised GEMM.
 
 ## Earlier
