@@ -1,6 +1,6 @@
 # Environment failures: a troubleshooting manual
 
-> September 2026. Five "the code did not change, the environment did" failures in a single day. This note records them in one shared format and turns the result into a checklist that can be followed directly.
+> September 2026. Five "the code did not change, the environment did" failures in a single day. This note records them in one shared format and turns the result into a checklist that can be followed directly. Later cases come from other days, and the table has grown from seven classes to eleven — the quick-reference part keeps the same structure, so read it as a table.
 
 ::: info Short version
 - The common trait of environment failures is that **the symptom is not where the cause is**: the error is in the command, the cause is in the PATH;
@@ -26,6 +26,10 @@ Each case is written in five parts: **symptom → diagnostic action → root cau
 | A cleanup command kills itself | `pgrep -af` first | Pattern matches the full command line, including its own | Break self-matching with a character class, or resolve PIDs first |
 | A script is blocked by policy or a hook | Read the source named in the error | Policy restricts scripts from unknown sources | Adjust the policy scope, or follow the hook's error |
 | Chinese chart output is all boxes | `fc-list :lang=zh` empty | No CJK font installed | Install the font and set the family explicitly |
+| A build is stopped by a bulk-delete guard | Read the running count and threshold in the error | The sandbox shim counts deletions per session, and every build clears temp dirs | Use the in-memory dev server this session; build next session |
+| A temp file will not land | `ls` the target directory | The compatibility layer resolves `/tmp` to a path that does not exist | Write to a relative path inside the project directory |
+| A background process dies with the command | `netstat` for the port | A process started in a subshell is reclaimed when the command ends | Start it with the background-task mechanism, not `(&)` |
+| A local service is unreachable | Retry with `--noproxy '*'` | Proxy variables are set, and loopback traffic goes through the proxy | Exclude the proxy explicitly for loopback addresses |
 
 ## 3. Three cases in detail
 
@@ -67,6 +71,22 @@ Each case is written in five parts: **symptom → diagnostic action → root cau
 
 ::: warning Worth noting
 The most expensive way to handle these is **privilege**: sudo for permission errors, wholesale path rewriting for "file not found". Both make the current command pass and cause the problem to reappear elsewhere in a harder-to-find form. Ask why it is this one before asking how to get past it.
+:::
+
+### Case four: a build stopped by the sandbox quota
+
+**Symptom**: several builds in a row failed at the same point, with an error saying bulk deletion needs confirmation and a counter that only ever climbed.
+
+**Diagnostic**: the counter went from just over a hundred to well past a thousand, while each build deleted only a few dozen files. The gap came from manual cleanup in between — the recursive delete used for cleanup counted against the same quota.
+
+**Root cause**: the delete quota is **cumulative per session**, not per operation. Every build clears its temp and output directories, and those deletions accumulate; manual cleanup does not merely delete a few extra files, it pushes the quota higher and feeds the loop.
+
+**Fix**: stop building. Verify content this session with the in-memory dev server, and leave the real build for the next session. The quota resets next session and the build passed first time.
+
+**Avoid**: when a delete-quota error appears, do not "delete again" to check whether it was a one-off. Treat "how much has this session already deleted" as a finite resource, and switch to a verification path that writes nothing once it is spent.
+
+::: tip Retry a failing batch first
+Another false alarm: a run of requests to a local or remote service all fail, which looks like the service is down. The real cause is usually connection-level flakiness, or a proxy intercepting loopback traffic. **Retry one at a time, and establish whether the error means "nothing landed locally" or "the remote did not respond"** before deciding to report it. Reporting a local failure as a live incident costs more credibility than missing one real outage.
 :::
 
 ## 4. The font class: no error, unusable output

@@ -19,6 +19,76 @@ function check(label, ok, detail = '') {
 
 const CASES = [
   {
+    path: '/notes/',
+    lang: 'zh',
+    must: [
+      // 新增两篇笔记已入索引
+      '把核验做到渲染级',
+      '先证伪自己',
+      // 修正后的口径：框架数量、环境故障类数
+      '六套智能体框架',
+      '十一类环境故障'
+    ],
+    mustNot: [
+      // 索引不再重复列出 env-troubleshooting（只应出现在工程实践区一次）
+      '把环境类故障变成排查手册'
+    ]
+  },
+  {
+    path: '/notes/render-level-verification',
+    lang: 'zh',
+    must: [
+      '构建产物取文',
+      '渲染级断言',
+      '线上字节比对',
+      '流水线成功不等于部署生效',
+      '必须出现',
+      '必须消失'
+    ]
+  },
+  {
+    path: '/notes/falsify-yourself-first',
+    lang: 'zh',
+    must: ['第一嫌疑人永远是检查本身', '词序不匹配', '断言放错了页', '大小写不匹配']
+  },
+  {
+    path: '/notes/env-troubleshooting',
+    lang: 'zh',
+    must: ['表格随之从七类长到十一类', '案例四：构建被沙箱配额拦下', '按会话累计', '批量失败先重试']
+  },
+  {
+    path: '/en/notes/',
+    lang: 'en',
+    must: [
+      'Verification at the render level',
+      'Falsify yourself first',
+      'Six agent frameworks',
+      'eleven classes of environment failure'
+    ],
+    mustNot: ['Turning environment failures into a troubleshooting manual']
+  },
+  {
+    path: '/en/notes/render-level-verification',
+    lang: 'en',
+    must: [
+      'take text from the build artifact',
+      'assert at the render level',
+      'compare bytes against the live site',
+      'a green pipeline is not the finish line',
+      'A successful pipeline is not a successful deploy'
+    ]
+  },
+  {
+    path: '/en/notes/falsify-yourself-first',
+    lang: 'en',
+    must: ['first suspect is always the check itself', 'word order', 'wrong page', 'letter case']
+  },
+  {
+    path: '/en/notes/env-troubleshooting',
+    lang: 'en',
+    must: ['grown from seven classes to eleven', 'Case four: a build stopped by the sandbox quota', 'cumulative per session', 'Retry a failing batch first']
+  },
+  {
     path: '/',
     lang: 'zh',
     must: [

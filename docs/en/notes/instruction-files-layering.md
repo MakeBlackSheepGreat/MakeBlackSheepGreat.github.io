@@ -33,7 +33,7 @@ Two reasons, neither of them about how clever the model is:
 | Layer | What goes in | Size | Loaded when | Test |
 | --- | --- | --- | --- | --- |
 | Always-loaded (project instruction file) | Hard constraints: prohibitions, mandatory checks, commands that do not work here | 30–60 lines | Start of every task | Violating it causes real damage |
-| Task layer (skills / process notes) | Steps and boundaries for one kind of work: how to do it, how to verify, when not to use it | under 100 lines each | When that task type is triggered | Only meaningful for that work |
+| Task layer (skills / process notes) | Steps and boundaries for one kind of work: how to do it, how to verify, when not to use it | under 120 lines each | When that task type is triggered | Only meaningful for that work |
 | Reference layer (notes, troubleshooting, decision records) | Cases, error tables, parameter detail, past decisions | unbounded | When linked | Findable when needed is enough |
 
 One test decides it: **if nobody reminds me, will this go wrong?** Yes → always-loaded. Only in specific work → task layer. Fine to look up afterwards → reference layer.

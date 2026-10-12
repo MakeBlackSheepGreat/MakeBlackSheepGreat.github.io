@@ -1,6 +1,6 @@
 # Six agent frameworks in half a year: what the data says
 
-> Between March and September 2026 I used six off-the-shelf coding agent frameworks in earnest on this machine, rebuilt one of my own, and self-hosted two more. This note uses the records to check my own judgement: **which migrations were forced by the work, and which were just me chasing novelty.**
+> Between March and September 2026 I used five off-the-shelf coding agent frameworks in earnest on this machine, rebuilt one of my own, and self-hosted two more. This note uses the records to check my own judgement: **which migrations were forced by the work, and which were just me chasing novelty.**
 
 ::: info Short version
 - Across six frameworks, only one thing ever triggered a migration: **the task type changed and the old framework's boundary stood in the way**;

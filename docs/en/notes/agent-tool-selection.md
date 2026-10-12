@@ -1,9 +1,9 @@
 # Choosing and switching agent frameworks: the criteria half a year produced
 
-> Within the last half year I have used four agent frameworks seriously on this machine and rebuilt one of my own. It looks like frequent switching, but every migration answered the same question: **has the current framework's capability boundary started to block the kind of work I am doing?**
+> Within the last half year I have used five agent frameworks seriously on this machine and rebuilt one of my own. It looks like frequent switching, but every migration answered the same question: **has the current framework's capability boundary started to block the kind of work I am doing?**
 
 ::: info Short version
-- The real trigger is **a change in task type**, not "a new tool exists"; running four frameworks side by side and assigning work by task type beats picking one best tool;
+- The real trigger is **a change in task type**, not "a new tool exists"; running five frameworks side by side and assigning work by task type beats picking one best tool;
 - Counter-intuitive: **migration cost is systematically underestimated**. The first move was planned as an hour of copying configuration and took three days — what had to be rebuilt was rule files, memory and scripted workflows;
 - The assets that matter are **rule files, memory files and acceptance habits**, and they have to live outside the framework, or every switch rebuilds them from scratch.
 :::
