@@ -31,9 +31,9 @@ A benign/malignant classification baseline trained on BUS-BRA and evaluated on t
 :::
 
 ::: card Fluorescence-guided osteomyelitis imaging software system
-<p class="entry-meta">2026.06 – 2026.08 · independently implemented</p>
+<p class="entry-meta">2026.06 – 2026.08 · independently implemented · national second prize</p>
 
-An end-to-end chain from image processing to a clinical workstation interface for fluorescence-guided osteomyelitis imaging: registration and display of white-light and fluorescence views, lesion annotation and 3D review. The research interest lies in how algorithm outputs are organised into a clinically usable workflow, and in the engineering constraints of a restricted delivery environment (offline, physical media, heterogeneous hardware).
+An end-to-end chain from image processing to a clinical workstation interface for fluorescence-guided osteomyelitis imaging: registration and display of white-light and fluorescence views, lesion annotation and 3D review. The research interest lies in how algorithm outputs are organised into a clinically usable workflow, and in the engineering constraints of a restricted delivery environment (offline, physical media, heterogeneous hardware). The entry won a national second prize at the 2026 China Youth Science and Technology Innovation "Open Competition", a special event of the 15th "Challenge Cup".
 
 <span class="badge">Three.js</span> <span class="badge">Medical software</span> <span class="badge">Delivery</span>
 :::

@@ -36,7 +36,7 @@ Listed by actual level of use, without inflation. Every line corresponds to some
 - **Linux services**: system-level and user-level systemd supervision, boot persistence, log triage
 - **Service exposure**: reverse proxies, private networking, tunnels and custom domains, HTTPS and security headers
 - **Cloudflare platform**: Workers, vector and key-value storage, Pages, tunnel and DNS record management
-- **Continuous integration**: dual-target publishing (static hosting plus edge platform) from GitHub Actions, build caching, headless-browser artifact generation
+- **Continuous integration**: dual-target publishing (static hosting plus edge platform) from GitHub Actions, build caching, headless-browser render checks and artifact generation
 - **Model serving**: an out-of-tree vLLM plugin (model implementation, configuration and tool-call parser); local llama.cpp CUDA inference services
 - **Cross-device sync**: memory and experience synchronised through a private Git repository
 - **Frontend and clients**: Vue3 + Three.js + Electron desktop application; Flutter Android application

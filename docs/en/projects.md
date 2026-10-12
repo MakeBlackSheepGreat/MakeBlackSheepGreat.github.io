@@ -76,6 +76,10 @@ Turning 30,000 papers into searchable, traceable knowledge entries: tiered concu
 Getting a self-hosted service running on the public internet: process supervision and boot persistence, credential persistence, reverse proxy and HTTPS, private networking. Issues included a process-scoped random secret that invalidated sessions on restart and cookie scope constraints, written up in the [notes](/en/notes/agent-service-public).
 :::
 
+::: card Personal site
+A bilingual site built with VitePress and published to both GitHub Pages and Cloudflare Pages. Page content is asserted by a render-level check script (60+ checks across both locales), and the site carries a zero-width-character watermark and decoy layer against scraping.
+:::
+
 ::: card Domestic AI chip operator exercises
 Several CANN operator contest problems: 2D convolution (FP16/FP32/BF16), the HardSwish activation, and a quantised GEMM optimisation task. This involved address spaces, tiling and vectorisation at the operator level.
 :::
@@ -85,7 +89,7 @@ Several CANN operator contest problems: 2D convolution (FP16/FP32/BF16), the Har
 These are research and engineering workspaces I use daily. They are private for now — email me if you would like to know more.
 
 - **Neural_Paper_Skill** — a workflow skill set for neural network research and paper writing, covering ideation, training, validation, writing and figures
-- **CordiSwarm** — a plugin-kernel research swarm agent system for long-running autonomous work
+- **CordiSwarm** — a plugin-kernel research swarm agent system: a task board as the single source of truth, idempotent dispatch keyed on plan versions and quality gates, models from several families; live on a self-hosted server running end-to-end research flows
 - **Regain-Mamba / LesioNeXt-Code** — research code for lesion analysis and remote sensing models, with reproducible training and evaluation pipelines
 - **WeftMesh** — local AI agent software with a star topology and a device-interconnection protocol
 - **SwustSpirit** — campus information tooling for students at my university

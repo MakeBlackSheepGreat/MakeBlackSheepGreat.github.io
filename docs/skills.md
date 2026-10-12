@@ -36,7 +36,7 @@ pageClass: labels
 - **Linux 服务**：服务器与用户级 systemd 服务托管、开机自启、日志排查
 - **网络与服务暴露**：反向代理、内网组网、隧道与自定义域名、HTTPS 与安全响应头
 - **Cloudflare 平台**：Workers、向量库与键值存储、Pages、隧道与 DNS 记录管理
-- **持续集成**：GitHub Actions 双路发布（静态托管 + 边缘平台）、构建缓存、无头浏览器生成交付物
+- **持续集成**：GitHub Actions 双路发布（静态托管 + 边缘平台）、构建缓存、无头浏览器渲染核验与交付物生成
 - **模型服务**：vLLM 的 out-of-tree 插件（模型实现、配置与工具调用解析器）、llama.cpp CUDA 本地推理服务
 - **跨设备同步**：以私有 Git 仓库同步记忆与经验
 - **前端与客户端**：Vue3 + Three.js + Electron 桌面应用；Flutter 安卓应用

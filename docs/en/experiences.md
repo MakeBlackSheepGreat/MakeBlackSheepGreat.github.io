@@ -32,7 +32,7 @@ First-year comprehensive evaluation 99.81, ranked 7th in the major (top 12%), wi
 
 **Provincial undergraduate innovation training project: interpretable pulmonary nodule classification and malignancy risk grading from chest CT** (approved 2026.05, ongoing): responsible for data processing and model experiments, including fixed data splits, random seeds and evaluation scripts to ensure reproducibility. Current stage: validating the stability of the evaluation protocol and consolidating experiment records.
 
-**Fluorescence-guided osteomyelitis imaging software system** (2026.06 – 2026.08): independently implemented the physician workstation prototype and the algorithm side, covering image review, lesion annotation and 3D display, with two release configurations (GPU accelerated and CPU fallback) to meet delivery requirements.
+**Fluorescence-guided osteomyelitis imaging software system** (2026.06 – 2026.08): independently implemented the physician workstation prototype and the algorithm side, covering image review, lesion annotation and 3D display, with two release configurations (GPU accelerated and CPU fallback) to meet delivery requirements. The entry, *An intelligent fluorescence-guided diagnosis and treatment platform for precise debridement of osteomyelitis of the jaw, and its industrial application*, won a national second prize at the 2026 China Youth Science and Technology Innovation "Open Competition".
 :::
 
 ::: card "One Student One Chip" study group · RISC-V and digital design
@@ -50,7 +50,8 @@ Built a corpus ingestion pipeline for literature retrieval: content-hash idempot
 ::: card Research workflow and multi-agent systems
 <p class="entry-meta">2026.07 – present</p>
 - Research workflow tooling: staged modules for model development and paper writing (13 skill modules, about 20 deterministic scripts, 90+ accompanying tests), covering topic selection, training, validation, writing and figures
-- Multi-agent collaboration system: role-based sub-agents (explore, implement, review) working in parallel on long-running tasks, with progress persisted to disk and resumable after interruption; used for literature organisation, batch experiments and code review
+- Research swarm system: a multi-agent platform with a task board as the single source of truth, idempotent task dispatch keyed on plan versions and quality gates; it takes models from several families and runs end-to-end research flows on a self-hosted server
+- Multi-agent collaboration: role-based sub-agents (explore, implement, review) working in parallel on long-running tasks, with progress persisted to disk and resumable after interruption; used for literature organisation, batch experiments and code review
 :::
 
 ::: card Model serving deployment and operations
@@ -94,6 +95,8 @@ Involved in the association's routine affairs and event organisation.
 **2026.07 – 08** — Summer focused on engineering practice: the paper corpus pipeline, multi-agent collaboration systems, service deployment and operations, and domestic AI chip operator problems.
 
 **2026.09** — Transferred into Electronic Information Engineering (Honors) and started catching up on the electronics core; took up the roles of Vice President (hardware track) of the Computing and Artificial Intelligence Association and Council Member of the Jingguan Tianxia Photography Association.
+
+**2026.10** — National second prize at the 2026 China Youth Science and Technology Innovation "Open Competition" for the fluorescence-guided osteomyelitis platform, a special event of the 15th "Challenge Cup".
 
 ## MORE
 

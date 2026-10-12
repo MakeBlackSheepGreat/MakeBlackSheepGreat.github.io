@@ -36,7 +36,7 @@ First-year comprehensive evaluation 99.81, ranked 7th in the major (top 12%) wit
 
 - **Breast ultrasound benign/malignant classification and diagnosis support**: binary classification trained on BUS-BRA and externally validated on BUSI; implemented the CNN training and evaluation pipeline, fixed the metrics and threshold policy, and produced Grad-CAM attention visualisations
 - **Provincial undergraduate innovation training project**: interpretable pulmonary nodule classification and malignancy risk grading from chest CT; data processing and model experiments with fixed splits, seeds and evaluation scripts
-- **Fluorescence-guided osteomyelitis imaging software system**: independently implemented the physician workstation prototype and the algorithm side, covering image review, lesion annotation and 3D display, with GPU-accelerated and CPU-fallback release configurations
+- **Fluorescence-guided osteomyelitis imaging software system**: independently implemented the physician workstation prototype and the algorithm side, covering image review, lesion annotation and 3D display, with GPU-accelerated and CPU-fallback release configurations; the entry won a national second prize at the 2026 China Youth Science and Technology Innovation "Open Competition"
 :::
 
 ::: card "One Student One Chip" study group · RISC-V and digital design
@@ -63,6 +63,7 @@ Code and further repositories: [github.com/MakeBlackSheepGreat](https://github.c
 
 ## AWARDS AND APPROVALS
 
+- **2026 China Youth Science and Technology Innovation "Open Competition"** · National second prize (2026.10, a special event of the 15th "Challenge Cup"; entry: an intelligent fluorescence-guided diagnosis and treatment platform for precise debridement of osteomyelitis of the jaw)
 - **11th National College Student Biomedical Engineering Innovation Design Competition** · National third prize (2026.07, Chinese Society of Biomedical Engineering)
 - **6th Sichuan Provincial Biomedical Engineering Innovation Design Competition** · Provincial second prize (2026.06, Sichuan Provincial Department of Education)
 - **SWUST Biomedical Engineering Innovation Design Competition** · University-level second prize (2026.05)

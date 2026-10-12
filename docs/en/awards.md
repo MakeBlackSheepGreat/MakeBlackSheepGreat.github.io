@@ -7,7 +7,9 @@ pageClass: labels
 ## Competitions
 
 ::: card China Youth Science and Technology Innovation "Open Competition" (2026) · National second prize
-October 2026, hosted by the Communist Youth League Central Committee. The problem set was intelligent fluorescence-guided diagnosis and treatment of osteomyelitis of the jaw, posted by Chengdu Keaoda Optoelectronic Technology Co., Ltd.
+October 2026. This is a special event of the 15th "Challenge Cup" China College Student Entrepreneurship Plan Competition, co-hosted by nine bodies including the Communist Youth League Central Committee, the Ministry of Education, the Ministry of Human Resources and Social Security, the China Association for Science and Technology and the All-China Students' Federation. It runs on the idea that whoever has the ability takes the problem and leads the solution: companies and research institutes post the problems, teams of young people from universities at home and abroad answer them, and the winners are settled in a live contest. Results in this special event do not count towards a school's team score.
+
+The problem set was intelligent fluorescence-guided diagnosis and treatment of osteomyelitis of the jaw, posted by Chengdu Keaoda Optoelectronic Technology Co., Ltd. The event runs through five stages — posting the problems, publishing the list, answering them, review, and final selection of the winners.
 
 The entry was *An intelligent fluorescence-guided diagnosis and treatment platform for precise debridement of osteomyelitis of the jaw, and its industrial application*. It takes the form of an offline medical imaging workstation covering file admission, case management, image processing, AI candidate hints, manual annotation, physician review and evidence export, all within one traceable flow.
 

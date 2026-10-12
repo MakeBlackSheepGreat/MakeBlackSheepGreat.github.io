@@ -33,6 +33,13 @@ const CASES = [
       'Electron',
       'PyTorch',
       'FastAPI',
+      // 揭榜挂帅条目：赛事性质（第十五届挑战杯专项赛事）
+      '第十五届',
+      '挑战杯',
+      '专项赛事',
+      '全国学联',
+      '英雄不论出处',
+      '夺榜挂帅',
       // 国赛条目：作品名 + 方法细节
       '国家级三等奖',
       '基于超声影像的乳腺肿瘤良恶性分类辅助诊断系统设计',
@@ -68,6 +75,9 @@ const CASES = [
       'Communist Youth League Central Committee',
       'precise debridement',
       'Chengdu Keaoda Optoelectronic Technology',
+      '15th "Challenge Cup"',
+      'special event',
+      "whoever has the ability",
       'Three.js',
       'Electron',
       'PyTorch',
