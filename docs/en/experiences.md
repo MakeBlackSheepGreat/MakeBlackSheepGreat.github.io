@@ -78,7 +78,7 @@ Involved in the association's routine affairs and event organisation.
 
 ## TIMELINE
 
-**Middle school** — First contact with circuits, programming and sensors in the school Arduino club; built line-following robots and similar projects.
+**Middle school (2019 – 2020)** — First contact with circuits, programming and sensors in the school Arduino club; built line-following robots and similar projects. In the same period I taught myself Linux system administration and NAT traversal, founded the TAP Minecraft server, opened the CIE MC server studio, and joined a Raspberry Pi enthusiast group.
 
 **High school** — Self-study of Linux, Python and HarmonyOS ArkTS development; earned the Huawei HarmonyOS application developer certification.
 

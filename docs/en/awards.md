@@ -71,6 +71,6 @@ Competitions entered without an award are listed below as well.
 
 ## Earlier
 
-In middle school I joined the school Arduino club, working with circuits, programming and sensors on line-following robot projects.
+In middle school (2019 – 2020) I joined the school Arduino club, working with circuits, programming and sensors on line-following robot projects. In the same period I taught myself Linux system administration and NAT traversal, founded the TAP Minecraft server, opened the CIE MC server studio, and joined a Raspberry Pi enthusiast group.
 
 In high school I earned the Huawei HarmonyOS application developer certification — the first certificate to come out of my self-directed study.

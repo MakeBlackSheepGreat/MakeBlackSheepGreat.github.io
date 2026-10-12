@@ -32,7 +32,35 @@ const CASES = [
   {
     path: '/experiences',
     lang: 'zh',
-    must: ['2026.10', '第十五届“挑战杯”专项赛事', '科研蜂群系统', '看板为任务真值']
+    must: [
+      '2026.10',
+      '第十五届“挑战杯”专项赛事',
+      '科研蜂群系统',
+      '看板为任务真值',
+      // 初中经历（2019 – 2020）
+      '初中（2019 – 2020）',
+      'TAP Minecraft 服务器',
+      'CIE MC 服务器工作室',
+      '树莓派爱好者基地',
+      'Linux 系统与内网穿透'
+    ]
+  },
+  {
+    path: '/awards',
+    lang: 'zh',
+    must: [
+      '第十五届',
+      '挑战杯',
+      '专项赛事',
+      '全国学联',
+      '英雄不论出处',
+      '夺榜挂帅',
+      // 更早区初中经历
+      '初中阶段（2019 – 2020）',
+      'TAP Minecraft 服务器',
+      'CIE MC 服务器工作室',
+      '树莓派爱好者基地'
+    ]
   },
   {
     path: '/cv',
@@ -67,7 +95,32 @@ const CASES = [
   {
     path: '/en/experiences',
     lang: 'en',
-    must: ['2026.10', 'Research swarm system', 'single source of truth']
+    must: [
+      '2026.10',
+      'Research swarm system',
+      'single source of truth',
+      // Middle-school years
+      'Middle school (2019 – 2020)',
+      'TAP Minecraft server',
+      'CIE MC server studio',
+      'Raspberry Pi enthusiast group',
+      'NAT traversal'
+    ]
+  },
+  {
+    path: '/en/awards',
+    lang: 'en',
+    must: [
+      '15th "Challenge Cup"',
+      'special event',
+      'whoever has the ability',
+      // Earlier section, middle-school years
+      'middle school (2019 – 2020)',
+      'TAP Minecraft server',
+      'CIE MC server studio',
+      'Raspberry Pi enthusiast group',
+      'NAT traversal'
+    ]
   },
   {
     path: '/en/cv',
