@@ -44,7 +44,14 @@ pageClass: labels
 - **检索与知识库**：向量检索、文档切片、证据链与待审队列
 - **字体与前端工程**：字体子集化、按设备匹配字体、构建后产物清理
 - **Python 工程**：uv / venv 环境管理、脚本与命令行工具开发
+- **跨平台移植与构建**：Autotools / CMake / Meson / Zig 构建系统在 OpenHarmony aarch64 上的适配，Conan 配方编写，平台条件编译门控与内核行为差异定位
 - **Git**：分支与变基、历史清理、仓库镜像同步
+
+## 开源贡献
+
+- **build_in_harmonyos**（AtomGit，Apache-2.0）：2026.08 – 2026.10 提交并合入 24 个 PR，将 22 个三方库适配到 OpenHarmony aarch64，另修复两处 CI 基础设施问题
+- **dsh-ops**（GitHub，MIT AND Apache-2.0）：提交 issue 与 PR 为原生 worker 增加 OpenHarmony 平台支持，定位三处内核行为差异，真机验证覆盖 8 项 worker 用例与 7 项越界安全边界用例
+- **第三方缺陷报告**：在排查他人 issue 的过程中发现两个独立缺陷并提交报告，均已合入修复
 
 ## 硬件与嵌入式
 

@@ -21,6 +21,7 @@ Current work includes pulmonary nodule classification and malignancy risk gradin
 ## News
 
 <ul class="news">
+<li><span class="news-date">2026.10</span><span>Filed an OpenHarmony platform-support pull request for the DSH low-level operations plugin, diagnosing and fixing three behavioural differences between the OpenHarmony kernel and Linux, with on-device worker and security-boundary validation</span></li>
 <li><span class="news-date">2026.10</span><span>National second prize at the 2026 China Youth Science and Technology Innovation "Open Competition" (a special event of the 15th "Challenge Cup") for the fluorescence-guided osteomyelitis platform</span></li>
 <li><span class="news-date">2026.09</span><span>Personal site is live; transferred into Electronic Information Engineering (Honors)</span></li>
 <li><span class="news-date">2026.08</span><span>Completed a paper-corpus ingestion pipeline for a literature knowledge base (30,031 papers, 11.2 hours, 99.96% completion) and open-sourced the software for the breast ultrasound diagnosis support system and the osteomyelitis workstation</span></li>

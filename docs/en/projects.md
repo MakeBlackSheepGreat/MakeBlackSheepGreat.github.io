@@ -38,6 +38,37 @@ Stack: Vue3 · FastAPI · Three.js · Electron · Playwright
 [Repository](https://github.com/MakeBlackSheepGreat/osteo-vision)
 :::
 
+## Open-source contributions
+
+::: card OpenHarmony build compatibility framework · contributor (build_in_harmonyos)
+An open-source framework that builds, packages and distributes third-party software for OpenHarmony aarch64, based on the Conan package manager, with a built-in error-matching engine and knowledge-graph system. Between 2026.08 and 2026.10 I submitted and merged 24 pull requests porting 22 third-party libraries to OpenHarmony.
+
+Ported packages: GDAL, OpenCASCADE, GTK+ 3, glib, pango, atk, gdk-pixbuf, cairo-gobject, harfbuzz, speex, asterisk-srtp, asterisk-speex, epoxy, goocanvas, flow-control, asymptote, qtserialport, abiword-plugin-opml, bashdb, termsvg and termshot. Also fixed two CI infrastructure issues where mis-tracked runtime state files blocked the full verification run.
+
+Stack: Python · Conan · OpenHarmony · Autotools / CMake / Meson · Zig
+
+[Repository](https://atomgit.com/OpenHarmonyPCDeveloper/build_in_harmonyos)
+:::
+
+::: card DSH low-level operations plugin · platform contributor (dsh-ops)
+A performance tooling plugin for DSH that rewrites file search and batch processing in Rust to cut token usage and task time. I filed an issue and a pull request adding OpenHarmony platform support to the native worker.
+
+Three behavioural differences between the OpenHarmony kernel and Linux were identified: `openat2` terminates the process with `SIGSYS` instead of returning `ENOSYS`, so the dependency's portable fallback never runs; the root path anchor and `/storage` are refused to open, so path-checking preflight always fails; and `fsync` on an `O_PATH` directory descriptor returns `EBADF`, so `replace` reports failure after a successful rename. The fix uses platform-gated compilation, keeping upstream statements verbatim for non-OpenHarmony targets. On-device validation covered an 8-case worker suite and 7 out-of-bounds security-boundary cases.
+
+Stack: Rust · Node.js · OpenHarmony · conditional compilation
+
+[Repository](https://github.com/T-Auto/dsh-ops) · [Pull request #53](https://github.com/T-Auto/dsh-ops/pull/53)
+:::
+
+::: card DSH connectivity plugin · defect reporter (dsh-connect-workbuddy)
+While diagnosing someone else's issue I found and reported two distinct defects, both since fixed. Both reports carried a full environment matrix, source locations and measured readings.
+
+- A destructive defect in the settings write channel: `__save` persists the host's own already-resolved `regions` value as the field's entire new value, so the first save blanks the live model catalog and the agent default model disappears
+- A faulty default in context budgeting: `applyContextBudgets` clamps every model above 200K down to 200K, discarding a model's real context window whenever the user has not set an explicit budget, and the default contradicts the upstream throttling line
+
+Stack: TypeScript · settings-channel tracing · defect reproduction with minimal evidence
+:::
+
 ## Agent and research tooling
 
 ::: card SWUST Code — a terminal-native coding agent (swust-code)

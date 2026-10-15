@@ -58,6 +58,9 @@ Studying Verilog and RISC-V processor design from digital logic fundamentals, cu
 - **ct-nodule-risk** — pulmonary nodule classification and risk grading: 3D medical imaging data processing and experiment records
 - **swust-code** — terminal-native coding agent: persistent memory, multi-agent workflows and goal-driven execution
 - **IPC_vision** — seven-model comparison: BP / CNN / ConvNeXt / LeNet-5 / ResNet / ViT / MobileNetV2 with a Flask API, web frontend and Electron app
+- **build_in_harmonyos** — contributor to an open-source OpenHarmony build compatibility framework: 24 pull requests submitted and merged between 2026.08 and 2026.10, porting 22 third-party libraries to OpenHarmony aarch64, plus two CI infrastructure fixes
+- **dsh-ops** — platform contributor to a DSH low-level operations plugin: diagnosed and fixed three OpenHarmony kernel behaviour differences (`SIGSYS` on `openat2`, a refused root path anchor, `EBADF` on `O_PATH` directory flush); pull request filed and under review
+- **Third-party defect reports** — filed two distinct defects against a DSH connectivity plugin (a destructive settings write that blanks the live catalog, and a context-budget default that wrongly clamps models), each with an environment matrix and source locations; both fixed
 
 Code and further repositories: [github.com/MakeBlackSheepGreat](https://github.com/MakeBlackSheepGreat)
 

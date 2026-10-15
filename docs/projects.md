@@ -39,6 +39,37 @@ pageClass: labels
 [仓库地址](https://github.com/MakeBlackSheepGreat/osteo-vision)
 :::
 
+## 开源项目贡献
+
+::: card 开源鸿蒙编译适配框架 · 贡献者（build_in_harmonyos）
+面向 OpenHarmony aarch64 的开源软件编译、固化与分发框架，基于 Conan 包管理器，内置错误匹配引擎与知识图谱。我在 2026.08 – 2026.10 期间提交并合入 24 个 PR，把 22 个三方库适配到鸿蒙平台。
+
+适配范围：GDAL、OpenCASCADE、GTK+ 3、glib、pango、atk、gdk-pixbuf、cairo-gobject、harfbuzz、speex、asterisk-srtp、asterisk-speex、epoxy、goocanvas、flow-control、asymptote、qtserialport、abiword-plugin-opml、bashdb、termsvg、termshot。另修复两处 CI 基础设施问题（被误跟踪的运行时状态文件阻塞全量校验）。
+
+技术：Python · Conan · OpenHarmony · Autotools / CMake / Meson · Zig
+
+[仓库地址](https://atomgit.com/OpenHarmonyPCDeveloper/build_in_harmonyos)
+:::
+
+::: card DSH 底层操作工具插件 · 平台贡献者（dsh-ops）
+DSH 的性能工具插件，用 Rust 重写文件检索与批处理以降低 token 消耗与任务耗时。我提交了 issue 与 PR，为原生 worker 增加 OpenHarmony 平台支持。
+
+定位到三处鸿蒙内核与 Linux 的行为差异：`openat2` 直接以 `SIGSYS` 终止进程而非返回 `ENOSYS`，使依赖库的 portable 回退永不触发；根路径锚点与 `/storage` 被拒绝打开，路径检查的 preflight 恒定失败；对 `O_PATH` 目录 fd 执行 `fsync` 返回 `EBADF`，使 rename 已成功却仍报失败。修复采用三处平台条件编译门控，非鸿蒙目标逐字保留上游语句。真机验证覆盖 8 项 worker 用例与 7 项越界安全边界用例。
+
+技术：Rust · Node.js · OpenHarmony · 条件编译
+
+[仓库地址](https://github.com/T-Auto/dsh-ops) · [PR #53](https://github.com/T-Auto/dsh-ops/pull/53)
+:::
+
+::: card DSH 连接插件 · 缺陷报告者（dsh-connect-workbuddy）
+在排查他人 issue 的过程中发现并报告了两个独立缺陷，均已合入修复。报告附完整环境矩阵、源码定位与实测读数。
+
+- 配置写入通道的破坏性缺陷：`__save` 以宿主自身已解析出的 `regions` 值作为该字段的新值整体持久化，首次保存即清空运行期候选目录，代理默认模型随之消失
+- 上下文预算默认值缺陷：`applyContextBudgets` 将所有超过 200K 的模型一律压到 200K，用户未显式配置预算时模型真实上下文被丢弃，且该默认值与上游节流线自相矛盾
+
+技术：TypeScript · 配置通道追踪 · 缺陷复现与最小证据
+:::
+
 ## 智能体与科研工具
 
 ::: card SWUST Code —— 终端原生 AI 编程智能体（swust-code）
@@ -127,5 +158,6 @@ pageClass: labels
 | --- | --- |
 | [MakeBlackSheepGreat](https://github.com/MakeBlackSheepGreat/MakeBlackSheepGreat) | GitHub 个人主页仓库 |
 | [campus-network-auto-login](https://github.com/MakeBlackSheepGreat/campus-network-auto-login) | 校园网自动登录小工具（JavaScript） |
+| [dsh-OHDSH](https://github.com/MakeBlackSheepGreat/dsh-OHDSH) | 鸿蒙上的 Agent 运行时（HarmonyOS · ArkTS · C） |
 
 更多的实验性仓库可以直接看我的 [GitHub 主页](https://github.com/MakeBlackSheepGreat)。

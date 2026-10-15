@@ -95,7 +95,10 @@ const CASES = [
       '2026.10',
       '2026 年度中国青年科技创新“揭榜挂帅”擂台赛国家级二等奖',
       '第十五届“挑战杯”专项赛事',
-      '另两项工作已完成并支撑竞赛获奖'
+      '另两项工作已完成并支撑竞赛获奖',
+      // 开源维护动态
+      '为 DSH 底层操作工具插件提交鸿蒙平台支持 PR',
+      '三处鸿蒙内核与 Linux 的行为差异'
     ],
     mustNot: ['以及颌骨骨髓炎荧光影像诊疗软件系统的实现']
   },
@@ -112,7 +115,23 @@ const CASES = [
       'TAP Minecraft 服务器',
       'CIE MC 服务器工作室',
       '树莓派爱好者基地',
-      'Linux 系统与内网穿透'
+      'Linux 系统与内网穿透',
+      // 开源项目维护
+      '开源鸿蒙编译适配框架贡献',
+      'build_in_harmonyos',
+      'dsh-ops',
+      '24 个 PR',
+      '22 个三方库适配到 OpenHarmony aarch64',
+      'SIGSYS',
+      'O_PATH',
+      '8 项 worker 用例与 7 项越界安全边界验证',
+      '2026.08 – 10',
+      // 向第三方项目提交缺陷报告
+      '向第三方项目提交缺陷报告',
+      'dsh-connect-workbuddy',
+      'applyContextBudgets',
+      '代理默认模型随之消失',
+      '17 个上游模型的实测目录下有 15 个被误砍'
     ]
   },
   {
@@ -135,7 +154,16 @@ const CASES = [
   {
     path: '/cv',
     lang: 'zh',
-    must: ['2026 年度中国青年科技创新“揭榜挂帅”擂台赛', '第十五届“挑战杯”专项赛事']
+    must: [
+      '2026 年度中国青年科技创新“揭榜挂帅”擂台赛',
+      '第十五届“挑战杯”专项赛事',
+      'build_in_harmonyos',
+      'dsh-ops',
+      '24 个 PR',
+      '22 个三方库适配到 OpenHarmony aarch64',
+      '第三方缺陷报告',
+      '上下文预算默认值误砍模型'
+    ]
   },
   {
     path: '/publications',
@@ -145,12 +173,46 @@ const CASES = [
   {
     path: '/projects',
     lang: 'zh',
-    must: ['看板为任务真值', '个人主页站点', '反抓取设计']
+    must: [
+      '看板为任务真值',
+      '个人主页站点',
+      '反抓取设计',
+      // 开源项目贡献区
+      '开源项目贡献',
+      'build_in_harmonyos',
+      'dsh-ops',
+      '开源鸿蒙编译适配框架',
+      'DSH 底层操作工具插件',
+      'Conan',
+      '24 个 PR',
+      '22 个三方库',
+      'SIGSYS',
+      'O_PATH',
+      // 缺陷报告卡片
+      'DSH 连接插件 · 缺陷报告者',
+      'dsh-connect-workbuddy',
+      'applyContextBudgets',
+      '配置写入通道的破坏性缺陷',
+      '上下文预算默认值缺陷'
+    ],
+    mustLink: [
+      'atomgit.com/OpenHarmonyPCDeveloper/build_in_harmonyos',
+      'github.com/T-Auto/dsh-ops',
+      'github.com/T-Auto/dsh-ops/pull/53'
+    ]
   },
   {
     path: '/skills',
     lang: 'zh',
-    must: ['无头浏览器渲染核验与交付物生成']
+    must: [
+      '无头浏览器渲染核验与交付物生成',
+      '开源贡献',
+      '跨平台移植与构建',
+      'Conan 配方编写',
+      'build_in_harmonyos',
+      'dsh-ops',
+      '第三方缺陷报告'
+    ]
   },
   {
     path: '/en/',
@@ -159,7 +221,10 @@ const CASES = [
       '2026.10',
       'Open Competition',
       '15th "Challenge Cup"',
-      'Two medical imaging works are finished'
+      'Two medical imaging works are finished',
+      // Open-source maintenance news item
+      'OpenHarmony platform-support pull request for the DSH low-level operations plugin',
+      'three behavioural differences between the OpenHarmony kernel and Linux'
     ]
   },
   {
@@ -174,7 +239,23 @@ const CASES = [
       'TAP Minecraft server',
       'CIE MC server studio',
       'Raspberry Pi enthusiast group',
-      'NAT traversal'
+      'NAT traversal',
+      // Open-source maintenance
+      'OpenHarmony build compatibility framework contributions',
+      'build_in_harmonyos',
+      'dsh-ops',
+      '24 pull requests',
+      '22 third-party libraries to OpenHarmony aarch64',
+      'SIGSYS',
+      'O_PATH',
+      '8-case worker suite and 7 out-of-bounds security-boundary cases',
+      '2026.08 – 10',
+      // Defect reports to a third-party project
+      'Defect reports to a third-party project',
+      'dsh-connect-workbuddy',
+      'applyContextBudgets',
+      'the agent default model disappears',
+      '15 were wrongly clamped'
     ]
   },
   {
@@ -195,7 +276,16 @@ const CASES = [
   {
     path: '/en/cv',
     lang: 'en',
-    must: ['2026 China Youth Science and Technology Innovation', '15th "Challenge Cup"']
+    must: [
+      '2026 China Youth Science and Technology Innovation',
+      '15th "Challenge Cup"',
+      'build_in_harmonyos',
+      'dsh-ops',
+      '24 pull requests',
+      '22 third-party libraries to OpenHarmony aarch64',
+      'Third-party defect reports',
+      'a context-budget default that wrongly clamps models'
+    ]
   },
   {
     path: '/en/publications',
@@ -205,12 +295,46 @@ const CASES = [
   {
     path: '/en/projects',
     lang: 'en',
-    must: ['single source of truth', 'Personal site', 'zero-width-character watermark']
+    must: [
+      'single source of truth',
+      'Personal site',
+      'zero-width-character watermark',
+      // Open-source contributions
+      'Open-source contributions',
+      'build_in_harmonyos',
+      'dsh-ops',
+      'OpenHarmony build compatibility framework',
+      'DSH low-level operations plugin',
+      'Conan',
+      '24 pull requests',
+      '22 third-party libraries',
+      'SIGSYS',
+      'O_PATH',
+      // Defect reporter card
+      'DSH connectivity plugin · defect reporter',
+      'dsh-connect-workbuddy',
+      'applyContextBudgets',
+      'A destructive defect in the settings write channel',
+      'A faulty default in context budgeting'
+    ],
+    mustLink: [
+      'atomgit.com/OpenHarmonyPCDeveloper/build_in_harmonyos',
+      'github.com/T-Auto/dsh-ops',
+      'github.com/T-Auto/dsh-ops/pull/53'
+    ]
   },
   {
     path: '/en/skills',
     lang: 'en',
-    must: ['headless-browser render checks']
+    must: [
+      'headless-browser render checks',
+      'OPEN-SOURCE CONTRIBUTIONS',
+      'Cross-platform porting and builds',
+      'Conan recipes',
+      'build_in_harmonyos',
+      'dsh-ops',
+      'Third-party defect reports'
+    ]
   }
 ]
 
@@ -228,6 +352,13 @@ for (const c of CASES) {
   const body = await page.innerText('body')
   for (const t of c.must) check(`包含「${t}」`, body.includes(t))
   for (const t of c.mustNot || []) check(`已移除「${t}」`, !body.includes(t))
+
+  const hrefs = await page.evaluate(() =>
+    Array.from(document.querySelectorAll('a[href]')).map((a) => a.getAttribute('href'))
+  )
+  for (const t of c.mustLink || []) {
+    check(`链接指向「${t}」`, hrefs.some((h) => h.includes(t)))
+  }
 
   const overflow = await page.evaluate(
     () => document.documentElement.scrollWidth - document.documentElement.clientWidth

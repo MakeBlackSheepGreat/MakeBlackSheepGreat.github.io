@@ -42,6 +42,28 @@ pageClass: labels
 
 ## 工程实践
 
+::: card 开源鸿蒙编译适配框架贡献（build_in_harmonyos）
+<p class="entry-meta">2026.08 – 2026.10</p>
+向 AtomGit 上的开源鸿蒙 PC 软件编译适配框架提交并合入 24 个 PR，把 22 个三方库适配到 OpenHarmony aarch64：GDAL、OpenCASCADE、GTK+ 3、glib、pango、atk、gdk-pixbuf、cairo-gobject、harfbuzz、speex、asterisk-srtp、asterisk-speex、epoxy、goocanvas、flow-control、asymptote、qtserialport、abiword-plugin-opml、bashdb、termsvg、termshot。
+
+每项适配以 Conan 配方为基础，按该项目知识图谱中的历史条目执行：构建解释器在 CI 环境下不作为硬门禁、Autotools 的 `config.guess` 平台判断、HMDFS 临时文件处理、meson 的 host_machine 判断与 EGL 头文件来自 SDK sysroot。另修复两处 CI 基础设施问题——被误跟踪的运行时状态文件阻塞了全量校验。
+:::
+
+::: card DSH 工具插件鸿蒙平台支持（dsh-ops）
+<p class="entry-meta">2026.10 – 至今</p>
+向 DSH 底层操作工具插件 dsh-ops 提交 issue 与 PR，为原生 worker 增加 OpenHarmony 平台支持。定位到三处鸿蒙内核与 Linux 的行为差异：`openat2` 直接以 `SIGSYS` 终止进程而非返回 `ENOSYS`，使依赖库的 portable 回退路径永不触发；根路径锚点与 `/storage` 被拒绝打开，路径检查的 preflight 阶段恒定失败；对 `O_PATH` 目录 fd 执行 `fsync` 返回 `EBADF`，使 rename 已成功的情况下仍报失败。
+
+修复采用三处平台条件编译门控：守卫移入 `open_beneath` 入口并返回 `NOSYS` 以触发可携带回退，路径检查改为从最深可打开的祖先前缀开始，flush 改为按路径重开父目录并 best-effort。已在鸿蒙 PC 真机（内核 1.12.0 与 1.13.0）完成 8 项 worker 用例与 7 项越界安全边界验证，非鸿蒙目标逐字保留上游语句。该 PR 目前仍在评审中。
+:::
+
+::: card 向第三方项目提交缺陷报告（dsh-connect-workbuddy）
+<p class="entry-meta">2026.10</p>
+在排查他人 issue 的过程中发现并报告了两个独立缺陷，均已合入修复：
+
+- **配置写入通道的破坏性缺陷**：`__save` 以宿主自身已解析出的 `regions` 值作为该字段的新值整体持久化，首次保存即清空运行期候选目录，代理默认模型随之消失。报告附完整环境矩阵、源码定位与前后对比读数。
+- **上下文预算默认值缺陷**：`applyContextBudgets` 将所有超过 200K 的模型一律压到 200K，用户未显式配置预算时模型真实上下文被丢弃；该默认值与上游节流线自相矛盾。在 17 个上游模型的实测目录下有 15 个被误砍。
+:::
+
 ::: card 文献知识库语料流水线
 <p class="entry-meta">2026.08</p>
 面向科研文献检索构建语料摄取流水线：以内容哈希实现幂等处理，任务表驱动断点续跑，本机 GPU 推理与云端推理混合调度，失败任务按原因分类重试。共处理论文 30,031 篇，完成 30,018 篇（99.96%），累计用时 11.2 小时；为每条知识条目建立指向原文的证据链接，检索结果可溯源。
@@ -95,6 +117,8 @@ pageClass: labels
 **2026.07 – 08** — 暑期集中开展工程实践：文献语料流水线、多智能体协作系统、服务部署与运维、国产 AI 芯片算子练习。
 
 **2026.09** — 转入电子信息工程（卓越）专业，开始补齐电子信息类核心课；任计算机与人工智能协会副会长（硬件方向）与镜观天下摄影协会理事。
+
+**2026.08 – 10** — 向开源鸿蒙编译适配框架提交并合入 24 个 PR，把 22 个三方库适配到 OpenHarmony aarch64；同期为 DSH 工具插件提交鸿蒙平台支持 PR，在真机上完成内核行为差异的定位与修复，并向另一第三方插件项目提交两个缺陷报告。
 
 **2026.10** — 获 2026 年度中国青年科技创新“揭榜挂帅”擂台赛国家级二等奖，作品为面向颌骨骨髓炎精准清创的智能化荧光诊疗平台，该赛事为第十五届“挑战杯”专项赛事。
 

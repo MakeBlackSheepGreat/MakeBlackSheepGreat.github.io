@@ -44,7 +44,14 @@ Listed by actual level of use, without inflation. Every line corresponds to some
 - **Retrieval and knowledge bases**: vector search, document chunking, evidence trails and review queues
 - **Fonts and frontend engineering**: font subsetting, device-matched font stacks, post-build artifact cleanup
 - **Python engineering**: uv / venv environments, scripts and CLI tools
+- **Cross-platform porting and builds**: adapting Autotools / CMake / Meson / Zig builds to OpenHarmony aarch64, Conan recipes, platform-gated conditional compilation and kernel behaviour diagnosis
 - **Git**: branching and rebasing, history cleanup, repository mirroring
+
+## OPEN-SOURCE CONTRIBUTIONS
+
+- **build_in_harmonyos** (AtomGit, Apache-2.0): 24 pull requests submitted and merged between 2026.08 and 2026.10, porting 22 third-party libraries to OpenHarmony aarch64, plus two CI infrastructure fixes
+- **dsh-ops** (GitHub, MIT AND Apache-2.0): filed an issue and a pull request adding OpenHarmony platform support to the native worker, diagnosing three kernel behaviour differences and validating on device with an 8-case worker suite and 7 out-of-bounds security-boundary cases
+- **Third-party defect reports**: found two distinct defects while diagnosing someone else's issue and reported both; both fixed
 
 ## HARDWARE AND EMBEDDED
 

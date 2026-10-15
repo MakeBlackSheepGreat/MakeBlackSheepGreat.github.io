@@ -21,6 +21,7 @@
 ## 动态
 
 <ul class="news">
+<li><span class="news-date">2026.10</span><span>为 DSH 底层操作工具插件提交鸿蒙平台支持 PR，定位并修复三处鸿蒙内核与 Linux 的行为差异，已在真机完成 worker 与安全边界验证</span></li>
 <li><span class="news-date">2026.10</span><span>参赛作品《面向颌骨骨髓炎精准清创的智能化荧光诊疗平台及产业化应用》获 2026 年度中国青年科技创新“揭榜挂帅”擂台赛国家级二等奖，该赛事为第十五届“挑战杯”专项赛事</span></li>
 <li><span class="news-date">2026.09</span><span>个人主页上线；转入信息与控制工程学院电子信息工程（卓越）专业</span></li>
 <li><span class="news-date">2026.08</span><span>完成面向文献知识库的论文语料摄取流水线（30,031 篇，11.2 小时，完成率 99.96%），并开源乳腺超声辅助诊断与颌骨骨髓炎医生工作站的软件代码</span></li>

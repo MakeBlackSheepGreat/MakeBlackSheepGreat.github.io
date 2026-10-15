@@ -58,6 +58,9 @@ ORCID [0009-0006-7544-5954](https://orcid.org/0009-0006-7544-5954) ｜ [github.c
 - **ct-nodule-risk** —— 肺结节分类与风险分级：3D 医学影像数据处理与实验记录
 - **swust-code** —— 终端编码智能体：持久记忆、多智能体工作流与目标驱动执行
 - **IPC_vision** —— 七模型对比工程：BP / CNN / ConvNeXt / LeNet-5 / ResNet / ViT / MobileNetV2，配套 Flask API、Web 前端与 Electron 应用
+- **build_in_harmonyos** —— 开源鸿蒙编译适配框架贡献者：2026.08 – 2026.10 提交并合入 24 个 PR，将 22 个三方库适配到 OpenHarmony aarch64，另修复两处 CI 基础设施问题
+- **dsh-ops** —— DSH 底层操作工具插件平台贡献者：定位并修复三处鸿蒙内核行为差异（`openat2` 触发 `SIGSYS`、根路径锚点被拒、`O_PATH` 目录 `fsync` 失败），PR 已提交待评审
+- **第三方缺陷报告** —— 向 DSH 连接插件报告两个独立缺陷（配置写入通道的破坏性持久化、上下文预算默认值误砍模型），均附环境矩阵与源码定位，已合入修复
 
 代码与更多仓库：[github.com/MakeBlackSheepGreat](https://github.com/MakeBlackSheepGreat)
 
