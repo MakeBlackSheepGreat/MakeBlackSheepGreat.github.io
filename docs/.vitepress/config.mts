@@ -175,6 +175,12 @@ export default defineConfig({
             {
               text: '研究记录',
               items: [{ text: '负面结果也是一份结果', link: '/notes/negative-results' }]
+            },
+            {
+              text: '写给同学的讲义',
+              items: [
+                { text: '生成式软件工程：零基础中文讲义', link: 'https://wiki.liteblacksheep.asia' }
+              ]
             }
           ]
         },
@@ -275,6 +281,12 @@ export default defineConfig({
             {
               text: 'Research notes',
               items: [{ text: 'Negative results count too', link: '/en/notes/negative-results' }]
+            },
+            {
+              text: 'Course notes',
+              items: [
+                { text: 'Generative Software Engineering', link: 'https://wiki.liteblacksheep.asia' }
+              ]
             }
           ]
         },

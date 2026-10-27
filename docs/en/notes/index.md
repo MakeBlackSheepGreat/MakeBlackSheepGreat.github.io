@@ -39,3 +39,7 @@ Methods that came out of half a year of daily use, independent of any particular
 ## 4. Research notes
 
 - [Negative results count too](/en/notes/negative-results) — an ablation that dropped accuracy from 77.23% to 56.78%, and what pre-registered criteria are for
+
+## 5. Course notes for classmates
+
+- [Generative Software Engineering: a Chinese course site for beginners](https://wiki.liteblacksheep.asia) — material from two public courses reworked into a single track, six parts and twenty-four chapters; part 0 covers the Linux, Git, shell and error-reading basics both courses assume, with runnable commands and real error text in every section
