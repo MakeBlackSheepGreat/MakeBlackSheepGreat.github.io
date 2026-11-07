@@ -1,0 +1,150 @@
+---
+pageClass: labels
+---
+
+# Projects
+
+Projects are grouped by direction below. Private repositories are listed by name only, without links.
+
+## Medical imaging AI
+
+::: card Breast ultrasound classification (bucad)
+Binary benign/malignant classification on breast ultrasound images. Trained on BUS-BRA and tested externally on BUSI, producing lesion region hints, risk stratification and Grad-CAM visualisation for review.
+
+Responsibilities: implementing and tuning the CNN classifier, fixing the evaluation metrics and threshold policy, building the Grad-CAM module, and packaging the inference demo. This work supported two competition awards (a university-level second prize and a national third prize).
+
+Stack: Python · PyTorch · medical imaging · Grad-CAM
+
+[Repository](https://github.com/MakeBlackSheepGreat/bucad)
+:::
+
+::: card Pulmonary nodule classification and interpretable risk grading (ct-nodule-risk)
+A provincial undergraduate innovation training project: classify pulmonary nodules on chest CT, grade malignancy risk, and give interpretable evidence for the decision.
+
+I handle data processing and model experiments — nodule extraction and preprocessing, the training and evaluation pipeline, and keeping records reproducible (fixed splits, seeds and evaluation scripts). Ongoing; the current focus is making the evaluation protocol solid.
+
+Stack: Python · PyTorch · 3D medical imaging · interpretability
+
+[Repository](https://github.com/MakeBlackSheepGreat/ct-nodule-risk)
+:::
+
+## Open-source contributions
+
+::: card OpenHarmony build compatibility framework · contributor (build_in_harmonyos)
+An open-source framework that builds, packages and distributes third-party software for OpenHarmony aarch64, based on the Conan package manager, with a built-in error-matching engine and knowledge-graph system. Between 2026.08 and 2026.10 I submitted and merged 24 pull requests porting 22 third-party libraries to OpenHarmony.
+
+Ported packages: GDAL, OpenCASCADE, GTK+ 3, glib, pango, atk, gdk-pixbuf, cairo-gobject, harfbuzz, speex, asterisk-srtp, asterisk-speex, epoxy, goocanvas, flow-control, asymptote, qtserialport, abiword-plugin-opml, bashdb, termsvg and termshot. Also fixed two CI infrastructure issues where mis-tracked runtime state files blocked the full verification run.
+
+Stack: Python · Conan · OpenHarmony · Autotools / CMake / Meson · Zig
+
+[Repository](https://atomgit.com/OpenHarmonyPCDeveloper/build_in_harmonyos)
+:::
+
+::: card DSH low-level operations plugin · platform contributor (dsh-ops)
+A performance tooling plugin for DSH that rewrites file search and batch processing in Rust to cut token usage and task time. I filed an issue and a pull request adding OpenHarmony platform support to the native worker.
+
+Three behavioural differences between the OpenHarmony kernel and Linux were identified: `openat2` terminates the process with `SIGSYS` instead of returning `ENOSYS`, so the dependency's portable fallback never runs; the root path anchor and `/storage` are refused to open, so path-checking preflight always fails; and `fsync` on an `O_PATH` directory descriptor returns `EBADF`, so `replace` reports failure after a successful rename. The fix uses platform-gated compilation, keeping upstream statements verbatim for non-OpenHarmony targets. On-device validation covered an 8-case worker suite and 7 out-of-bounds security-boundary cases.
+
+Stack: Rust · Node.js · OpenHarmony · conditional compilation
+
+[Repository](https://github.com/T-Auto/dsh-ops) · [Pull request #53](https://github.com/T-Auto/dsh-ops/pull/53)
+:::
+
+::: card DSH connectivity plugin · defect reporter (dsh-connect-workbuddy)
+While diagnosing someone else's issue I found and reported two distinct defects, both since fixed. Both reports carried a full environment matrix, source locations and measured readings.
+
+- A destructive defect in the settings write channel: `__save` persists the host's own already-resolved `regions` value as the field's entire new value, so the first save blanks the live model catalog and the agent default model disappears
+- A faulty default in context budgeting: `applyContextBudgets` clamps every model above 200K down to 200K, discarding a model's real context window whenever the user has not set an explicit budget, and the default contradicts the upstream throttling line
+
+Stack: TypeScript · settings-channel tracing · defect reproduction with minimal evidence
+:::
+
+## Agent and research tooling
+
+::: card SWUST Code — a terminal-native coding agent (swust-code)
+A personal build based on an open-source coding agent, extended with persistent memory, multi-agent workflows on smaller models, and goal-driven autonomy, plus its own documentation site. It is usable day to day and has been used to develop other projects.
+
+Stack: TypeScript · Node.js · multi-agent · CLI
+
+[Code](https://github.com/MakeBlackSheepGreat/swust-code) · [Docs site](https://github.com/MakeBlackSheepGreat/swust-code-docs)
+:::
+
+::: card IPC Vision — seven-model MNIST comparison (IPC_vision)
+An exercise that walks the whole path from model to application: BP, CNN, ConvNeXt, LeNet-5, ResNet, ViT and MobileNetV2 compared under one dataset and evaluation protocol, wrapped with a Flask API, a web frontend and an Electron desktop app. The aim was to compare model scales on one task under a single evaluation protocol.
+
+Stack: Python · PyTorch · Flask · Electron
+
+[Repository](https://github.com/MakeBlackSheepGreat/IPC_vision)
+:::
+
+::: card PDF vector search (pdf-vector-search)
+A local PDF knowledge-base retrieval tool for agents: documents are chunked and embedded into a local vector store, exposed through a command-line interface for an upper-layer agent to call — used for literature search and question answering. The design goal is retrieval results that carry their sources, rather than feeding papers to a model one at a time.
+
+Stack: Python · vector search · RAG · CLI
+
+[Repository](https://github.com/MakeBlackSheepGreat/pdf-vector-search)
+:::
+
+## Engineering practice
+
+These have no dedicated repository, though they took no less time than coding work.
+
+::: card Paper corpus ingestion pipeline
+Turning 30,000 papers into searchable, traceable knowledge entries: tiered concurrency, content-hash idempotency, and mixed local/cloud inference. It finished 30,018 of 30,031 papers in 11.2 hours (99.96%) and attached evidence links back to the source for every entry. Engineering details are in the [notes](/en/notes/paper-corpus-pipeline).
+:::
+
+::: card Agent service deployment and operations
+Getting a self-hosted service running on the public internet: process supervision and boot persistence, credential persistence, reverse proxy and HTTPS, private networking. Issues included a process-scoped random secret that invalidated sessions on restart and cookie scope constraints, written up in the [notes](/en/notes/agent-service-public).
+:::
+
+::: card Personal site
+A bilingual site built with VitePress and published to both GitHub Pages and Cloudflare Pages. Page content is asserted by a render-level check script (60+ checks across both locales), and the site carries a zero-width-character watermark and decoy layer against scraping.
+:::
+
+::: card Domestic AI chip operator exercises
+Several CANN operator contest problems: 2D convolution (FP16/FP32/BF16), the HardSwish activation, and a quantised GEMM optimisation task. This involved address spaces, tiling and vectorisation at the operator level.
+:::
+
+## Private workspaces
+
+These are research and engineering workspaces I use daily. They are private for now — email me if you would like to know more.
+
+- **Neural_Paper_Skill** — a workflow skill set for neural network research and paper writing, covering ideation, training, validation, writing and figures
+- **CordiSwarm** — a plugin-kernel research swarm agent system: a task board as the single source of truth, idempotent dispatch keyed on plan versions and quality gates, models from several families; live on a self-hosted server running end-to-end research flows
+- **WeftMesh** — local AI agent software with a star topology and a device-interconnection protocol
+- **SwustSpirit** — campus information tooling for students at my university
+
+## Small tools and archives
+
+::: card BearPi-Pico H3863 development archive (BearPi-Pico-H3863)
+Documentation, chip manuals, firmware and source-code pointers for the BearPi-Pico H3863, archived because the material was scattered; the archive makes it easier to consult and reproduce.
+
+Stack: embedded · documentation
+
+[Repository](https://github.com/MakeBlackSheepGreat/BearPi-Pico-H3863)
+:::
+
+::: card HTML long-image export skill (html-png-exporter-skill)
+A skill for coding agents: render a long HTML page into a previewable full-page image and export it as PNG using native Canvas. Built so that generated reports and posters can be inspected before revision.
+
+Stack: JavaScript · Canvas · agent skill
+
+[Repository](https://github.com/MakeBlackSheepGreat/html-png-exporter-skill)
+:::
+
+::: card dsh-OHDSH — an agent runtime on HarmonyOS (dsh-OHDSH)
+An attempt to bring a reproducible implementation of DeepSeek Harness to HarmonyOS. Most of the effort went into diagnosing a startup failure on a real device, traced to several system-level restrictions with workarounds for each.
+
+Stack: HarmonyOS · ArkTS · C
+
+[Repository](https://github.com/MakeBlackSheepGreat/dsh-OHDSH)
+:::
+
+## Other public repositories
+
+| Repository | Description |
+| --- | --- |
+| [MakeBlackSheepGreat](https://github.com/MakeBlackSheepGreat/MakeBlackSheepGreat) | GitHub profile repository |
+| [campus-network-auto-login](https://github.com/MakeBlackSheepGreat/campus-network-auto-login) | Small campus network auto-login tool (JavaScript) |
+
+More experimental repositories are on my [GitHub profile](https://github.com/MakeBlackSheepGreat).

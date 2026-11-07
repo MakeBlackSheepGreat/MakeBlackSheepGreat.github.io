@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 300" width="240" height="300" role="img" aria-label="照片占位图">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eef1ff"/>
+      <stop offset="100%" stop-color="#e3e8f5"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="300" fill="url(#bg)"/>
+  <circle cx="120" cy="112" r="42" fill="#c3c9dd"/>
+  <path d="M42 300c0-46 35-84 78-84s78 38 78 84z" fill="#c3c9dd"/>
+  <text x="120" y="288" text-anchor="middle"
+        font-family="Segoe UI, Helvetica Neue, Arial, sans-serif"
+        font-size="13" fill="#8b93ab">照片占位 / photo</text>
+</svg>

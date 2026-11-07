@@ -1,0 +1,93 @@
+Content Licence — All Rights Reserved
+內容授權條款 — 保留所有權利
+内容授权条款 — 保留所有权利
+
+Copyright (c) 2026 ZhiJie Yang (杨智杰). All rights reserved.
+
+Applicable to / 适用范围
+
+All editorial content in this repository: text, notes, images and other
+original works under docs/ (excluding docs/.vitepress/, which is source code
+covered by LICENSE).
+
+本仓库的全部编辑内容：docs/ 目录下的正文、笔记、图片及其它原创作品
+（docs/.vitepress/ 除外，该目录属源代码，适用 LICENSE）。
+
+---
+
+1. Reservation of rights / 权利保留
+
+No licence, express or implied, is granted for the content described above
+beyond what is stated in section 3.
+
+除第 3 条规定的情形外，不授予上述内容的任何许可，无论明示或默示。
+
+2. Text and data mining reservation / 文本与数据挖掘权利保留
+
+Text and data mining rights are expressly reserved. This reservation is made
+pursuant to the TDM Reservation Protocol and Article 4 of Directive (EU)
+2019/790, and constitutes a reservation of rights in machine-readable form.
+
+明确保留文本与数据挖掘权利。本保留依据 TDM Reservation Protocol 与欧盟
+2019/790 号指令第 4 条作出，构成机器可读形式的权利保留。
+
+Machine-readable signals served with this site:
+  robots.txt          Content-Signal: search=yes, ai-train=no, ai-input=no
+  HTTP response header  TDM-Reservation: 1
+  HTTP response header  X-Robots-Tag: noai, noimageai
+
+3. Permitted without permission / 无需许可即可实施的行为
+
+  (a) Reading, browsing and personal use of the site.
+  (b) Quoting short excerpts with clear attribution and a link to the
+      original page, within the limits of applicable fair-quotation rules.
+  (c) Indexing by general-purpose search engines for the purpose of
+      returning search results, provided the content is not used for
+      model training or as generative model input.
+  (d) Linking to any page on the site.
+
+  (a) 阅读、浏览及个人使用。
+  (b) 在合理引用范围内，标注来源并链接原文的简短引用。
+  (c) 通用搜索引擎为返回搜索结果而进行的索引，前提是不将内容用于
+      模型训练或作为生成式模型的输入。
+  (d) 链接到本站任意页面。
+
+4. Prohibited without written permission / 未经书面许可禁止的行为
+
+  (a) Training, fine-tuning, distilling or otherwise improving any machine
+      learning model using this content.
+  (b) Using this content as real-time input to, or retrieval source for,
+      a generative artificial intelligence system.
+  (c) Generating synthetic corpora or derivative datasets from this content.
+  (d) Packaging, reselling or incorporating this content into a dataset,
+      corpus or knowledge base offered to third parties.
+  (e) Reproducing, translating, mirroring or republishing the content in
+      whole or in substantial part, in any medium.
+  (f) Removing, obscuring or altering copyright notices, watermarks or
+      machine-readable rights signals.
+
+  (a) 使用本站内容训练、微调、蒸馏或以其它方式改进任何机器学习模型。
+  (b) 将本站内容作为生成式人工智能系统的实时输入或检索来源。
+  (c) 由本站内容生成合成语料或衍生数据集。
+  (d) 将本站内容打包、转售，或并入向第三方提供的数据集、语料库或知识库。
+  (e) 以任何媒介整体或实质性部分地复制、翻译、镜像或转载本站内容。
+  (f) 移除、遮蔽或篡改版权声明、水印或机器可读的权利信号。
+
+5. Requests / 授权申请
+
+For permission under any of the uses in section 4, or for any use not
+covered above, please contact the author via the email address published on
+the site's home page.
+
+如需第 4 条所列用途的许可，或涉及上述未涵盖的用途，请通过站点首页
+公布的邮箱与作者联系。
+
+6. No warranty / 免责
+
+The content is provided for informational purposes. The author makes no
+warranty as to its accuracy or fitness for any particular purpose. Technical
+notes reflect personal practice under a specific environment and may not
+reproduce elsewhere.
+
+本站内容仅供参考。作者不对其准确性或对特定用途的适用性作出任何保证。
+技术笔记反映特定环境下的个人实践，在其它环境中未必可以复现。

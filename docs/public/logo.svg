@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="LiteBlackSheep">
+  <rect x="4" y="4" width="248" height="248" rx="44" fill="#a8331b"/>
+  <g fill="#f7f4ed">
+    <circle cx="104" cy="132" r="34"/>
+    <circle cx="140" cy="122" r="38"/>
+    <circle cx="176" cy="132" r="32"/>
+    <rect x="104" y="150" width="76" height="40" rx="18"/>
+    <circle cx="82" cy="126" r="26"/>
+    <ellipse cx="60" cy="108" rx="13" ry="9" transform="rotate(-24 60 108)"/>
+    <rect x="112" y="182" width="15" height="34" rx="7.5"/>
+    <rect x="158" y="182" width="15" height="34" rx="7.5"/>
+  </g>
+  <circle cx="74" cy="120" r="5.5" fill="#17160f"/>
+</svg>

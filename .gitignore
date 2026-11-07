@@ -1,0 +1,18 @@
+node_modules
+.vitepress/cache
+.vitepress/dist
+docs/.vitepress/dist
+docs/.vitepress/cache
+docs/.vitepress/.temp
+docs/.vitepress/config.mts.timestamp-*
+docs/.vitepress/*.png
+.DS_Store
+*.log
+
+# 临时探针脚本与截图（不进入版本库）
+_*.mjs
+_*.py
+.oil-ui/
+
+# 私有材料（不进入版本库）
+private/
